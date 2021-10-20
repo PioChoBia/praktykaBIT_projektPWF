@@ -1,7 +1,7 @@
 ﻿
 namespace ProjektPWF
 {
-    partial class Form1
+    partial class StartWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,17 @@ namespace ProjektPWF
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // StartWindow
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "StartWindow";
+            this.Text = "StartWindow";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+
 
 namespace ProjektPWF
 {
-    public partial class Form1 : Form
+    public partial class StartWindow : Form
     {
-        public Form1()
+        public StartWindow()
         {
             InitializeComponent();
+
+            using (var dbContext = new ApplicationDbContext())
+            {
+               
+            }
         }
     }
 }
