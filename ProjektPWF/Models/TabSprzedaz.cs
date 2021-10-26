@@ -11,7 +11,7 @@ namespace ProjektPWF.Models
     class TabSprzedaz
     {
         [Key]
-        public int IdSprzedaz { get; set; }
+        public int IdSprzedaz { get; set; } 
 
         [Column(TypeName = "Date")]
         public DateTime DataSprzedazy { get; set; }
@@ -30,7 +30,7 @@ namespace ProjektPWF.Models
 
         [StringLength(200)]
         public string Uwagi { get; set; }
-
+        
         public int IdDostarczanie { get; set; }
         [ForeignKey("IdDostarczanie")]
    //     public int? TabDostarczanie { get; set; }
@@ -60,7 +60,7 @@ namespace ProjektPWF.Models
         [ForeignKey("IdTermin")]
         //public int? TabTermin { get; set; }
         public virtual TabTermin Termin { get; set; }
-
+        
         public int IdVat { get; set; }
         [ForeignKey("IdVat")]
         //public int? TabVat { get; set; }

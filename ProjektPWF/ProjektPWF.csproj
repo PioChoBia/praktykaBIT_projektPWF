@@ -59,6 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Models\TabDostarczanie.cs" />
+    <Compile Include="Models\TabKierownik.cs" />
+    <Compile Include="Models\TabNabywca.cs" />
+    <Compile Include="Models\TabPlatnosc.cs" />
+    <Compile Include="Models\TabSprzedaz.cs" />
+    <Compile Include="Models\TabStatus.cs" />
+    <Compile Include="Models\TabTermin.cs" />
+    <Compile Include="Models\TabVat.cs" />
     <Compile Include="StartWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,9 +102,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
