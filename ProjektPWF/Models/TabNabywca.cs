@@ -7,13 +7,13 @@ namespace ProjektPWF.Models
         [Key]
         public int Id { get; set; }
 
-        [StringLength(100)]
-        public string Nazwa { get; set; }
+        [StringLength(200)]
+        public string NazwaNabywcy { get; set; }
 
-        [StringLength(100)]
-        public string Adres { get; set; }
+        [StringLength(200)]
+        public string AdresNabywcy { get; set; }
 
-        [StringLength(30)]
-        public string Nip { get; set; }
+        [StringLength(13)]
+        public string NIP { get; set; }
     }
 }
