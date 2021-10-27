@@ -106,7 +106,7 @@ namespace ProjektPWF
            // DopisTabStatus(new TabStatus { Status="nowa"});
 
             var xx = new TabVat();
-           var obsluga= new Obsluga();
+           var obsluga = new Obsluga();
        
 
 

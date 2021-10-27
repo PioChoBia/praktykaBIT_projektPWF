@@ -4,6 +4,11 @@ namespace ProjektPWF.Models
 {
     public class Obsluga
     {
-        //nic
+        //nawet specjalnie daje to
+        [Key]
+        public int Id { get; set; }
+
+        [StringLength(100)]
+        public string Stawka { get; set; }
     }
 }
