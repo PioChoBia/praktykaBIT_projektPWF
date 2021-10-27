@@ -9,5 +9,6 @@ namespace ProjektPWF.Models
 
         [StringLength(50)]
         public string Status { get; set; }
+
     }
 }

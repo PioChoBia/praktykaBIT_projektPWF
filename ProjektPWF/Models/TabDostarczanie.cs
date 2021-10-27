@@ -6,7 +6,7 @@ namespace ProjektPWF.Models
     public class TabDostarczanie
     {
         [Key]
-        public int IdDostarczanie { get; set; }
+        public int Id { get; set; }
 
         [StringLength(100)]
         public string Sposob { get; set; }

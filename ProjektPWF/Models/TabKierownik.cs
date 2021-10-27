@@ -10,7 +10,7 @@ namespace ProjektPWF.Models
     public class TabKierownik
     {
         [Key]
-        public int IdKierownik { get; set; }
+        public int Id { get; set; }
         //public virtual TabSprzedaz Kierownik { get; set; }
 
         [StringLength(20)]

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ProjektPWF.Models
 {
-    class TabSprzedaz
+    public class TabSprzedaz
     {
         [Key]
         public int IdSprzedaz { get; set; } 

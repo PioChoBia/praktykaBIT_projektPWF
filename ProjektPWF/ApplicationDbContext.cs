@@ -7,21 +7,21 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace ProjektPWF
 {
-    class ApplicationDbContext :DbContext
+   public class ApplicationDbContext :DbContext
     {
         public ApplicationDbContext(): base("ApplicationDbContext")
         {
 
         }
         
-        public DbSet<TabSprzedaz> Sprzedaz { get; set; }
-        public DbSet<TabDostarczanie> Dostarczanie { get; set; }
-        public DbSet<TabKierownik> Kierownik { get; set; }
-        public DbSet<TabNabywca> Nabywca { get; set; }
-        public DbSet<TabPlatnosc> Platnosc { get; set; }
-        public DbSet<TabStatus> Status { get; set; }
-        public DbSet<TabTermin> Termin { get; set; }
-        public DbSet<TabVat> Vat { get; set; }
+        public DbSet<TabSprzedaz> SprzedazC { get; set; }
+        public DbSet<TabDostarczanie> DostarczanieC { get; set; }
+        public DbSet<TabKierownik> KierownikC { get; set; }
+        public DbSet<TabNabywca> NabywcaC { get; set; }
+        public DbSet<TabPlatnosc> PlatnoscC { get; set; }
+        public DbSet<TabStatus> StatusC { get; set; }
+        public DbSet<TabTermin> TerminC { get; set; }
+        public DbSet<TabVat> VatC { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
