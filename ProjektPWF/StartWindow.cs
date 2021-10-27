@@ -105,8 +105,9 @@ namespace ProjektPWF
             //StartoweTabPlatnosc();
            // DopisTabStatus(new TabStatus { Status="nowa"});
 
-            //var obsluga =new Obsluga();
-
+            var xx = new TabVat();
+           var obsluga= new Obsluga();
+       
 
 
 
