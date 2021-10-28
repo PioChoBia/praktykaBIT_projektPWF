@@ -109,128 +109,44 @@ namespace ProjektPWF
         public StartWindow()
         {
             InitializeComponent();
-
             // WpiszStartoweDoTabel();
 
+            //tabela SprzedazC
+
+
+
+
+
+
+
+       
+            //tabela KierownikC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.KierownikC.AsNoTracking().
+                    Select(s => new KierownikViewModel
+                    {
+                        Id = s.Id,
+                        ImieKierownika = s.ImieKierownika,
+                        NazwiskoKierownika = s.NazwiskoKierownika
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }
+          
+
+            /*
             var dane = new List<TabSprzedaz> { };        
 
             using (var dbContext = new ApplicationDbContext())
             {
-                dane= dbContext.SprzedazC.ToList();
-                /*
-                dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 1).First() );
-                dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 2).First() );
-                dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 3).First() );
-                */
+                dane= dbContext.SprzedazC.ToList();               
+             //   dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 1).First() );     
             }
 
             this.dataGridView1.DataSource = dane;
-
-
-
-            /*
-            using (var dbContext = new ApplicationDbContext())
-            {
-
-            }
-
-            var sprzedaz = new List<TabSprzedaz>
-            {
-
-            };
-
-            using(var context = new ApplicationDbContext())
-            {
-                context.tabSprzedazs.AddRange(sprzedaz);
-
-                context.SaveChanges();
-            }
-
-            var dostarczanie = new List<TabDostarczanie>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabDostarczanies.AddRange(dostarczanie);
-
-                context.SaveChanges();
-            }
-
-            var kierownik = new List<TabKierownik>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabKierowniks.AddRange(kierownik);
-
-                context.SaveChanges();
-            }
-
-            var nabywca = new List<TabNabywca>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabNabywcas.AddRange(nabywca);
-
-                context.SaveChanges();
-            }
-
-            var platnosc = new List<TabPlatnosc>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabPlatnoscs.AddRange(platnosc);
-
-                context.SaveChanges();
-            }
-
-            var status = new List<TabStatus>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabStatuses.AddRange(status);
-
-                context.SaveChanges();
-            }
-
-            var termin = new List<TabTermin>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabTermins.AddRange(termin);
-
-                context.SaveChanges();
-            }
-
-            var vat = new List<TabVat>
-            {
-
-            };
-
-            using (var context = new ApplicationDbContext())
-            {
-                context.tabVats.AddRange(vat);
-
-                context.SaveChanges();
-            }
-
             */
+
+
         }
 
         private void StartWindow_Load(object sender, EventArgs e)

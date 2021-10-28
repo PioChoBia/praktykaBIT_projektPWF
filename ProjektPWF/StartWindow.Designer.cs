@@ -36,8 +36,6 @@ namespace ProjektPWF
             this.buttonSzukaj = new System.Windows.Forms.Button();
             this.groupBoxSzukaj = new System.Windows.Forms.GroupBox();
             this.textBoxSzukaj = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.groupBoxNaglowek.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxSzukaj.SuspendLayout();
@@ -69,7 +67,7 @@ namespace ProjektPWF
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(41, 173);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1148, 178);
+            this.dataGridView1.Size = new System.Drawing.Size(1148, 217);
             this.dataGridView1.TabIndex = 2;
             // 
             // buttonDrukuj
@@ -111,30 +109,11 @@ namespace ProjektPWF
             this.textBoxSzukaj.Size = new System.Drawing.Size(172, 22);
             this.textBoxSzukaj.TabIndex = 5;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(139, 408);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(207, 95);
-            this.listBox1.TabIndex = 6;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(554, 427);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(140, 111);
-            this.listView1.TabIndex = 7;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 686);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBoxSzukaj);
             this.Controls.Add(this.buttonDrukuj);
             this.Controls.Add(this.dataGridView1);
@@ -160,8 +139,6 @@ namespace ProjektPWF
         private System.Windows.Forms.Button buttonSzukaj;
         private System.Windows.Forms.GroupBox groupBoxSzukaj;
         private System.Windows.Forms.TextBox textBoxSzukaj;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListView listView1;
     }
 }
 

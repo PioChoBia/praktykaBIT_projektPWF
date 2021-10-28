@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Models\KierownikViewModel.cs" />
+    <Compile Include="Models\SprzedazModelView.cs" />
     <Compile Include="Obsluga.cs" />
     <Compile Include="Models\TabDostarczanie.cs" />
     <Compile Include="Models\TabKierownik.cs" />
