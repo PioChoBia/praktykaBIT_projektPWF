@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ProjektPWF.Models;
 
-namespace ProjektPWF.Models
+namespace ProjektPWF
 {
     public class Obsluga
     {
-
-
         public void  WpiszTabDostarczanie(TabDostarczanie t)
         {     
             using (var dbContext = new ApplicationDbContext())

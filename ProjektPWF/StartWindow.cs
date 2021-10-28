@@ -110,8 +110,21 @@ namespace ProjektPWF
         {
             InitializeComponent();
 
-            WpiszStartoweDoTabel();
+            // WpiszStartoweDoTabel();
 
+            var dane = new List<TabSprzedaz> { };        
+
+            using (var dbContext = new ApplicationDbContext())
+            {
+                dane= dbContext.SprzedazC.ToList();
+                /*
+                dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 1).First() );
+                dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 2).First() );
+                dane.Add( dbContext.SprzedazC.Where(t => t.IdSprzedaz == 3).First() );
+                */
+            }
+
+            this.dataGridView1.DataSource = dane;
 
 
 
@@ -218,6 +231,11 @@ namespace ProjektPWF
             }
 
             */
+        }
+
+        private void StartWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

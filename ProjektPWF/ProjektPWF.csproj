@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
-    <Compile Include="Models\Obsluga.cs" />
+    <Compile Include="Obsluga.cs" />
     <Compile Include="Models\TabDostarczanie.cs" />
     <Compile Include="Models\TabKierownik.cs" />
     <Compile Include="Models\TabNabywca.cs" />
@@ -68,6 +68,11 @@
     <Compile Include="Models\TabStatus.cs" />
     <Compile Include="Models\TabTermin.cs" />
     <Compile Include="Models\TabVat.cs" />
+    <Compile Include="ProjektPWFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjektPWFDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StartWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +95,17 @@
       <DependentUpon>StartWindow.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="ProjektPWFDataSet.xsc">
+      <DependentUpon>ProjektPWFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjektPWFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjektPWFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjektPWFDataSet.xss">
+      <DependentUpon>ProjektPWFDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
