@@ -22,8 +22,8 @@ namespace ProjektPWF.Models
         public int NrZlecenia { get; set; }
 
         public int NrUmowy { get; set; }
+        
         [StringLength(1000)]
-
         public string Tresc { get; set; }
 
         public double Netto { get; set; }

@@ -15,11 +15,46 @@ namespace ProjektPWF
     public partial class StartWindow : Form
     {
 
-        public static void WpiszStartoweDoTabel()
+        public void WpiszStartoweDoTabel()
         {     
             var obsluga = new Obsluga();
-           
-            /*
+            obsluga.WpiszTabSprzedaz( new TabSprzedaz{ 
+                DataSprzedazy=DateTime.Today, 
+                DataWystawienia=DateTime.Today, 
+                NrZlecenia=1,
+                NrUmowy=1,
+                Tresc="to jest treść1",
+                Netto=123.12,
+                Uwagi="to są uwagi1",
+
+                IdDostarczanie=1,
+                IdKierownik=1,
+                IdNabywca=1,
+                IdPlatnosc=1,
+                IdStatus=1,
+                IdTermin=1,
+                IdVat=1
+               } );;
+
+            obsluga.WpiszTabSprzedaz( new TabSprzedaz{ 
+                DataSprzedazy=DateTime.Today, 
+                DataWystawienia=DateTime.Today, 
+                NrZlecenia=2,
+                NrUmowy=2,
+                Tresc="to jest treść2",
+                Netto=223.12,
+                Uwagi="to są uwagi2",
+
+                IdDostarczanie=2,
+                IdKierownik=2,
+                IdNabywca=2,
+                IdPlatnosc=2,
+                IdStatus=2,
+                IdTermin=2,
+                IdVat=2
+               } );;
+
+
             //tabela DostarczanieC
             obsluga.WpiszTabDostarczanie( new TabDostarczanie{ Sposob="list polecony" } );
             obsluga.WpiszTabDostarczanie( new TabDostarczanie{ Sposob="e-mail" } );
@@ -63,8 +98,7 @@ namespace ProjektPWF
             obsluga.WpiszTabVat( new TabVat{ Stawka="ZW" } );
             obsluga.WpiszTabVat( new TabVat{ Stawka="5 %" } );
             obsluga.WpiszTabVat( new TabVat{ Stawka="8 %" } );
-            obsluga.WpiszTabVat( new TabVat{ Stawka="23 %" } );
-            */
+            obsluga.WpiszTabVat( new TabVat{ Stawka="23 %" } );            
         }
 
 
@@ -77,6 +111,8 @@ namespace ProjektPWF
             InitializeComponent();
 
             WpiszStartoweDoTabel();
+
+
 
 
             /*
