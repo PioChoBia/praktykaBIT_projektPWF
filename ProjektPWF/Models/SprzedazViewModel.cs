@@ -17,23 +17,18 @@ namespace ProjektPWF.Models
         public double Netto { get; set; }
         public string Uwagi { get; set; }
         public int IdDostarczanie { get; set; }
-        public virtual TabDostarczanie Dostarczanie { get; set; }
+        public DostarczanieViewModel Dostarczanie { get; set; }
         public int IdKierownik { get; set; }
-        public virtual TabKierownik Kierownik { get; set; }
+        public KierownikViewModel Kierownik { get; set; }
         public int IdNabywca { get; set; }
-        public virtual TabNabywca Nabywca { get; set; }
+        public NabywcaViewModel Nabywca { get; set; }
         public int IdPlatnosc { get; set; }
-        public virtual TabPlatnosc Platnosc { get; set; }
+        public PlatnoscViewModel Platnosc { get; set; }
         public int IdStatus { get; set; }
-        public virtual TabStatus Status { get; set; }
-
+        public StatusViewModel Status { get; set; }
         public int IdTermin { get; set; }
-        public virtual TabTermin Termin { get; set; }
-
+        public TerminViewModel Termin { get; set; }
         public int IdVat { get; set; }
-        public virtual TabVat Vat { get; set; }
-
-
-
+        public VatViewModel Vat { get; set; }
     }
 }

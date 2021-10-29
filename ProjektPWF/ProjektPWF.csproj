@@ -63,7 +63,7 @@
     <Compile Include="Models\KierownikViewModel.cs" />
     <Compile Include="Models\NabywcaViewModel.cs" />
     <Compile Include="Models\PlatnoscViewModel.cs" />
-    <Compile Include="Models\SprzedazModelView.cs" />
+    <Compile Include="Models\SprzedazViewModel.cs" />
     <Compile Include="Models\StatusViewModel.cs" />
     <Compile Include="Models\TerminViewModel.cs" />
     <Compile Include="Models\VatViewModel.cs" />

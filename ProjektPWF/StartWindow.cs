@@ -111,18 +111,59 @@ namespace ProjektPWF
             InitializeComponent();
             // WpiszStartoweDoTabel();
 
+
             //tabela SprzedazC
-
-
-
-
             using (var dbContext = new ApplicationDbContext())
             {
-                var dane = dbContext.VatC.AsNoTracking().
-                    Select(s => new VatViewModel
+                var dane = dbContext.SprzedazC.AsNoTracking().
+                    Select(s => new SprzedazModelView
                     {
-                        Id = s.Id,
-                        Stawka=s.Stawka
+                        IdSprzedaz=s.IdSprzedaz,
+                        DataSprzedazy=s.DataSprzedazy,
+                        DataWystawienia=s.DataWystawienia,
+                        Netto=s.Netto,
+                        NrZlecenia=s.NrZlecenia,
+                        Tresc=s.Tresc,
+                        Uwagi=s.Uwagi,
+                        Dostarczanie=new DostarczanieViewModel
+                        {
+                            Id=s.Dostarczanie.Id,
+                            Sposob=s.Dostarczanie.Sposob                            
+                        },
+                        Kierownik=new KierownikViewModel
+                        {
+                            Id=s.Kierownik.Id,
+                            ImieKierownika=s.Kierownik.ImieKierownika,
+                            NazwiskoKierownika=s.Kierownik.NazwiskoKierownika
+                        },
+                        Nabywca=new NabywcaViewModel
+                        {
+                            Id=s.Nabywca.Id,
+                            NazwaNabywcy=s.Nabywca.NazwaNabywcy,
+                            AdresNabywcy=s.Nabywca.AdresNabywcy,
+                            NIP=s.Nabywca.NIP
+                        },
+                        Platnosc=new PlatnoscViewModel
+                        {
+                            Id=s.Platnosc.Id,
+                            Rodzaj=s.Platnosc.Rodzaj
+                        },
+                        Status=new StatusViewModel
+                        {
+                            Id=s.Status.Id,
+                            Status=s.Status.Status
+                        },
+                        Termin=new TerminViewModel
+                        {
+                            Id=s.Termin.Id,
+                            Termin=s.Termin.Termin
+                        },
+                        Vat=new VatViewModel
+                        {
+                            Id=s.Vat.Id,
+                            Stawka=s.Vat.Stawka
+                        }
+                        
                     }).ToList();
                 this.dataGridView1.DataSource = dane;
             }
