@@ -116,10 +116,98 @@ namespace ProjektPWF
 
 
 
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.VatC.AsNoTracking().
+                    Select(s => new VatViewModel
+                    {
+                        Id = s.Id,
+                        Stawka=s.Stawka
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }
 
 
 
-       
+
+            /*
+            //tabela VatC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.VatC.AsNoTracking().
+                    Select(s => new VatViewModel
+                    {
+                        Id = s.Id,
+                        Stawka=s.Stawka
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }            
+            
+
+            //tabela TerminC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.TerminC.AsNoTracking().
+                    Select(s => new TerminViewModel
+                    {
+                        Id = s.Id,
+                        Termin=s.Termin
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }
+
+            //tabela StatusC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.StatusC.AsNoTracking().
+                    Select(s => new StatusViewModel
+                    {
+                        Id = s.Id,
+                        Status=s.Status
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }
+
+
+            //tabela PlatnoscC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.PlatnoscC.AsNoTracking().
+                    Select(s => new PlatnoscViewModel
+                    {
+                        Id = s.Id,
+                        Rodzaj=s.Rodzaj
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }
+  
+             
+            //tabela NabywcaC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.NabywcaC.AsNoTracking().
+                    Select(s => new NabywcaViewModel
+                    {
+                        Id = s.Id,
+                        NazwaNabywcy=s.NazwaNabywcy,
+                        AdresNabywcy=s.AdresNabywcy,
+                        NIP=s.NIP
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }             
+             
+            //tabela DostarczanieC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.DostarczanieC.AsNoTracking().
+                    Select(s => new DostarczanieViewModel
+                    {
+                        Id = s.Id,
+                        Sposob=s.Sposob
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            } 
+             
             //tabela KierownikC
             using (var dbContext = new ApplicationDbContext())
             {
@@ -132,7 +220,9 @@ namespace ProjektPWF
                     }).ToList();
                 this.dataGridView1.DataSource = dane;
             }
-          
+            */
+
+
 
             /*
             var dane = new List<TabSprzedaz> { };        

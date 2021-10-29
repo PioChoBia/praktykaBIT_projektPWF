@@ -59,8 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Models\DostarczanieViewModel .cs" />
     <Compile Include="Models\KierownikViewModel.cs" />
+    <Compile Include="Models\NabywcaViewModel.cs" />
+    <Compile Include="Models\PlatnoscViewModel.cs" />
     <Compile Include="Models\SprzedazModelView.cs" />
+    <Compile Include="Models\StatusViewModel.cs" />
+    <Compile Include="Models\TerminViewModel.cs" />
+    <Compile Include="Models\VatViewModel.cs" />
     <Compile Include="Obsluga.cs" />
     <Compile Include="Models\TabDostarczanie.cs" />
     <Compile Include="Models\TabKierownik.cs" />
