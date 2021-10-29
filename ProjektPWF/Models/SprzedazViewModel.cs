@@ -12,10 +12,15 @@ namespace ProjektPWF.Models
         public DateTime DataSprzedazy { get; set; }
         public DateTime DataWystawienia { get; set; }
         public int NrZlecenia { get; set; }
+
+
         public int NrUmowy { get; set; }
         public string Tresc { get; set; }
         public double Netto { get; set; }
         public string Uwagi { get; set; }
+
+
+        //?
         public int IdDostarczanie { get; set; }
         public DostarczanieViewModel Dostarczanie { get; set; }
         public int IdKierownik { get; set; }

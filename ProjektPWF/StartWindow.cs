@@ -116,6 +116,7 @@ namespace ProjektPWF
             using (var dbContext = new ApplicationDbContext())
             {
                 var dane = dbContext.SprzedazC.AsNoTracking().
+                    
                     Select(s => new SprzedazModelView
                     {
                         IdSprzedaz=s.IdSprzedaz,
@@ -123,9 +124,10 @@ namespace ProjektPWF
                         DataWystawienia=s.DataWystawienia,
                         Netto=s.Netto,
                         NrZlecenia=s.NrZlecenia,
+                        NrUmowy=s.NrUmowy,
                         Tresc=s.Tresc,
-                        Uwagi=s.Uwagi,
-                        Dostarczanie=new DostarczanieViewModel
+                        Uwagi=s.Uwagi,                        
+                        Dostarczanie =new DostarczanieViewModel
                         {
                             Id=s.Dostarczanie.Id,
                             Sposob=s.Dostarczanie.Sposob                            
