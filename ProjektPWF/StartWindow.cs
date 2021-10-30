@@ -110,14 +110,49 @@ namespace ProjektPWF
         {
             InitializeComponent();
             // WpiszStartoweDoTabel();
-
-
+           
             //tabela SprzedazC
             using (var dbContext = new ApplicationDbContext())
             {
                 var dane = dbContext.SprzedazC.AsNoTracking().
                     
-                    Select(s => new SprzedazModelView
+                    Select(s => new SprzedazViewModel
+                    {
+                        IdSprzedaz=s.IdSprzedaz,
+                        DataSprzedazy=s.DataSprzedazy,
+                        DataWystawienia=s.DataWystawienia,                        
+                        NrZlecenia=s.NrZlecenia,
+                        NrUmowy=s.NrUmowy,
+                        Tresc=s.Tresc,
+                        Netto=s.Netto, 
+                        VatStawka=s.Vat.Stawka,
+                        Uwagi=s.Uwagi, 
+                        DostarczanieSposob=s.Dostarczanie.Sposob,
+                        KierownikImieNazwisko=s.Kierownik.ImieKierownika+" "+
+                            s.Kierownik.NazwiskoKierownika,
+                        NabywcaNazwa=s.Nabywca.NazwaNabywcy,
+                        NabywcaAdres=s.Nabywca.AdresNabywcy,
+                        NabywcaNip=s.Nabywca.NIP,
+                        PlatnoscRodzaj=s.Platnosc.Rodzaj,
+                        StatusStatus=s.Status.Status,
+                        TerminTermin=s.Termin.Termin
+
+                        
+
+
+                        
+                    }).ToList();
+                this.dataGridView1.DataSource = dane;
+            }
+
+
+            /*
+            //tabela SprzedazC
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.SprzedazC.AsNoTracking().
+                    
+                    Select(s => new SprzedazViewModel
                     {
                         IdSprzedaz=s.IdSprzedaz,
                         DataSprzedazy=s.DataSprzedazy,
@@ -126,7 +161,10 @@ namespace ProjektPWF
                         NrZlecenia=s.NrZlecenia,
                         NrUmowy=s.NrUmowy,
                         Tresc=s.Tresc,
-                        Uwagi=s.Uwagi,                        
+                        Uwagi=s.Uwagi,   
+                        
+
+
                         Dostarczanie =new DostarczanieViewModel
                         {
                             Id=s.Dostarczanie.Id,
@@ -138,7 +176,7 @@ namespace ProjektPWF
                             ImieKierownika=s.Kierownik.ImieKierownika,
                             NazwiskoKierownika=s.Kierownik.NazwiskoKierownika
                         },
-                        Nabywca=new NabywcaViewModel
+                        Nabywca1=new NabywcaViewModel
                         {
                             Id=s.Nabywca.Id,
                             NazwaNabywcy=s.Nabywca.NazwaNabywcy,
@@ -169,7 +207,7 @@ namespace ProjektPWF
                     }).ToList();
                 this.dataGridView1.DataSource = dane;
             }
-
+            */
 
 
 
