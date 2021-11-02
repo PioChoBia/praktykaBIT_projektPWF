@@ -94,11 +94,11 @@ namespace ProjektPWF
 
 
             //tabela VatC
-            obsluga.WpiszTabVat( new TabVat{ Stawka="00" } );
-            obsluga.WpiszTabVat( new TabVat{ Stawka="ZW" } );
-            obsluga.WpiszTabVat( new TabVat{ Stawka="5 %" } );
-            obsluga.WpiszTabVat( new TabVat{ Stawka="8 %" } );
-            obsluga.WpiszTabVat( new TabVat{ Stawka="23 %" } );            
+            obsluga.WpiszTabVat( new TabVat{ StawkaVat="00" } );
+            obsluga.WpiszTabVat( new TabVat{ StawkaVat="ZW" } );
+            obsluga.WpiszTabVat( new TabVat{ StawkaVat="5 %" } );
+            obsluga.WpiszTabVat( new TabVat{ StawkaVat="8 %" } );
+            obsluga.WpiszTabVat( new TabVat{ StawkaVat="23 %" } );            
         }
 
 
@@ -118,14 +118,14 @@ namespace ProjektPWF
                     
                     Select(s => new SprzedazViewModel
                     {
-                        IdSprzedaz=s.IdSprzedaz,
+                        IdSprzedaz=s.Id,
                         DataSprzedazy=s.DataSprzedazy,
                         DataWystawienia=s.DataWystawienia,                        
                         NrZlecenia=s.NrZlecenia,
                         NrUmowy=s.NrUmowy,
                         Tresc=s.Tresc,
                         Netto=s.Netto, 
-                        VatStawka=s.Vat.Stawka,
+                        VatStawka=s.Vat.StawkaVat,
                         Uwagi=s.Uwagi, 
                         DostarczanieSposob=s.Dostarczanie.Sposob,
                         KierownikImieNazwisko=s.Kierownik.ImieKierownika+" "+
