@@ -9,21 +9,10 @@ namespace ProjektPWF
 {
    public class ApplicationDbContext :DbContext
     {
-        public DbSet<TabSprzedaz> SprzedazC { get; set; }
-        public DbSet<TabDostarczanie> DostarczanieC { get; set; }
-        public DbSet<TabKierownik> KierownikC { get; set; }
-        public DbSet<TabNabywca> NabywcaC { get; set; }
-        public DbSet<TabPlatnosc> PlatnoscC { get; set; }
-        public DbSet<TabStatus> StatusC { get; set; }
-        public DbSet<TabTermin> TerminC { get; set; }
-        public DbSet<TabVat> VatC { get; set; }
-
         public ApplicationDbContext(): base("ApplicationDbContext")
         {
-
         }
-/*
- //przenoszę do góry 
+ 
         public DbSet<TabSprzedaz> SprzedazC { get; set; }
         public DbSet<TabDostarczanie> DostarczanieC { get; set; }
         public DbSet<TabKierownik> KierownikC { get; set; }
@@ -32,7 +21,7 @@ namespace ProjektPWF
         public DbSet<TabStatus> StatusC { get; set; }
         public DbSet<TabTermin> TerminC { get; set; }
         public DbSet<TabVat> VatC { get; set; }
-*/
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
