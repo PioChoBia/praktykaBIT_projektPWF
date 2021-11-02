@@ -24,7 +24,10 @@ namespace ProjektPWF
         public StartWindow()
         {
             InitializeComponent();
-            //WpiszStartoweDoTabel();
+            Obsluga obsluga = new Obsluga();
+            Wyswietl wyswietl = new Wyswietl();
+                          
+            //obsluga.WpiszStartoweDoTabel();
            
             
 
@@ -32,7 +35,7 @@ namespace ProjektPWF
             //tabela SprzedazC
             using (var dbContext = new ApplicationDbContext())
             {
-                dbContext.SprzedazC.Add(new TabSprzedaz { NrUmowy = 1 });
+                //dbContext.SprzedazC.Add(new TabSprzedaz { NrUmowy = 1 });
 
                 var dane = dbContext.SprzedazC.AsNoTracking().
 
