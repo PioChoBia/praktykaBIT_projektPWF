@@ -26,7 +26,7 @@ namespace ProjektPWF
             Obsluga obsluga = new Obsluga();
             Wyswietl wyswietl = new Wyswietl();
 
-            obsluga.WpiszStartoweDoTabel();
+            //obsluga.WpiszStartoweDoTabel();
 
 
 

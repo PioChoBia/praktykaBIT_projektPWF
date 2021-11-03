@@ -11,7 +11,6 @@ namespace ProjektPWF.Models
     {
         [Key]
         public int Id { get; set; }
-        //public virtual TabSprzedaz Kierownik { get; set; }
 
         [StringLength(20)]
         public string ImieKierownika { get; set; }
