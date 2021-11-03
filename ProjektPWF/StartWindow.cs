@@ -26,42 +26,11 @@ namespace ProjektPWF
             InitializeComponent();
             Obsluga obsluga = new Obsluga();
             Wyswietl wyswietl = new Wyswietl();
-                          
+
             //obsluga.WpiszStartoweDoTabel();
-           
-            
 
+            dataGridView1.DataSource= wyswietl.BezFiltru();
 
-            //tabela SprzedazC
-            using (var dbContext = new ApplicationDbContext())
-            {
-                //dbContext.SprzedazC.Add(new TabSprzedaz { NrUmowy = 1 });
-
-                var dane = dbContext.SprzedazC.AsNoTracking().
-
-                    Select(s => new SprzedazViewModel
-                    {
-                        IdSprzedaz = s.IdSprzedaz,
-                        DataSprzedazy = s.DataSprzedazy,
-                        DataWystawienia = s.DataWystawienia,
-                        NrZlecenia = s.NrZlecenia,
-                        NrUmowy = s.NrUmowy,
-                        Tresc = s.Tresc,
-                        Netto = s.Netto,
-                        VatStawka = s.Vat.Stawka,
-                        Uwagi = s.Uwagi,
-                        DostarczanieSposob = s.Dostarczanie.Sposob,
-                        KierownikImieNazwisko = s.Kierownik.ImieKierownika + " " +
-                            s.Kierownik.NazwiskoKierownika,
-                        NabywcaNazwa = s.Nabywca.NazwaNabywcy,
-                        NabywcaAdres = s.Nabywca.AdresNabywcy,
-                        NabywcaNip = s.Nabywca.NIP,
-                        PlatnoscRodzaj = s.Platnosc.Rodzaj,
-                        StatusStatus = s.Status.Status,
-                        TerminTermin = s.Termin.Termin
-                    }).ToList();
-                this.dataGridView1.DataSource = dane;
-            }
 
 
         }
