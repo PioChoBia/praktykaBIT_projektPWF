@@ -9,6 +9,6 @@ namespace ProjektPWF.Models
     class VatViewModel
     {
         public int Id { get; set; }
-        public string Stawka { get; set; }
+        public string StawkaVat { get; set; }
     }
 }

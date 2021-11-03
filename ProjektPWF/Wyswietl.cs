@@ -18,6 +18,7 @@ namespace ProjektPWF
             {
                 //dbContext.SprzedazC.Add(new TabSprzedaz { NrUmowy = 1 });
 
+                
                 var dane = dbContext.SprzedazC.AsNoTracking().
 
                     Select(s => new SprzedazViewModel
@@ -29,7 +30,7 @@ namespace ProjektPWF
                         NrUmowy = s.NrUmowy,
                         Tresc = s.Tresc,
                         Netto = s.Netto,
-                        VatStawka = s.Vat.Stawka,
+                        VatStawka = s.Vat.StawkaVat,
                         Uwagi = s.Uwagi,
                         DostarczanieSposob = s.Dostarczanie.Sposob,
                         KierownikImieNazwisko = s.Kierownik.ImieKierownika + " " +

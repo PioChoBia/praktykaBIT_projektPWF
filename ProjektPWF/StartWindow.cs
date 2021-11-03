@@ -19,17 +19,18 @@ namespace ProjektPWF
 
 
 
-
-
         public StartWindow()
         {
             InitializeComponent();
+
             Obsluga obsluga = new Obsluga();
             Wyswietl wyswietl = new Wyswietl();
 
-            //obsluga.WpiszStartoweDoTabel();
+            obsluga.WpiszStartoweDoTabel();
 
-            dataGridView1.DataSource= wyswietl.BezFiltru();
+
+
+           dataGridView1.DataSource= wyswietl.BezFiltru();
 
 
 

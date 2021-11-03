@@ -148,15 +148,15 @@ namespace ProjektPWF
 
 
             //tabela VatC
-            TabVat vat1 = new TabVat { Stawka = "00" };
+            TabVat vat1 = new TabVat { StawkaVat = "00" };
             WpiszTabVat(vat1);
-            TabVat vat2 = new TabVat { Stawka = "ZW" };
+            TabVat vat2 = new TabVat { StawkaVat = "ZW" };
             WpiszTabVat(vat2);
-            TabVat vat3 = new TabVat { Stawka = "5 %" };
+            TabVat vat3 = new TabVat { StawkaVat = "5 %" };
             WpiszTabVat(vat3);
-            TabVat vat4 = new TabVat { Stawka = "8 %" };
+            TabVat vat4 = new TabVat { StawkaVat = "8 %" };
             WpiszTabVat(vat4);
-            TabVat vat5 = new TabVat { Stawka = "23 %" };
+            TabVat vat5 = new TabVat { StawkaVat = "23 %" };
             WpiszTabVat(vat5);
 
 

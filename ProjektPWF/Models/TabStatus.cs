@@ -5,7 +5,7 @@ namespace ProjektPWF.Models
     public class TabStatus
     {
         [Key]
-        public int IdStatus{ get; set; }
+        public int Id{ get; set; }
 
         [StringLength(50)]
         public string Status { get; set; }
