@@ -11,7 +11,7 @@ namespace ProjektPWF.Models
     public class TabSprzedaz
     {
         [Key]
-        public int IdSprzedaz { get; set; } 
+        public int Id { get; set; } 
 
         [Column(TypeName = "Date")]
         public DateTime DataSprzedazy { get; set; }

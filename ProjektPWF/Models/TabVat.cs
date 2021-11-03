@@ -8,6 +8,6 @@ namespace ProjektPWF.Models
         public int Id { get; set; }
 
         [StringLength(100)]
-        public string Stawka { get; set; }
+        public string StawkaVat { get; set; }
     }
 }
