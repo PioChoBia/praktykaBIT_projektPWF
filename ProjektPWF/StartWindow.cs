@@ -21,7 +21,8 @@ namespace ProjektPWF
 
         public StartWindow()
         {
-            InitializeComponent();
+            InitializeComponent();                     
+
             Obsluga obsluga = new Obsluga();
             Wyswietl wyswietl = new Wyswietl();
 
@@ -40,12 +41,13 @@ namespace ProjektPWF
 
         private void StartWindow_Load(object sender, EventArgs e)
         {
-
+            groupBoxDopisz.Visible = false;
         }
+
 
         private void buttonDopisz_Click(object sender, EventArgs e)
         {
-            //groupBoxDopisz.Visible = true;            
+            groupBoxDopisz.Visible = true;            
             
             dateTimePickerDopiszDataSprzedazy.CustomFormat = "d MMMM yyyy";
             dateTimePickerDopiszDataSprzedazy.Format = DateTimePickerFormat.Custom;
@@ -72,7 +74,7 @@ namespace ProjektPWF
             tabSprzedaz.NrUmowy = int.Parse( textBoxDopiszNrUmowy.Text );
 
 
-            //groupBoxDopisz.Visible = false;
+            groupBoxDopisz.Visible = false;
         }
 
         private void textBoxDopiszNrZlecenia_TextChanged(object sender, EventArgs e)
