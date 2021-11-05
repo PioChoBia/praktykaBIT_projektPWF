@@ -12,15 +12,11 @@ namespace ProjektPWF
 
         public List<SprzedazViewModel> BezFiltru()
         {
-
-
             using (var dbContext = new ApplicationDbContext())
             {
                 //dbContext.SprzedazC.Add(new TabSprzedaz { NrUmowy = 1 });
-
-                
+              
                 var dane = dbContext.SprzedazC.AsNoTracking().
-
                     Select(s => new SprzedazViewModel
                     {
                         IdSprzedaz = s.IdSprzedaz,
@@ -42,14 +38,24 @@ namespace ProjektPWF
                         StatusStatus = s.Status.Status,
                         TerminTermin = s.Termin.Termin
                     }).ToList();
-
                 return dane;
-                
             }
+        }
 
 
-
-
+        public List<VatViewModel> DopiszComboBoxVat()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                 var dane = dbContext.VatC.
+                    Select(s => new VatViewModel
+                    {
+                        Id = s.Id,
+                        StawkaVat = s.StawkaVat
+                        
+                    }).ToList();
+                return dane;
+            }
         }
 
 

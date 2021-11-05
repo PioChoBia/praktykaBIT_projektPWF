@@ -37,17 +37,21 @@ namespace ProjektPWF
             this.textBoxSzukaj = new System.Windows.Forms.TextBox();
             this.buttonDopisz = new System.Windows.Forms.Button();
             this.groupBoxDopisz = new System.Windows.Forms.GroupBox();
-            this.dateTimePickerDopiszDataSprzedazy = new System.Windows.Forms.DateTimePicker();
-            this.labelDopiszDataSprzedazy = new System.Windows.Forms.Label();
-            this.dateTimePickerDopiszDataWystawienia = new System.Windows.Forms.DateTimePicker();
-            this.labelDopiszDataWystawienia = new System.Windows.Forms.Label();
-            this.buttonDopiszZatwierdz = new System.Windows.Forms.Button();
-            this.labelDopiszNrZlecenia = new System.Windows.Forms.Label();
-            this.textBoxDopiszNrZlecenia = new System.Windows.Forms.TextBox();
+            this.comboBoxDopiszVatStawka = new System.Windows.Forms.ComboBox();
+            this.labelDopiszVatStawka = new System.Windows.Forms.Label();
+            this.textBoxDopiszNetto = new System.Windows.Forms.TextBox();
+            this.labelDopiszNetto = new System.Windows.Forms.Label();
+            this.richTextBoxDopiszTrescUmowy = new System.Windows.Forms.RichTextBox();
+            this.labelDopiszTrescUmowy = new System.Windows.Forms.Label();
             this.textBoxDopiszNrUmowy = new System.Windows.Forms.TextBox();
             this.labelDopiszNrUmowy = new System.Windows.Forms.Label();
-            this.labelDopiszTrescUmowy = new System.Windows.Forms.Label();
-            this.richTextBoxDopiszTrescUmowy = new System.Windows.Forms.RichTextBox();
+            this.textBoxDopiszNrZlecenia = new System.Windows.Forms.TextBox();
+            this.labelDopiszNrZlecenia = new System.Windows.Forms.Label();
+            this.buttonDopiszZatwierdz = new System.Windows.Forms.Button();
+            this.dateTimePickerDopiszDataWystawienia = new System.Windows.Forms.DateTimePicker();
+            this.labelDopiszDataWystawienia = new System.Windows.Forms.Label();
+            this.dateTimePickerDopiszDataSprzedazy = new System.Windows.Forms.DateTimePicker();
+            this.labelDopiszDataSprzedazy = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxSzukaj.SuspendLayout();
             this.groupBoxDopisz.SuspendLayout();
@@ -124,6 +128,10 @@ namespace ProjektPWF
             // 
             // groupBoxDopisz
             // 
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszVatStawka);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszVatStawka);
+            this.groupBoxDopisz.Controls.Add(this.textBoxDopiszNetto);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszNetto);
             this.groupBoxDopisz.Controls.Add(this.richTextBoxDopiszTrescUmowy);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszTrescUmowy);
             this.groupBoxDopisz.Controls.Add(this.textBoxDopiszNrUmowy);
@@ -142,67 +150,56 @@ namespace ProjektPWF
             this.groupBoxDopisz.TabStop = false;
             this.groupBoxDopisz.Text = "wpisz poprawne wartości i kliknij zatwierdź";
             // 
-            // dateTimePickerDopiszDataSprzedazy
+            // comboBoxDopiszVatStawka
             // 
-            this.dateTimePickerDopiszDataSprzedazy.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePickerDopiszDataSprzedazy.Location = new System.Drawing.Point(107, 25);
-            this.dateTimePickerDopiszDataSprzedazy.Name = "dateTimePickerDopiszDataSprzedazy";
-            this.dateTimePickerDopiszDataSprzedazy.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePickerDopiszDataSprzedazy.TabIndex = 1;
+            this.comboBoxDopiszVatStawka.FormattingEnabled = true;
+            this.comboBoxDopiszVatStawka.Location = new System.Drawing.Point(374, 58);
+            this.comboBoxDopiszVatStawka.Name = "comboBoxDopiszVatStawka";
+            this.comboBoxDopiszVatStawka.Size = new System.Drawing.Size(317, 21);
+            this.comboBoxDopiszVatStawka.TabIndex = 17;
+            this.comboBoxDopiszVatStawka.SelectedIndexChanged += new System.EventHandler(this.comboBoxDopiszVatStawka_SelectedIndexChanged);
             // 
-            // labelDopiszDataSprzedazy
+            // labelDopiszVatStawka
             // 
-            this.labelDopiszDataSprzedazy.AutoSize = true;
-            this.labelDopiszDataSprzedazy.Location = new System.Drawing.Point(12, 25);
-            this.labelDopiszDataSprzedazy.Name = "labelDopiszDataSprzedazy";
-            this.labelDopiszDataSprzedazy.Size = new System.Drawing.Size(78, 13);
-            this.labelDopiszDataSprzedazy.TabIndex = 0;
-            this.labelDopiszDataSprzedazy.Text = "data sprzedaży";
+            this.labelDopiszVatStawka.AutoSize = true;
+            this.labelDopiszVatStawka.Location = new System.Drawing.Point(279, 58);
+            this.labelDopiszVatStawka.Name = "labelDopiszVatStawka";
+            this.labelDopiszVatStawka.Size = new System.Drawing.Size(60, 13);
+            this.labelDopiszVatStawka.TabIndex = 16;
+            this.labelDopiszVatStawka.Text = "stawka Vat";
             // 
-            // dateTimePickerDopiszDataWystawienia
+            // textBoxDopiszNetto
             // 
-            this.dateTimePickerDopiszDataWystawienia.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateTimePickerDopiszDataWystawienia.Location = new System.Drawing.Point(106, 51);
-            this.dateTimePickerDopiszDataWystawienia.Name = "dateTimePickerDopiszDataWystawienia";
-            this.dateTimePickerDopiszDataWystawienia.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePickerDopiszDataWystawienia.TabIndex = 3;
+            this.textBoxDopiszNetto.Location = new System.Drawing.Point(374, 25);
+            this.textBoxDopiszNetto.Name = "textBoxDopiszNetto";
+            this.textBoxDopiszNetto.Size = new System.Drawing.Size(65, 20);
+            this.textBoxDopiszNetto.TabIndex = 15;
             // 
-            // labelDopiszDataWystawienia
+            // labelDopiszNetto
             // 
-            this.labelDopiszDataWystawienia.AutoSize = true;
-            this.labelDopiszDataWystawienia.Location = new System.Drawing.Point(12, 51);
-            this.labelDopiszDataWystawienia.Name = "labelDopiszDataWystawienia";
-            this.labelDopiszDataWystawienia.Size = new System.Drawing.Size(88, 13);
-            this.labelDopiszDataWystawienia.TabIndex = 2;
-            this.labelDopiszDataWystawienia.Text = "data wystawienia";
+            this.labelDopiszNetto.AutoSize = true;
+            this.labelDopiszNetto.Location = new System.Drawing.Point(279, 29);
+            this.labelDopiszNetto.Name = "labelDopiszNetto";
+            this.labelDopiszNetto.Size = new System.Drawing.Size(71, 13);
+            this.labelDopiszNetto.TabIndex = 14;
+            this.labelDopiszNetto.Text = "wartość netto";
             // 
-            // buttonDopiszZatwierdz
+            // richTextBoxDopiszTrescUmowy
             // 
-            this.buttonDopiszZatwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDopiszZatwierdz.Location = new System.Drawing.Point(1016, 200);
-            this.buttonDopiszZatwierdz.Name = "buttonDopiszZatwierdz";
-            this.buttonDopiszZatwierdz.Size = new System.Drawing.Size(104, 32);
-            this.buttonDopiszZatwierdz.TabIndex = 7;
-            this.buttonDopiszZatwierdz.Text = "zatwierdź";
-            this.buttonDopiszZatwierdz.UseVisualStyleBackColor = true;
-            this.buttonDopiszZatwierdz.Click += new System.EventHandler(this.buttonDopiszZatwierdz_Click);
+            this.richTextBoxDopiszTrescUmowy.Location = new System.Drawing.Point(106, 147);
+            this.richTextBoxDopiszTrescUmowy.Name = "richTextBoxDopiszTrescUmowy";
+            this.richTextBoxDopiszTrescUmowy.Size = new System.Drawing.Size(892, 98);
+            this.richTextBoxDopiszTrescUmowy.TabIndex = 13;
+            this.richTextBoxDopiszTrescUmowy.Text = "";
             // 
-            // labelDopiszNrZlecenia
+            // labelDopiszTrescUmowy
             // 
-            this.labelDopiszNrZlecenia.AutoSize = true;
-            this.labelDopiszNrZlecenia.Location = new System.Drawing.Point(12, 93);
-            this.labelDopiszNrZlecenia.Name = "labelDopiszNrZlecenia";
-            this.labelDopiszNrZlecenia.Size = new System.Drawing.Size(78, 13);
-            this.labelDopiszNrZlecenia.TabIndex = 8;
-            this.labelDopiszNrZlecenia.Text = "numer zlecenia";
-            // 
-            // textBoxDopiszNrZlecenia
-            // 
-            this.textBoxDopiszNrZlecenia.Location = new System.Drawing.Point(107, 89);
-            this.textBoxDopiszNrZlecenia.Name = "textBoxDopiszNrZlecenia";
-            this.textBoxDopiszNrZlecenia.Size = new System.Drawing.Size(65, 20);
-            this.textBoxDopiszNrZlecenia.TabIndex = 9;
-            this.textBoxDopiszNrZlecenia.TextChanged += new System.EventHandler(this.textBoxDopiszNrZlecenia_TextChanged);
+            this.labelDopiszTrescUmowy.AutoSize = true;
+            this.labelDopiszTrescUmowy.Location = new System.Drawing.Point(12, 149);
+            this.labelDopiszTrescUmowy.Name = "labelDopiszTrescUmowy";
+            this.labelDopiszTrescUmowy.Size = new System.Drawing.Size(66, 13);
+            this.labelDopiszTrescUmowy.TabIndex = 12;
+            this.labelDopiszTrescUmowy.Text = "treść umowy";
             // 
             // textBoxDopiszNrUmowy
             // 
@@ -221,22 +218,67 @@ namespace ProjektPWF
             this.labelDopiszNrUmowy.TabIndex = 10;
             this.labelDopiszNrUmowy.Text = "numer umowy";
             // 
-            // labelDopiszTrescUmowy
+            // textBoxDopiszNrZlecenia
             // 
-            this.labelDopiszTrescUmowy.AutoSize = true;
-            this.labelDopiszTrescUmowy.Location = new System.Drawing.Point(12, 149);
-            this.labelDopiszTrescUmowy.Name = "labelDopiszTrescUmowy";
-            this.labelDopiszTrescUmowy.Size = new System.Drawing.Size(66, 13);
-            this.labelDopiszTrescUmowy.TabIndex = 12;
-            this.labelDopiszTrescUmowy.Text = "treść umowy";
+            this.textBoxDopiszNrZlecenia.Location = new System.Drawing.Point(107, 89);
+            this.textBoxDopiszNrZlecenia.Name = "textBoxDopiszNrZlecenia";
+            this.textBoxDopiszNrZlecenia.Size = new System.Drawing.Size(65, 20);
+            this.textBoxDopiszNrZlecenia.TabIndex = 9;
+            this.textBoxDopiszNrZlecenia.TextChanged += new System.EventHandler(this.textBoxDopiszNrZlecenia_TextChanged);
             // 
-            // richTextBoxDopiszTrescUmowy
+            // labelDopiszNrZlecenia
             // 
-            this.richTextBoxDopiszTrescUmowy.Location = new System.Drawing.Point(106, 147);
-            this.richTextBoxDopiszTrescUmowy.Name = "richTextBoxDopiszTrescUmowy";
-            this.richTextBoxDopiszTrescUmowy.Size = new System.Drawing.Size(892, 98);
-            this.richTextBoxDopiszTrescUmowy.TabIndex = 13;
-            this.richTextBoxDopiszTrescUmowy.Text = "";
+            this.labelDopiszNrZlecenia.AutoSize = true;
+            this.labelDopiszNrZlecenia.Location = new System.Drawing.Point(12, 93);
+            this.labelDopiszNrZlecenia.Name = "labelDopiszNrZlecenia";
+            this.labelDopiszNrZlecenia.Size = new System.Drawing.Size(78, 13);
+            this.labelDopiszNrZlecenia.TabIndex = 8;
+            this.labelDopiszNrZlecenia.Text = "numer zlecenia";
+            // 
+            // buttonDopiszZatwierdz
+            // 
+            this.buttonDopiszZatwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDopiszZatwierdz.Location = new System.Drawing.Point(1016, 200);
+            this.buttonDopiszZatwierdz.Name = "buttonDopiszZatwierdz";
+            this.buttonDopiszZatwierdz.Size = new System.Drawing.Size(104, 32);
+            this.buttonDopiszZatwierdz.TabIndex = 7;
+            this.buttonDopiszZatwierdz.Text = "zatwierdź";
+            this.buttonDopiszZatwierdz.UseVisualStyleBackColor = true;
+            this.buttonDopiszZatwierdz.Click += new System.EventHandler(this.buttonDopiszZatwierdz_Click);
+            // 
+            // dateTimePickerDopiszDataWystawienia
+            // 
+            this.dateTimePickerDopiszDataWystawienia.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerDopiszDataWystawienia.Location = new System.Drawing.Point(106, 51);
+            this.dateTimePickerDopiszDataWystawienia.Name = "dateTimePickerDopiszDataWystawienia";
+            this.dateTimePickerDopiszDataWystawienia.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePickerDopiszDataWystawienia.TabIndex = 3;
+            // 
+            // labelDopiszDataWystawienia
+            // 
+            this.labelDopiszDataWystawienia.AutoSize = true;
+            this.labelDopiszDataWystawienia.Location = new System.Drawing.Point(12, 51);
+            this.labelDopiszDataWystawienia.Name = "labelDopiszDataWystawienia";
+            this.labelDopiszDataWystawienia.Size = new System.Drawing.Size(88, 13);
+            this.labelDopiszDataWystawienia.TabIndex = 2;
+            this.labelDopiszDataWystawienia.Text = "data wystawienia";
+            // 
+            // dateTimePickerDopiszDataSprzedazy
+            // 
+            this.dateTimePickerDopiszDataSprzedazy.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerDopiszDataSprzedazy.Location = new System.Drawing.Point(107, 25);
+            this.dateTimePickerDopiszDataSprzedazy.Name = "dateTimePickerDopiszDataSprzedazy";
+            this.dateTimePickerDopiszDataSprzedazy.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePickerDopiszDataSprzedazy.TabIndex = 1;
+            // 
+            // labelDopiszDataSprzedazy
+            // 
+            this.labelDopiszDataSprzedazy.AutoSize = true;
+            this.labelDopiszDataSprzedazy.Location = new System.Drawing.Point(12, 25);
+            this.labelDopiszDataSprzedazy.Name = "labelDopiszDataSprzedazy";
+            this.labelDopiszDataSprzedazy.Size = new System.Drawing.Size(78, 13);
+            this.labelDopiszDataSprzedazy.TabIndex = 0;
+            this.labelDopiszDataSprzedazy.Text = "data sprzedaży";
             // 
             // StartWindow
             // 
@@ -282,6 +324,10 @@ namespace ProjektPWF
         private System.Windows.Forms.Label labelDopiszNrUmowy;
         private System.Windows.Forms.RichTextBox richTextBoxDopiszTrescUmowy;
         private System.Windows.Forms.Label labelDopiszTrescUmowy;
+        private System.Windows.Forms.ComboBox comboBoxDopiszVatStawka;
+        private System.Windows.Forms.Label labelDopiszVatStawka;
+        private System.Windows.Forms.TextBox textBoxDopiszNetto;
+        private System.Windows.Forms.Label labelDopiszNetto;
     }
 }
 

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="DoKontrolki.cs" />
     <Compile Include="Info.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DostarczanieViewModel .cs" />
