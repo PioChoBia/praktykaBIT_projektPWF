@@ -14,7 +14,6 @@ namespace ProjektPWF
 {
     public partial class StartWindow : Form
     {
-        private const string V = "ala";
         Obsluga obsluga = new Obsluga();
         Wyswietl wyswietl = new Wyswietl();
 
@@ -50,81 +49,9 @@ namespace ProjektPWF
             richTextBoxDopiszTrescUmowy.Text = "wpisz treść umowy";
 
 
-
-            //List<string> l1= new List<string>() { "Ala", "Bela", "Cela" };
-            //comboBoxDopiszVatStawka.DataSource = l1;
-
-
-
-            
-            List<DoKontrolki> listTabVat;
-
-            using (var dbContext = new ApplicationDbContext())
-            {
-                listTabVat = dbContext.VatC.AsNoTracking<TabVat>().Select(s => new DoKontrolki { NazwaPola = s.StawkaVat }).ToList();
-                comboBoxDopiszVatStawka.DataSource = listTabVat;
-            }
-            //comboBoxDopiszVatStawka.DataSource = listTabVat;
-
-
-
-                //AsNoTracking<Student>().ToList<Student>();
-
-            //               dbContext.VatC.Add(t);
-            //               dbContext.SaveChanges();
-
-
-
-
-
-            /*
-                            var dane = dbContext.SprzedazC.AsNoTracking().
-                    Select(s => new SprzedazViewModel
-                    {
-                        IdSprzedaz = s.IdSprzedaz,
-                        DataSprzedazy = s.DataSprzedazy,
-                        DataWystawienia = s.DataWystawienia,
-                        NrZlecenia = s.NrZlecenia,
-                        NrUmowy = s.NrUmowy,
-                        Tresc = s.Tresc,
-                        Netto = s.Netto,
-                        VatStawka = s.Vat.StawkaVat,
-                        Uwagi = s.Uwagi,
-                        DostarczanieSposob = s.Dostarczanie.Sposob,
-                        KierownikImieNazwisko = s.Kierownik.ImieKierownika + " " +
-                            s.Kierownik.NazwiskoKierownika,
-                        NabywcaNazwa = s.Nabywca.NazwaNabywcy,
-                        NabywcaAdres = s.Nabywca.AdresNabywcy,
-                        NabywcaNip = s.Nabywca.NIP,
-                        PlatnoscRodzaj = s.Platnosc.Rodzaj,
-                        StatusStatus = s.Status.Status,
-                        TerminTermin = s.Termin.Termin
-                    }).ToList();
-            */
-
-            /*
-                    public void WpiszTabVat(TabVat t)
-            {
-            using (var dbContext = new ApplicationDbContext())
-            {
-                dbContext.VatC.Add(t);
-                dbContext.SaveChanges();
-            }
-            }
-
-            foreach (var item in collection)
-            {
-
-            }
-
-            */
-
-
-
-
-
-            //comboBoxDopiszVatStawka.DataSource = l1;            
-            //wyswietl.DopiszComboBoxVat();
+            comboBoxDopiszVatStawka.DataSource = wyswietl.DopiszComboBoxVat();
+            comboBoxDopiszVatStawka.DisplayMember = "StawkaVat";
+            comboBoxDopiszVatStawka.ValueMember = "Id";
 
 
         }
@@ -143,7 +70,9 @@ namespace ProjektPWF
             //tabSprzedaz.Netto =
             //tabSprzedaz.Uwagi=
 
-            //tabSprzedaz.IdVat=
+            tabSprzedaz.IdVat = ( (VatViewModel)comboBoxDopiszVatStawka.SelectedItem ).Id;
+
+            tabSprzedaz = tabSprzedaz;
 
 
 
@@ -152,8 +81,7 @@ namespace ProjektPWF
 
         private void textBoxDopiszNrZlecenia_TextChanged(object sender, EventArgs e)
         {
-            int parseValue;
-            if (!int.TryParse(textBoxDopiszNrZlecenia.Text, out parseValue))
+            if (!int.TryParse(textBoxDopiszNrZlecenia.Text, out _))
             {
                 textBoxDopiszNrZlecenia.Text = "0";
             }
@@ -161,8 +89,7 @@ namespace ProjektPWF
 
         private void textBoxDopiszNrUmowy_TextChanged(object sender, EventArgs e)
         {
-            int parseValue;
-            if (!int.TryParse(textBoxDopiszNrUmowy.Text, out parseValue))
+            if (!int.TryParse(textBoxDopiszNrUmowy.Text, out _))
             {
                 textBoxDopiszNrUmowy.Text = "0";
             }

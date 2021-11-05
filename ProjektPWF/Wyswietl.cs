@@ -51,8 +51,7 @@ namespace ProjektPWF
                     Select(s => new VatViewModel
                     {
                         Id = s.Id,
-                        StawkaVat = s.StawkaVat
-                        
+                        StawkaVat = s.StawkaVat                       
                     }).ToList();
                 return dane;
             }
