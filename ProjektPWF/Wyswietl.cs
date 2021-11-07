@@ -43,7 +43,7 @@ namespace ProjektPWF
         }
 
 
-        public List<VatViewModel> DopiszComboBoxVat()
+        public List<VatViewModel> ComboBoxDopiszVat()
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -57,7 +57,19 @@ namespace ProjektPWF
             }
         }
 
-
+        public List<DostarczanieViewModel> ComboBoxDopiszDostarczanie()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.DostarczanieC.
+                   Select(s => new DostarczanieViewModel
+                   {
+                       Id = s.Id,
+                       Sposob = s.Sposob
+                   }).ToList();
+                return dane;
+            }
+        }
 
 
     }

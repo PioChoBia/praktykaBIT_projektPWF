@@ -46,12 +46,19 @@ namespace ProjektPWF
 
             textBoxDopiszNrZlecenia.Text = "0";
             textBoxDopiszNrUmowy.Text = "0";
-            richTextBoxDopiszTrescUmowy.Text = "wpisz treść umowy";
+            richTextBoxDopiszTresc.Text = "";
+            textBoxDopiszNetto.Text = "0";
 
-
-            comboBoxDopiszVatStawka.DataSource = wyswietl.DopiszComboBoxVat();
+            comboBoxDopiszVatStawka.DataSource = wyswietl.ComboBoxDopiszVat();
             comboBoxDopiszVatStawka.DisplayMember = "StawkaVat";
             comboBoxDopiszVatStawka.ValueMember = "Id";
+
+            richTextBoxDopiszUwagi.Text = "";
+
+            comboBoxDopiszDostarczanie.DataSource = wyswietl.ComboBoxDopiszDostarczanie();
+            comboBoxDopiszDostarczanie.DisplayMember = "Sposob";
+            comboBoxDopiszDostarczanie.ValueMember = "Id";
+
 
 
         }
@@ -59,22 +66,32 @@ namespace ProjektPWF
         private void buttonDopiszZatwierdz_Click(object sender, EventArgs e)
         {
             TabSprzedaz tabSprzedaz = new TabSprzedaz();
-            Obsluga obsluga1 = new Obsluga();
 
             tabSprzedaz.DataSprzedazy = dateTimePickerDopiszDataSprzedazy.Value;
             tabSprzedaz.DataWystawienia = dateTimePickerDopiszDataWystawienia.Value;
 
             tabSprzedaz.NrZlecenia = int.Parse(textBoxDopiszNrZlecenia.Text);
             tabSprzedaz.NrUmowy = int.Parse(textBoxDopiszNrUmowy.Text);
+            tabSprzedaz.Tresc = richTextBoxDopiszTresc.Text;
 
-            //tabSprzedaz.Netto =
-            //tabSprzedaz.Uwagi=
+            tabSprzedaz.Netto = double.Parse(textBoxDopiszNetto.Text);
 
             tabSprzedaz.IdVat = ( (VatViewModel)comboBoxDopiszVatStawka.SelectedItem ).Id;
 
-            tabSprzedaz = tabSprzedaz;
+            tabSprzedaz.Uwagi = richTextBoxDopiszUwagi.Text;
+
+            tabSprzedaz.IdDostarczanie= ((DostarczanieViewModel)comboBoxDopiszDostarczanie.SelectedItem).Id;
+
+            //do wykonania
+            tabSprzedaz.IdKierownik = 1;
+            tabSprzedaz.IdNabywca = 1;
+            tabSprzedaz.IdPlatnosc = 1;
+            tabSprzedaz.IdStatus = 1;
+            tabSprzedaz.IdTermin = 1;
 
 
+            obsluga.WpiszTabSprzedaz(tabSprzedaz);
+            dataGridView1.DataSource = wyswietl.BezFiltru();
 
             groupBoxDopisz.Visible = false;
         }
@@ -95,9 +112,12 @@ namespace ProjektPWF
             }
         }
 
-        private void comboBoxDopiszVatStawka_SelectedIndexChanged(object sender, EventArgs e)
+        private void textBoxDopiszNetto_TextChanged(object sender, EventArgs e)
         {
-
+            if (!double.TryParse(textBoxDopiszNetto.Text, out _))
+            {
+                textBoxDopiszNetto.Text = "0";
+            }
         }
     }
 }

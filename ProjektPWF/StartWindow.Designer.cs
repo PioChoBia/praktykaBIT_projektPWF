@@ -37,12 +37,16 @@ namespace ProjektPWF
             this.textBoxSzukaj = new System.Windows.Forms.TextBox();
             this.buttonDopisz = new System.Windows.Forms.Button();
             this.groupBoxDopisz = new System.Windows.Forms.GroupBox();
+            this.comboBoxDopiszDostarczanie = new System.Windows.Forms.ComboBox();
+            this.labelDopiszDostarczanie = new System.Windows.Forms.Label();
+            this.richTextBoxDopiszUwagi = new System.Windows.Forms.RichTextBox();
+            this.labelDopiszUwagi = new System.Windows.Forms.Label();
             this.comboBoxDopiszVatStawka = new System.Windows.Forms.ComboBox();
             this.labelDopiszVatStawka = new System.Windows.Forms.Label();
             this.textBoxDopiszNetto = new System.Windows.Forms.TextBox();
             this.labelDopiszNetto = new System.Windows.Forms.Label();
-            this.richTextBoxDopiszTrescUmowy = new System.Windows.Forms.RichTextBox();
-            this.labelDopiszTrescUmowy = new System.Windows.Forms.Label();
+            this.richTextBoxDopiszTresc = new System.Windows.Forms.RichTextBox();
+            this.labelDopiszTresc = new System.Windows.Forms.Label();
             this.textBoxDopiszNrUmowy = new System.Windows.Forms.TextBox();
             this.labelDopiszNrUmowy = new System.Windows.Forms.Label();
             this.textBoxDopiszNrZlecenia = new System.Windows.Forms.TextBox();
@@ -128,12 +132,16 @@ namespace ProjektPWF
             // 
             // groupBoxDopisz
             // 
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszDostarczanie);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszDostarczanie);
+            this.groupBoxDopisz.Controls.Add(this.richTextBoxDopiszUwagi);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszUwagi);
             this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszVatStawka);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszVatStawka);
             this.groupBoxDopisz.Controls.Add(this.textBoxDopiszNetto);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszNetto);
-            this.groupBoxDopisz.Controls.Add(this.richTextBoxDopiszTrescUmowy);
-            this.groupBoxDopisz.Controls.Add(this.labelDopiszTrescUmowy);
+            this.groupBoxDopisz.Controls.Add(this.richTextBoxDopiszTresc);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszTresc);
             this.groupBoxDopisz.Controls.Add(this.textBoxDopiszNrUmowy);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszNrUmowy);
             this.groupBoxDopisz.Controls.Add(this.textBoxDopiszNrZlecenia);
@@ -150,19 +158,52 @@ namespace ProjektPWF
             this.groupBoxDopisz.TabStop = false;
             this.groupBoxDopisz.Text = "wpisz poprawne wartości i kliknij zatwierdź";
             // 
+            // comboBoxDopiszDostarczanie
+            // 
+            this.comboBoxDopiszDostarczanie.FormattingEnabled = true;
+            this.comboBoxDopiszDostarczanie.Location = new System.Drawing.Point(582, 22);
+            this.comboBoxDopiszDostarczanie.Name = "comboBoxDopiszDostarczanie";
+            this.comboBoxDopiszDostarczanie.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxDopiszDostarczanie.TabIndex = 21;
+            // 
+            // labelDopiszDostarczanie
+            // 
+            this.labelDopiszDostarczanie.AutoSize = true;
+            this.labelDopiszDostarczanie.Location = new System.Drawing.Point(463, 26);
+            this.labelDopiszDostarczanie.Name = "labelDopiszDostarczanie";
+            this.labelDopiszDostarczanie.Size = new System.Drawing.Size(104, 13);
+            this.labelDopiszDostarczanie.TabIndex = 20;
+            this.labelDopiszDostarczanie.Text = "sposób dostarczania";
+            // 
+            // richTextBoxDopiszUwagi
+            // 
+            this.richTextBoxDopiszUwagi.Location = new System.Drawing.Point(374, 93);
+            this.richTextBoxDopiszUwagi.Name = "richTextBoxDopiszUwagi";
+            this.richTextBoxDopiszUwagi.Size = new System.Drawing.Size(624, 39);
+            this.richTextBoxDopiszUwagi.TabIndex = 19;
+            this.richTextBoxDopiszUwagi.Text = "";
+            // 
+            // labelDopiszUwagi
+            // 
+            this.labelDopiszUwagi.AutoSize = true;
+            this.labelDopiszUwagi.Location = new System.Drawing.Point(291, 92);
+            this.labelDopiszUwagi.Name = "labelDopiszUwagi";
+            this.labelDopiszUwagi.Size = new System.Drawing.Size(35, 13);
+            this.labelDopiszUwagi.TabIndex = 18;
+            this.labelDopiszUwagi.Text = "uwagi";
+            // 
             // comboBoxDopiszVatStawka
             // 
             this.comboBoxDopiszVatStawka.FormattingEnabled = true;
             this.comboBoxDopiszVatStawka.Location = new System.Drawing.Point(374, 58);
             this.comboBoxDopiszVatStawka.Name = "comboBoxDopiszVatStawka";
-            this.comboBoxDopiszVatStawka.Size = new System.Drawing.Size(317, 21);
+            this.comboBoxDopiszVatStawka.Size = new System.Drawing.Size(65, 21);
             this.comboBoxDopiszVatStawka.TabIndex = 17;
-            this.comboBoxDopiszVatStawka.SelectedIndexChanged += new System.EventHandler(this.comboBoxDopiszVatStawka_SelectedIndexChanged);
             // 
             // labelDopiszVatStawka
             // 
             this.labelDopiszVatStawka.AutoSize = true;
-            this.labelDopiszVatStawka.Location = new System.Drawing.Point(279, 58);
+            this.labelDopiszVatStawka.Location = new System.Drawing.Point(291, 61);
             this.labelDopiszVatStawka.Name = "labelDopiszVatStawka";
             this.labelDopiszVatStawka.Size = new System.Drawing.Size(60, 13);
             this.labelDopiszVatStawka.TabIndex = 16;
@@ -174,32 +215,33 @@ namespace ProjektPWF
             this.textBoxDopiszNetto.Name = "textBoxDopiszNetto";
             this.textBoxDopiszNetto.Size = new System.Drawing.Size(65, 20);
             this.textBoxDopiszNetto.TabIndex = 15;
+            this.textBoxDopiszNetto.TextChanged += new System.EventHandler(this.textBoxDopiszNetto_TextChanged);
             // 
             // labelDopiszNetto
             // 
             this.labelDopiszNetto.AutoSize = true;
-            this.labelDopiszNetto.Location = new System.Drawing.Point(279, 29);
+            this.labelDopiszNetto.Location = new System.Drawing.Point(291, 32);
             this.labelDopiszNetto.Name = "labelDopiszNetto";
             this.labelDopiszNetto.Size = new System.Drawing.Size(71, 13);
             this.labelDopiszNetto.TabIndex = 14;
             this.labelDopiszNetto.Text = "wartość netto";
             // 
-            // richTextBoxDopiszTrescUmowy
+            // richTextBoxDopiszTresc
             // 
-            this.richTextBoxDopiszTrescUmowy.Location = new System.Drawing.Point(106, 147);
-            this.richTextBoxDopiszTrescUmowy.Name = "richTextBoxDopiszTrescUmowy";
-            this.richTextBoxDopiszTrescUmowy.Size = new System.Drawing.Size(892, 98);
-            this.richTextBoxDopiszTrescUmowy.TabIndex = 13;
-            this.richTextBoxDopiszTrescUmowy.Text = "";
+            this.richTextBoxDopiszTresc.Location = new System.Drawing.Point(106, 147);
+            this.richTextBoxDopiszTresc.Name = "richTextBoxDopiszTresc";
+            this.richTextBoxDopiszTresc.Size = new System.Drawing.Size(892, 98);
+            this.richTextBoxDopiszTresc.TabIndex = 13;
+            this.richTextBoxDopiszTresc.Text = "";
             // 
-            // labelDopiszTrescUmowy
+            // labelDopiszTresc
             // 
-            this.labelDopiszTrescUmowy.AutoSize = true;
-            this.labelDopiszTrescUmowy.Location = new System.Drawing.Point(12, 149);
-            this.labelDopiszTrescUmowy.Name = "labelDopiszTrescUmowy";
-            this.labelDopiszTrescUmowy.Size = new System.Drawing.Size(66, 13);
-            this.labelDopiszTrescUmowy.TabIndex = 12;
-            this.labelDopiszTrescUmowy.Text = "treść umowy";
+            this.labelDopiszTresc.AutoSize = true;
+            this.labelDopiszTresc.Location = new System.Drawing.Point(12, 149);
+            this.labelDopiszTresc.Name = "labelDopiszTresc";
+            this.labelDopiszTresc.Size = new System.Drawing.Size(66, 13);
+            this.labelDopiszTresc.TabIndex = 12;
+            this.labelDopiszTresc.Text = "treść umowy";
             // 
             // textBoxDopiszNrUmowy
             // 
@@ -322,12 +364,16 @@ namespace ProjektPWF
         private System.Windows.Forms.Label labelDopiszNrZlecenia;
         private System.Windows.Forms.TextBox textBoxDopiszNrUmowy;
         private System.Windows.Forms.Label labelDopiszNrUmowy;
-        private System.Windows.Forms.RichTextBox richTextBoxDopiszTrescUmowy;
-        private System.Windows.Forms.Label labelDopiszTrescUmowy;
+        private System.Windows.Forms.RichTextBox richTextBoxDopiszTresc;
+        private System.Windows.Forms.Label labelDopiszTresc;
         private System.Windows.Forms.ComboBox comboBoxDopiszVatStawka;
         private System.Windows.Forms.Label labelDopiszVatStawka;
         private System.Windows.Forms.TextBox textBoxDopiszNetto;
         private System.Windows.Forms.Label labelDopiszNetto;
+        private System.Windows.Forms.ComboBox comboBoxDopiszDostarczanie;
+        private System.Windows.Forms.Label labelDopiszDostarczanie;
+        private System.Windows.Forms.RichTextBox richTextBoxDopiszUwagi;
+        private System.Windows.Forms.Label labelDopiszUwagi;
     }
 }
 
