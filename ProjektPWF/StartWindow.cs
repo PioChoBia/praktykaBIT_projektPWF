@@ -59,8 +59,25 @@ namespace ProjektPWF
             comboBoxDopiszDostarczanie.DisplayMember = "Sposob";
             comboBoxDopiszDostarczanie.ValueMember = "Id";
 
+            comboBoxDopiszKierownik.DataSource = wyswietl.ComboBoxDopiszKierownik();
+            comboBoxDopiszKierownik.DisplayMember = "NazwiskoKierownika"; // jak wyświetlić imię i nazwisko ? "Imiekierownika+" "+"NazwiskoKierownika" nie idzie!!
+            comboBoxDopiszKierownik.ValueMember = "Id";
 
+            comboBoxDopiszNabywca.DataSource = wyswietl.ComboBoxDopiszNabywca();
+            comboBoxDopiszNabywca.DisplayMember = "NazwaNabywcy"; 
+            comboBoxDopiszNabywca.ValueMember = "Id";
 
+            comboBoxDopiszPlatnosc.DataSource = wyswietl.ComboBoxDopiszPlatnosc();
+            comboBoxDopiszPlatnosc.DisplayMember = "Rodzaj";
+            comboBoxDopiszPlatnosc.ValueMember = "Id";
+
+            comboBoxDopiszStatus.DataSource = wyswietl.ComboBoxDopiszStatus();
+            comboBoxDopiszStatus.DisplayMember = "Status";
+            comboBoxDopiszStatus.ValueMember = "Id";
+
+            comboBoxDopiszTermin.DataSource = wyswietl.ComboBoxDopiszTermin();
+            comboBoxDopiszTermin.DisplayMember = "Termin";
+            comboBoxDopiszTermin.ValueMember = "Id";
         }
 
         private void buttonDopiszZatwierdz_Click(object sender, EventArgs e)
@@ -82,13 +99,15 @@ namespace ProjektPWF
 
             tabSprzedaz.IdDostarczanie= ((DostarczanieViewModel)comboBoxDopiszDostarczanie.SelectedItem).Id;
 
-            //do wykonania
-            tabSprzedaz.IdKierownik = 1;
-            tabSprzedaz.IdNabywca = 1;
-            tabSprzedaz.IdPlatnosc = 1;
-            tabSprzedaz.IdStatus = 1;
-            tabSprzedaz.IdTermin = 1;
+            tabSprzedaz.IdKierownik = ((KierownikViewModel)comboBoxDopiszKierownik.SelectedItem).Id;
 
+            tabSprzedaz.IdNabywca = ((NabywcaViewModel)comboBoxDopiszNabywca.SelectedItem).Id;
+
+            tabSprzedaz.IdPlatnosc = ((PlatnoscViewModel)comboBoxDopiszPlatnosc.SelectedItem).Id;
+
+            tabSprzedaz.IdStatus = ((StatusViewModel)comboBoxDopiszStatus.SelectedItem).Id;
+
+            tabSprzedaz.IdTermin = ((TerminViewModel)comboBoxDopiszTermin.SelectedItem).Id;
 
             obsluga.WpiszTabSprzedaz(tabSprzedaz);
             dataGridView1.DataSource = wyswietl.BezFiltru();
@@ -119,5 +138,9 @@ namespace ProjektPWF
                 textBoxDopiszNetto.Text = "0";
             }
         }
+
+
+
+
     }
 }

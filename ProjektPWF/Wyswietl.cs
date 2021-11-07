@@ -71,6 +71,79 @@ namespace ProjektPWF
             }
         }
 
+        public List<KierownikViewModel> ComboBoxDopiszKierownik()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.KierownikC.
+                   Select(s => new KierownikViewModel
+                   {
+                       Id = s.Id,
+                       NazwiskoKierownika = s.NazwiskoKierownika,
+                       ImieKierownika=s.ImieKierownika
+                   }).ToList();
+                return dane;
+            }
+        }
+
+        public List<NabywcaViewModel> ComboBoxDopiszNabywca()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.NabywcaC.
+                   Select(s => new NabywcaViewModel
+                   {
+                       Id = s.Id,
+                       NazwaNabywcy = s.NazwaNabywcy,
+                       AdresNabywcy = s.AdresNabywcy,
+                       NIP=s.NIP
+                   }).ToList();
+                return dane;
+            }
+        }
+
+        public List<PlatnoscViewModel> ComboBoxDopiszPlatnosc()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.PlatnoscC.
+                   Select(s => new PlatnoscViewModel
+                   {
+                       Id = s.Id,
+                       Rodzaj = s.Rodzaj,
+                   }).ToList();
+                return dane;
+            }
+        }
+
+        public List<StatusViewModel> ComboBoxDopiszStatus()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.StatusC.
+                   Select(s => new StatusViewModel
+                   {
+                       Id = s.Id,
+                       Status = s.Status,
+                   }).ToList();
+                return dane;
+            }
+        }
+
+        public List<TerminViewModel> ComboBoxDopiszTermin()
+        {
+            using (var dbContext = new ApplicationDbContext())
+            {
+                var dane = dbContext.TerminC.
+                   Select(s => new TerminViewModel
+                   {
+                       Id = s.Id,
+                       Termin = s.Termin,
+                   }).ToList();
+                return dane;
+            }
+        }
+
 
     }
 }

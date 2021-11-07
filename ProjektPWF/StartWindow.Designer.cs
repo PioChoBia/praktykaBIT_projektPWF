@@ -37,6 +37,10 @@ namespace ProjektPWF
             this.textBoxSzukaj = new System.Windows.Forms.TextBox();
             this.buttonDopisz = new System.Windows.Forms.Button();
             this.groupBoxDopisz = new System.Windows.Forms.GroupBox();
+            this.comboBoxDopiszNabywca = new System.Windows.Forms.ComboBox();
+            this.labelDopiszNabywca = new System.Windows.Forms.Label();
+            this.comboBoxDopiszKierownik = new System.Windows.Forms.ComboBox();
+            this.labelDopiszKierownik = new System.Windows.Forms.Label();
             this.comboBoxDopiszDostarczanie = new System.Windows.Forms.ComboBox();
             this.labelDopiszDostarczanie = new System.Windows.Forms.Label();
             this.richTextBoxDopiszUwagi = new System.Windows.Forms.RichTextBox();
@@ -56,6 +60,12 @@ namespace ProjektPWF
             this.labelDopiszDataWystawienia = new System.Windows.Forms.Label();
             this.dateTimePickerDopiszDataSprzedazy = new System.Windows.Forms.DateTimePicker();
             this.labelDopiszDataSprzedazy = new System.Windows.Forms.Label();
+            this.comboBoxDopiszPlatnosc = new System.Windows.Forms.ComboBox();
+            this.labelDopiszPlatnosc = new System.Windows.Forms.Label();
+            this.comboBoxDopiszStatus = new System.Windows.Forms.ComboBox();
+            this.labelDopiszStatus = new System.Windows.Forms.Label();
+            this.comboBoxDopiszTermin = new System.Windows.Forms.ComboBox();
+            this.labelDopiszTermin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxSzukaj.SuspendLayout();
             this.groupBoxDopisz.SuspendLayout();
@@ -132,6 +142,16 @@ namespace ProjektPWF
             // 
             // groupBoxDopisz
             // 
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszTermin);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszTermin);
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszStatus);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszStatus);
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszPlatnosc);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszPlatnosc);
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszNabywca);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszNabywca);
+            this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszKierownik);
+            this.groupBoxDopisz.Controls.Add(this.labelDopiszKierownik);
             this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszDostarczanie);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszDostarczanie);
             this.groupBoxDopisz.Controls.Add(this.richTextBoxDopiszUwagi);
@@ -153,15 +173,49 @@ namespace ProjektPWF
             this.groupBoxDopisz.Controls.Add(this.labelDopiszDataSprzedazy);
             this.groupBoxDopisz.Location = new System.Drawing.Point(48, 409);
             this.groupBoxDopisz.Name = "groupBoxDopisz";
-            this.groupBoxDopisz.Size = new System.Drawing.Size(1142, 251);
+            this.groupBoxDopisz.Size = new System.Drawing.Size(1142, 253);
             this.groupBoxDopisz.TabIndex = 7;
             this.groupBoxDopisz.TabStop = false;
             this.groupBoxDopisz.Text = "wpisz poprawne wartości i kliknij zatwierdź";
             // 
+            // comboBoxDopiszNabywca
+            // 
+            this.comboBoxDopiszNabywca.FormattingEnabled = true;
+            this.comboBoxDopiszNabywca.Location = new System.Drawing.Point(278, 88);
+            this.comboBoxDopiszNabywca.Name = "comboBoxDopiszNabywca";
+            this.comboBoxDopiszNabywca.Size = new System.Drawing.Size(201, 21);
+            this.comboBoxDopiszNabywca.TabIndex = 25;
+            // 
+            // labelDopiszNabywca
+            // 
+            this.labelDopiszNabywca.AutoSize = true;
+            this.labelDopiszNabywca.Location = new System.Drawing.Point(205, 92);
+            this.labelDopiszNabywca.Name = "labelDopiszNabywca";
+            this.labelDopiszNabywca.Size = new System.Drawing.Size(50, 13);
+            this.labelDopiszNabywca.TabIndex = 24;
+            this.labelDopiszNabywca.Text = "nabywca";
+            // 
+            // comboBoxDopiszKierownik
+            // 
+            this.comboBoxDopiszKierownik.FormattingEnabled = true;
+            this.comboBoxDopiszKierownik.Location = new System.Drawing.Point(278, 116);
+            this.comboBoxDopiszKierownik.Name = "comboBoxDopiszKierownik";
+            this.comboBoxDopiszKierownik.Size = new System.Drawing.Size(201, 21);
+            this.comboBoxDopiszKierownik.TabIndex = 23;
+            // 
+            // labelDopiszKierownik
+            // 
+            this.labelDopiszKierownik.AutoSize = true;
+            this.labelDopiszKierownik.Location = new System.Drawing.Point(204, 120);
+            this.labelDopiszKierownik.Name = "labelDopiszKierownik";
+            this.labelDopiszKierownik.Size = new System.Drawing.Size(52, 13);
+            this.labelDopiszKierownik.TabIndex = 22;
+            this.labelDopiszKierownik.Text = "kierownik";
+            // 
             // comboBoxDopiszDostarczanie
             // 
             this.comboBoxDopiszDostarczanie.FormattingEnabled = true;
-            this.comboBoxDopiszDostarczanie.Location = new System.Drawing.Point(582, 22);
+            this.comboBoxDopiszDostarczanie.Location = new System.Drawing.Point(683, 17);
             this.comboBoxDopiszDostarczanie.Name = "comboBoxDopiszDostarczanie";
             this.comboBoxDopiszDostarczanie.Size = new System.Drawing.Size(102, 21);
             this.comboBoxDopiszDostarczanie.TabIndex = 21;
@@ -169,7 +223,7 @@ namespace ProjektPWF
             // labelDopiszDostarczanie
             // 
             this.labelDopiszDostarczanie.AutoSize = true;
-            this.labelDopiszDostarczanie.Location = new System.Drawing.Point(463, 26);
+            this.labelDopiszDostarczanie.Location = new System.Drawing.Point(564, 21);
             this.labelDopiszDostarczanie.Name = "labelDopiszDostarczanie";
             this.labelDopiszDostarczanie.Size = new System.Drawing.Size(104, 13);
             this.labelDopiszDostarczanie.TabIndex = 20;
@@ -177,16 +231,16 @@ namespace ProjektPWF
             // 
             // richTextBoxDopiszUwagi
             // 
-            this.richTextBoxDopiszUwagi.Location = new System.Drawing.Point(374, 93);
+            this.richTextBoxDopiszUwagi.Location = new System.Drawing.Point(562, 85);
             this.richTextBoxDopiszUwagi.Name = "richTextBoxDopiszUwagi";
-            this.richTextBoxDopiszUwagi.Size = new System.Drawing.Size(624, 39);
+            this.richTextBoxDopiszUwagi.Size = new System.Drawing.Size(558, 47);
             this.richTextBoxDopiszUwagi.TabIndex = 19;
             this.richTextBoxDopiszUwagi.Text = "";
             // 
             // labelDopiszUwagi
             // 
             this.labelDopiszUwagi.AutoSize = true;
-            this.labelDopiszUwagi.Location = new System.Drawing.Point(291, 92);
+            this.labelDopiszUwagi.Location = new System.Drawing.Point(521, 96);
             this.labelDopiszUwagi.Name = "labelDopiszUwagi";
             this.labelDopiszUwagi.Size = new System.Drawing.Size(35, 13);
             this.labelDopiszUwagi.TabIndex = 18;
@@ -322,11 +376,62 @@ namespace ProjektPWF
             this.labelDopiszDataSprzedazy.TabIndex = 0;
             this.labelDopiszDataSprzedazy.Text = "data sprzedaży";
             // 
+            // comboBoxDopiszPlatnosc
+            // 
+            this.comboBoxDopiszPlatnosc.FormattingEnabled = true;
+            this.comboBoxDopiszPlatnosc.Location = new System.Drawing.Point(966, 58);
+            this.comboBoxDopiszPlatnosc.Name = "comboBoxDopiszPlatnosc";
+            this.comboBoxDopiszPlatnosc.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxDopiszPlatnosc.TabIndex = 27;
+            // 
+            // labelDopiszPlatnosc
+            // 
+            this.labelDopiszPlatnosc.AutoSize = true;
+            this.labelDopiszPlatnosc.Location = new System.Drawing.Point(825, 58);
+            this.labelDopiszPlatnosc.Name = "labelDopiszPlatnosc";
+            this.labelDopiszPlatnosc.Size = new System.Drawing.Size(121, 13);
+            this.labelDopiszPlatnosc.TabIndex = 26;
+            this.labelDopiszPlatnosc.Text = "płatność opłacona jako";
+            // 
+            // comboBoxDopiszStatus
+            // 
+            this.comboBoxDopiszStatus.FormattingEnabled = true;
+            this.comboBoxDopiszStatus.Location = new System.Drawing.Point(966, 17);
+            this.comboBoxDopiszStatus.Name = "comboBoxDopiszStatus";
+            this.comboBoxDopiszStatus.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxDopiszStatus.TabIndex = 29;
+            // 
+            // labelDopiszStatus
+            // 
+            this.labelDopiszStatus.AutoSize = true;
+            this.labelDopiszStatus.Location = new System.Drawing.Point(825, 21);
+            this.labelDopiszStatus.Name = "labelDopiszStatus";
+            this.labelDopiszStatus.Size = new System.Drawing.Size(82, 13);
+            this.labelDopiszStatus.TabIndex = 28;
+            this.labelDopiszStatus.Text = "status płatności";
+            // 
+            // comboBoxDopiszTermin
+            // 
+            this.comboBoxDopiszTermin.FormattingEnabled = true;
+            this.comboBoxDopiszTermin.Location = new System.Drawing.Point(684, 51);
+            this.comboBoxDopiszTermin.Name = "comboBoxDopiszTermin";
+            this.comboBoxDopiszTermin.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxDopiszTermin.TabIndex = 31;
+            // 
+            // labelDopiszTermin
+            // 
+            this.labelDopiszTermin.AutoSize = true;
+            this.labelDopiszTermin.Location = new System.Drawing.Point(564, 54);
+            this.labelDopiszTermin.Name = "labelDopiszTermin";
+            this.labelDopiszTermin.Size = new System.Drawing.Size(99, 13);
+            this.labelDopiszTermin.TabIndex = 30;
+            this.labelDopiszTermin.Text = "termin płatności dni";
+            // 
             // StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1236, 686);
+            this.ClientSize = new System.Drawing.Size(1236, 746);
             this.Controls.Add(this.groupBoxDopisz);
             this.Controls.Add(this.buttonDopisz);
             this.Controls.Add(this.labelNaglowek);
@@ -374,6 +479,16 @@ namespace ProjektPWF
         private System.Windows.Forms.Label labelDopiszDostarczanie;
         private System.Windows.Forms.RichTextBox richTextBoxDopiszUwagi;
         private System.Windows.Forms.Label labelDopiszUwagi;
+        private System.Windows.Forms.ComboBox comboBoxDopiszKierownik;
+        private System.Windows.Forms.Label labelDopiszKierownik;
+        private System.Windows.Forms.ComboBox comboBoxDopiszNabywca;
+        private System.Windows.Forms.Label labelDopiszNabywca;
+        private System.Windows.Forms.ComboBox comboBoxDopiszPlatnosc;
+        private System.Windows.Forms.Label labelDopiszPlatnosc;
+        private System.Windows.Forms.ComboBox comboBoxDopiszStatus;
+        private System.Windows.Forms.Label labelDopiszStatus;
+        private System.Windows.Forms.ComboBox comboBoxDopiszTermin;
+        private System.Windows.Forms.Label labelDopiszTermin;
     }
 }
 
