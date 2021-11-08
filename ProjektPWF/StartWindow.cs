@@ -32,6 +32,7 @@ namespace ProjektPWF
         private void StartWindow_Load(object sender, EventArgs e)
         {
             groupBoxDopisz.Visible = false;
+            tabControlTabelePoboczne.Visible = false;
         }
 
 
@@ -139,8 +140,71 @@ namespace ProjektPWF
             }
         }
 
+        private void buttonTabelePoboczne_Click(object sender, EventArgs e)
+        {
+            tabControlTabelePoboczne.Visible = true;
+            TabelePoboczne tabelePoboczne = new TabelePoboczne();
+
+
+            dataGridViewTabelePoboczneDostarczanie.Columns.Clear();
+            
+            DataGridViewColumn id = new DataGridViewTextBoxColumn();
+            id.Name = "Id";
+            id.HeaderText = "id";
+            id.DataPropertyName = "Id";
+            id.Width = 30;
+            dataGridViewTabelePoboczneDostarczanie.Columns.Insert(0, id);
+            
+            DataGridViewColumn sposob = new DataGridViewTextBoxColumn();
+            sposob.Name = "Sposob";
+            sposob.HeaderText = "sposób";
+            sposob.DataPropertyName = "Sposob";
+            sposob.Width = 100;
+            dataGridViewTabelePoboczneDostarczanie.Columns.Insert(1, sposob);
+
+            DataGridViewButtonColumn kasuj = new DataGridViewButtonColumn();
+            kasuj.Name = "kasuj";
+            kasuj.HeaderText = "";
+            kasuj.Text = "kasuj";
+            kasuj.UseColumnTextForButtonValue = true;
+            kasuj.Width = 50;
+            dataGridViewTabelePoboczneDostarczanie.Columns.Insert(2, kasuj);
+
+
+            dataGridViewTabelePoboczneDostarczanie.DataSource = tabelePoboczne.WyswietlDostarczanie();
+
+
+        }
+
+        private void dataGridViewTabelePoboczneDostarczanie_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+
+                DataGridViewRow row = dataGridViewTabelePoboczneDostarczanie.Rows[e.RowIndex];
+                if (MessageBox.Show(string.Format("Skasować pole o id : {0}?", row.Cells["Id"].Value), "Potwierdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    using (var dbContext = new ApplicationDbContext())
+                    {
+                        var doSkasowania = dbContext.DostarczanieC.Where(
+                            a =>( a.Id == int.Parse( row.Cells["Id"].Value.ToString() )                            
+                             )                                         
+                        
+                        ).First();
+
+                        dbContext.DostarczanieC.Remove(doSkasowania);
+                        dbContext.SaveChanges();
+                    }
 
 
 
+
+
+
+
+
+                }   
+            }
+        }
     }
 }

@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TabelePoboczne.cs" />
     <Compile Include="Wyswietl.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,6 +118,7 @@
     <None Include="ProjektPWFDataSet.xss">
       <DependentUpon>ProjektPWFDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Properties\DataSources\ProjektPWF.Models.DostarczanieViewModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
