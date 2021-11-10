@@ -4,32 +4,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace ProjektPWF
 {
-    class TabelePoboczne
+    public partial class TabelePoboczne : Form
     {
-        public List<DostarczanieViewModel> WyswietlDostarczanie()
+        
+        public void ListBox1()
         {
-            using (var dbContext = new ApplicationDbContext())
-            {
-                var dane = dbContext.DostarczanieC.AsNoTracking().
-                    Select(s => new DostarczanieViewModel
-                    {
-                        Id=s.Id,
-                        Sposob=s.Sposob
-                    }).ToList();
-                return dane;
-            }
+            ListBox l1=new ListBox();
+            l1.FormattingEnabled = true;
+        
+            l1.Location = new System.Drawing.Point(500, 19);
+            l1.Name = "listBoxTabelePoboczneDostarczanie1";
+            l1.Size = new System.Drawing.Size(120, 160);
+            l1.TabIndex = 10;
+            l1.Visible = true;
+
         }
-
-
-
-
-
-
-
-
 
     }
 }

@@ -57,7 +57,8 @@ namespace ProjektPWF
             }
         }
 
-        public List<DostarczanieViewModel> ComboBoxDopiszDostarczanie()
+        public List<DostarczanieViewModel> Dostarczanie()
+            //ComboBoxDopiszDostarczanie()
         {
             using (var dbContext = new ApplicationDbContext())
             {

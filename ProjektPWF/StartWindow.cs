@@ -56,7 +56,7 @@ namespace ProjektPWF
 
             richTextBoxDopiszUwagi.Text = "";
 
-            comboBoxDopiszDostarczanie.DataSource = wyswietl.ComboBoxDopiszDostarczanie();
+            comboBoxDopiszDostarczanie.DataSource = wyswietl.Dostarczanie();
             comboBoxDopiszDostarczanie.DisplayMember = "Sposob";
             comboBoxDopiszDostarczanie.ValueMember = "Id";
 
@@ -140,71 +140,95 @@ namespace ProjektPWF
             }
         }
 
+        //------------------------------------------------------------
+        //do przeniesienia do TabelePoboczne.
+        // |
+        // v
+
         private void buttonTabelePoboczne_Click(object sender, EventArgs e)
         {
             tabControlTabelePoboczne.Visible = true;
-            TabelePoboczne tabelePoboczne = new TabelePoboczne();
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
 
+            //TabelePoboczne tabelePoboczne = new TabelePoboczne();
+            //tabelePoboczne.ListBox1();
 
-            dataGridViewTabelePoboczneDostarczanie.Columns.Clear();
-            
-            DataGridViewColumn id = new DataGridViewTextBoxColumn();
-            id.Name = "Id";
-            id.HeaderText = "id";
-            id.DataPropertyName = "Id";
-            id.Width = 30;
-            dataGridViewTabelePoboczneDostarczanie.Columns.Insert(0, id);
-            
-            DataGridViewColumn sposob = new DataGridViewTextBoxColumn();
-            sposob.Name = "Sposob";
-            sposob.HeaderText = "sposób";
-            sposob.DataPropertyName = "Sposob";
-            sposob.Width = 100;
-            dataGridViewTabelePoboczneDostarczanie.Columns.Insert(1, sposob);
-
-            DataGridViewButtonColumn kasuj = new DataGridViewButtonColumn();
-            kasuj.Name = "kasuj";
-            kasuj.HeaderText = "";
-            kasuj.Text = "kasuj";
-            kasuj.UseColumnTextForButtonValue = true;
-            kasuj.Width = 50;
-            dataGridViewTabelePoboczneDostarczanie.Columns.Insert(2, kasuj);
-
-
-            dataGridViewTabelePoboczneDostarczanie.DataSource = tabelePoboczne.WyswietlDostarczanie();
-
-
+            listBoxTabelePoboczneDostarczanie.DataSource= wyswietl.Dostarczanie();
+            listBoxTabelePoboczneDostarczanie.DisplayMember = "Sposob";
+            listBoxTabelePoboczneDostarczanie.ValueMember = "Id";
+                  
         }
 
-        private void dataGridViewTabelePoboczneDostarczanie_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void buttonDostarczanieKasuj_Click(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == 2)
+            DostarczanieViewModel dostarczanieViewModel = (DostarczanieViewModel)listBoxTabelePoboczneDostarczanie.SelectedItem;
+            if (MessageBox.Show("Skasować pole "+dostarczanieViewModel.Sposob+" ?", "Potwierdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
-                DataGridViewRow row = dataGridViewTabelePoboczneDostarczanie.Rows[e.RowIndex];
-                if (MessageBox.Show(string.Format("Skasować pole o id : {0}?", row.Cells["Id"].Value), "Potwierdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                using (var dbContext = new ApplicationDbContext())
                 {
-                    using (var dbContext = new ApplicationDbContext())
-                    {
-                        var doSkasowania = dbContext.DostarczanieC.Where(
-                            a =>( a.Id == int.Parse( row.Cells["Id"].Value.ToString() )                            
-                             )                                         
-                        
-                        ).First();
-
-                        dbContext.DostarczanieC.Remove(doSkasowania);
-                        dbContext.SaveChanges();
-                    }
-
-
-
-
-
-
-
-
-                }   
+                    TabDostarczanie doSkasowania = dbContext.DostarczanieC.Where(a => (a.Id ==dostarczanieViewModel.Id)).First();
+                    dbContext.DostarczanieC.Remove(doSkasowania);
+                    dbContext.SaveChanges();
+                    listBoxTabelePoboczneDostarczanie.DataSource= wyswietl.Dostarczanie();
+                }
             }
         }
+
+        private void buttonDostarczanieDopisz_Click(object sender, EventArgs e)
+        {
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = true;
+        }
+
+        private void buttonTabelePoboczneDostarczanieDopiszOK_Click(object sender, EventArgs e)
+        {
+            if (textBoxTabelePoboczneDostarczanieDopisz.Text!="")
+            {
+               TabDostarczanie tabDostarczanie = new TabDostarczanie { Sposob = textBoxTabelePoboczneDostarczanieDopisz.Text };
+               obsluga.WpiszTabDostarczanie(tabDostarczanie);
+               listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
+               groupBoxTabelePoboczneDostarczanieDopisz.Visible = false; 
+            }
+        }
+
+        private void buttonTabelePoboczneDopiszPomin_Click(object sender, EventArgs e)
+        {
+            textBoxTabelePoboczneDostarczanieDopisz.Text = "";
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
+        }
+
+        private void buttonDostarczanieEdytuj_Click(object sender, EventArgs e)
+        {
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = true;
+            DostarczanieViewModel dostarczanieViewModel = (DostarczanieViewModel)listBoxTabelePoboczneDostarczanie.SelectedItem;
+            textBoxTabelePoboczneDostarczanieEdytuj.Text = dostarczanieViewModel.Sposob;
+        }
+
+        private void buttonTabelePoboczneDostarczanieEdytujOK_Click(object sender, EventArgs e)
+        {
+            if (textBoxTabelePoboczneDostarczanieEdytuj.Text != "")
+            {
+                DostarczanieViewModel dostarczanieViewModel = (DostarczanieViewModel)listBoxTabelePoboczneDostarczanie.SelectedItem;
+                using (var dbContext = new ApplicationDbContext())
+                {
+                    TabDostarczanie doEdycji = dbContext.DostarczanieC.Where(a => (a.Id == dostarczanieViewModel.Id)).First();
+                    doEdycji.Sposob = textBoxTabelePoboczneDostarczanieEdytuj.Text;
+                    dbContext.SaveChanges();
+                }
+                listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
+                groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
+            }
+        }
+
+        private void buttonTabelePoboczneDostarczanieEdytujPomin_Click(object sender, EventArgs e)
+        {
+            textBoxTabelePoboczneDostarczanieEdytuj.Text = "";
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
+        }
     }
+
+
+
 }

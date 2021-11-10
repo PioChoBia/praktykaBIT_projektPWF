@@ -29,10 +29,6 @@ namespace ProjektPWF
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelNaglowek = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonDrukuj = new System.Windows.Forms.Button();
@@ -73,22 +69,31 @@ namespace ProjektPWF
             this.buttonTabelePoboczne = new System.Windows.Forms.Button();
             this.tabControlTabelePoboczne = new System.Windows.Forms.TabControl();
             this.tabPageDostarczanie = new System.Windows.Forms.TabPage();
-            this.dataGridViewTabelePoboczneDostarczanie = new System.Windows.Forms.DataGridView();
+            this.groupBoxTabelePoboczneDostarczanieEdytuj = new System.Windows.Forms.GroupBox();
+            this.buttonTabelePoboczneDostarczanieEdytujPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneDostarczanieEdytujOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneDostarczanieEdytuj = new System.Windows.Forms.TextBox();
+            this.groupBoxTabelePoboczneDostarczanieDopisz = new System.Windows.Forms.GroupBox();
+            this.buttonTabelePoboczneDopiszPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneDostarczanieDopiszOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneDostarczanieDopisz = new System.Windows.Forms.TextBox();
+            this.listBoxTabelePoboczneDostarczanie = new System.Windows.Forms.ListBox();
+            this.buttonDostarczanieKasuj = new System.Windows.Forms.Button();
+            this.buttonDostarczanieDopisz = new System.Windows.Forms.Button();
+            this.buttonDostarczanieEdytuj = new System.Windows.Forms.Button();
             this.tabPageKierownik = new System.Windows.Forms.TabPage();
             this.tabPageNabywca = new System.Windows.Forms.TabPage();
             this.tabPagePlatnosc = new System.Windows.Forms.TabPage();
             this.tabPageStatus = new System.Windows.Forms.TabPage();
             this.tabPageTermin = new System.Windows.Forms.TabPage();
             this.tabPageVat = new System.Windows.Forms.TabPage();
-            this.sposobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dostarczanieViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxSzukaj.SuspendLayout();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
             this.tabPageDostarczanie.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabelePoboczneDostarczanie)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dostarczanieViewModelBindingSource)).BeginInit();
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.SuspendLayout();
+            this.groupBoxTabelePoboczneDostarczanieDopisz.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNaglowek
@@ -476,7 +481,12 @@ namespace ProjektPWF
             // 
             // tabPageDostarczanie
             // 
-            this.tabPageDostarczanie.Controls.Add(this.dataGridViewTabelePoboczneDostarczanie);
+            this.tabPageDostarczanie.Controls.Add(this.groupBoxTabelePoboczneDostarczanieEdytuj);
+            this.tabPageDostarczanie.Controls.Add(this.groupBoxTabelePoboczneDostarczanieDopisz);
+            this.tabPageDostarczanie.Controls.Add(this.listBoxTabelePoboczneDostarczanie);
+            this.tabPageDostarczanie.Controls.Add(this.buttonDostarczanieKasuj);
+            this.tabPageDostarczanie.Controls.Add(this.buttonDostarczanieDopisz);
+            this.tabPageDostarczanie.Controls.Add(this.buttonDostarczanieEdytuj);
             this.tabPageDostarczanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tabPageDostarczanie.Location = new System.Drawing.Point(4, 25);
             this.tabPageDostarczanie.Name = "tabPageDostarczanie";
@@ -486,42 +496,128 @@ namespace ProjektPWF
             this.tabPageDostarczanie.Text = "dostarczanie";
             this.tabPageDostarczanie.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTabelePoboczneDostarczanie
+            // groupBoxTabelePoboczneDostarczanieEdytuj
             // 
-            this.dataGridViewTabelePoboczneDostarczanie.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTabelePoboczneDostarczanie.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTabelePoboczneDostarczanie.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTabelePoboczneDostarczanie.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sposobDataGridViewTextBoxColumn});
-            this.dataGridViewTabelePoboczneDostarczanie.DataSource = this.dostarczanieViewModelBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTabelePoboczneDostarczanie.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTabelePoboczneDostarczanie.Location = new System.Drawing.Point(51, 11);
-            this.dataGridViewTabelePoboczneDostarczanie.Name = "dataGridViewTabelePoboczneDostarczanie";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTabelePoboczneDostarczanie.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTabelePoboczneDostarczanie.Size = new System.Drawing.Size(291, 193);
-            this.dataGridViewTabelePoboczneDostarczanie.TabIndex = 0;
-            this.dataGridViewTabelePoboczneDostarczanie.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTabelePoboczneDostarczanie_CellContentClick);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Controls.Add(this.buttonTabelePoboczneDostarczanieEdytujPomin);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Controls.Add(this.buttonTabelePoboczneDostarczanieEdytujOK);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Controls.Add(this.textBoxTabelePoboczneDostarczanieEdytuj);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Location = new System.Drawing.Point(352, 108);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Name = "groupBoxTabelePoboczneDostarczanieEdytuj";
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Size = new System.Drawing.Size(348, 83);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.TabIndex = 11;
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.TabStop = false;
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.Text = "edytuj i zatwierdź";
+            // 
+            // buttonTabelePoboczneDostarczanieEdytujPomin
+            // 
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.Location = new System.Drawing.Point(249, 25);
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.Name = "buttonTabelePoboczneDostarczanieEdytujPomin";
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.TabIndex = 6;
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.Text = "pomiń";
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneDostarczanieEdytujPomin.Click += new System.EventHandler(this.buttonTabelePoboczneDostarczanieEdytujPomin_Click);
+            // 
+            // buttonTabelePoboczneDostarczanieEdytujOK
+            // 
+            this.buttonTabelePoboczneDostarczanieEdytujOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneDostarczanieEdytujOK.Location = new System.Drawing.Point(183, 25);
+            this.buttonTabelePoboczneDostarczanieEdytujOK.Name = "buttonTabelePoboczneDostarczanieEdytujOK";
+            this.buttonTabelePoboczneDostarczanieEdytujOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneDostarczanieEdytujOK.TabIndex = 5;
+            this.buttonTabelePoboczneDostarczanieEdytujOK.Text = "OK";
+            this.buttonTabelePoboczneDostarczanieEdytujOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneDostarczanieEdytujOK.Click += new System.EventHandler(this.buttonTabelePoboczneDostarczanieEdytujOK_Click);
+            // 
+            // textBoxTabelePoboczneDostarczanieEdytuj
+            // 
+            this.textBoxTabelePoboczneDostarczanieEdytuj.Location = new System.Drawing.Point(27, 30);
+            this.textBoxTabelePoboczneDostarczanieEdytuj.Name = "textBoxTabelePoboczneDostarczanieEdytuj";
+            this.textBoxTabelePoboczneDostarczanieEdytuj.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneDostarczanieEdytuj.TabIndex = 0;
+            // 
+            // groupBoxTabelePoboczneDostarczanieDopisz
+            // 
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Controls.Add(this.buttonTabelePoboczneDopiszPomin);
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Controls.Add(this.buttonTabelePoboczneDostarczanieDopiszOK);
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Controls.Add(this.textBoxTabelePoboczneDostarczanieDopisz);
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Location = new System.Drawing.Point(352, 13);
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Name = "groupBoxTabelePoboczneDostarczanieDopisz";
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Size = new System.Drawing.Size(348, 83);
+            this.groupBoxTabelePoboczneDostarczanieDopisz.TabIndex = 10;
+            this.groupBoxTabelePoboczneDostarczanieDopisz.TabStop = false;
+            this.groupBoxTabelePoboczneDostarczanieDopisz.Text = "dopisz i zatwierdź";
+            // 
+            // buttonTabelePoboczneDopiszPomin
+            // 
+            this.buttonTabelePoboczneDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneDopiszPomin.Location = new System.Drawing.Point(249, 25);
+            this.buttonTabelePoboczneDopiszPomin.Name = "buttonTabelePoboczneDopiszPomin";
+            this.buttonTabelePoboczneDopiszPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneDopiszPomin.TabIndex = 6;
+            this.buttonTabelePoboczneDopiszPomin.Text = "pomiń";
+            this.buttonTabelePoboczneDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneDopiszPomin.Click += new System.EventHandler(this.buttonTabelePoboczneDopiszPomin_Click);
+            // 
+            // buttonTabelePoboczneDostarczanieDopiszOK
+            // 
+            this.buttonTabelePoboczneDostarczanieDopiszOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneDostarczanieDopiszOK.Location = new System.Drawing.Point(183, 25);
+            this.buttonTabelePoboczneDostarczanieDopiszOK.Name = "buttonTabelePoboczneDostarczanieDopiszOK";
+            this.buttonTabelePoboczneDostarczanieDopiszOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneDostarczanieDopiszOK.TabIndex = 5;
+            this.buttonTabelePoboczneDostarczanieDopiszOK.Text = "OK";
+            this.buttonTabelePoboczneDostarczanieDopiszOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneDostarczanieDopiszOK.Click += new System.EventHandler(this.buttonTabelePoboczneDostarczanieDopiszOK_Click);
+            // 
+            // textBoxTabelePoboczneDostarczanieDopisz
+            // 
+            this.textBoxTabelePoboczneDostarczanieDopisz.Location = new System.Drawing.Point(27, 30);
+            this.textBoxTabelePoboczneDostarczanieDopisz.Name = "textBoxTabelePoboczneDostarczanieDopisz";
+            this.textBoxTabelePoboczneDostarczanieDopisz.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneDostarczanieDopisz.TabIndex = 0;
+            // 
+            // listBoxTabelePoboczneDostarczanie
+            // 
+            this.listBoxTabelePoboczneDostarczanie.FormattingEnabled = true;
+            this.listBoxTabelePoboczneDostarczanie.Location = new System.Drawing.Point(42, 19);
+            this.listBoxTabelePoboczneDostarczanie.Name = "listBoxTabelePoboczneDostarczanie";
+            this.listBoxTabelePoboczneDostarczanie.Size = new System.Drawing.Size(131, 160);
+            this.listBoxTabelePoboczneDostarczanie.TabIndex = 9;
+            // 
+            // buttonDostarczanieKasuj
+            // 
+            this.buttonDostarczanieKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDostarczanieKasuj.Location = new System.Drawing.Point(210, 146);
+            this.buttonDostarczanieKasuj.Name = "buttonDostarczanieKasuj";
+            this.buttonDostarczanieKasuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonDostarczanieKasuj.TabIndex = 7;
+            this.buttonDostarczanieKasuj.Text = "kasuj";
+            this.buttonDostarczanieKasuj.UseVisualStyleBackColor = true;
+            this.buttonDostarczanieKasuj.Click += new System.EventHandler(this.buttonDostarczanieKasuj_Click);
+            // 
+            // buttonDostarczanieDopisz
+            // 
+            this.buttonDostarczanieDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDostarczanieDopisz.Location = new System.Drawing.Point(210, 19);
+            this.buttonDostarczanieDopisz.Name = "buttonDostarczanieDopisz";
+            this.buttonDostarczanieDopisz.Size = new System.Drawing.Size(104, 32);
+            this.buttonDostarczanieDopisz.TabIndex = 6;
+            this.buttonDostarczanieDopisz.Text = "dopisz";
+            this.buttonDostarczanieDopisz.UseVisualStyleBackColor = true;
+            this.buttonDostarczanieDopisz.Click += new System.EventHandler(this.buttonDostarczanieDopisz_Click);
+            // 
+            // buttonDostarczanieEdytuj
+            // 
+            this.buttonDostarczanieEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDostarczanieEdytuj.Location = new System.Drawing.Point(210, 80);
+            this.buttonDostarczanieEdytuj.Name = "buttonDostarczanieEdytuj";
+            this.buttonDostarczanieEdytuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonDostarczanieEdytuj.TabIndex = 5;
+            this.buttonDostarczanieEdytuj.Text = "edytuj";
+            this.buttonDostarczanieEdytuj.UseVisualStyleBackColor = true;
+            this.buttonDostarczanieEdytuj.Click += new System.EventHandler(this.buttonDostarczanieEdytuj_Click);
             // 
             // tabPageKierownik
             // 
@@ -579,16 +675,6 @@ namespace ProjektPWF
             this.tabPageVat.Text = "Vat";
             this.tabPageVat.UseVisualStyleBackColor = true;
             // 
-            // sposobDataGridViewTextBoxColumn
-            // 
-            this.sposobDataGridViewTextBoxColumn.DataPropertyName = "Sposob";
-            this.sposobDataGridViewTextBoxColumn.HeaderText = "Sposob";
-            this.sposobDataGridViewTextBoxColumn.Name = "sposobDataGridViewTextBoxColumn";
-            // 
-            // dostarczanieViewModelBindingSource
-            // 
-            this.dostarczanieViewModelBindingSource.DataSource = typeof(ProjektPWF.Models.DostarczanieViewModel);
-            // 
             // StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,8 +698,10 @@ namespace ProjektPWF
             this.groupBoxDopisz.PerformLayout();
             this.tabControlTabelePoboczne.ResumeLayout(false);
             this.tabPageDostarczanie.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTabelePoboczneDostarczanie)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dostarczanieViewModelBindingSource)).EndInit();
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.ResumeLayout(false);
+            this.groupBoxTabelePoboczneDostarczanieEdytuj.PerformLayout();
+            this.groupBoxTabelePoboczneDostarczanieDopisz.ResumeLayout(false);
+            this.groupBoxTabelePoboczneDostarczanieDopisz.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,9 +754,18 @@ namespace ProjektPWF
         private System.Windows.Forms.TabPage tabPageStatus;
         private System.Windows.Forms.TabPage tabPageTermin;
         private System.Windows.Forms.TabPage tabPageVat;
-        private System.Windows.Forms.DataGridView dataGridViewTabelePoboczneDostarczanie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sposobDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource dostarczanieViewModelBindingSource;
+        private System.Windows.Forms.Button buttonDostarczanieKasuj;
+        private System.Windows.Forms.Button buttonDostarczanieDopisz;
+        private System.Windows.Forms.Button buttonDostarczanieEdytuj;
+        private System.Windows.Forms.ListBox listBoxTabelePoboczneDostarczanie;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneDostarczanieDopisz;
+        private System.Windows.Forms.Button buttonTabelePoboczneDostarczanieDopiszOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneDostarczanieDopisz;
+        private System.Windows.Forms.Button buttonTabelePoboczneDopiszPomin;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneDostarczanieEdytuj;
+        private System.Windows.Forms.Button buttonTabelePoboczneDostarczanieEdytujPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneDostarczanieEdytujOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneDostarczanieEdytuj;
     }
 }
 
