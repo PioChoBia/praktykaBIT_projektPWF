@@ -31,8 +31,8 @@ namespace ProjektPWF
 
         private void buttonDostarczanieDopisz_Click(object sender, EventArgs e)
         {
-            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
-            groupBoxTabelePoboczneDostarczanieDopisz.Visible = true;
+             groupBoxTabelePoboczneDostarczanieDopisz.Visible = true;
+             groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
         }
 
         private void buttonTabelePoboczneDostarczanieDopiszOK_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace ProjektPWF
             groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
         }
 
-        private void buttonDostarczanieEdytuj_Click(object sender, EventArgs e)
+        private void buttonTabelePoboczneDostarczanieEdytuj_Click(object sender, EventArgs e)
         {
             groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
             groupBoxTabelePoboczneDostarczanieEdytuj.Visible = true;

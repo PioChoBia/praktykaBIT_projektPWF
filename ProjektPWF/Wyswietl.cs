@@ -43,7 +43,7 @@ namespace ProjektPWF
         }
 
 
-        public List<VatViewModel> ComboBoxDopiszVat()
+        public List<VatViewModel> Vat()
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -131,7 +131,7 @@ namespace ProjektPWF
             }
         }
 
-        public List<TerminViewModel> ComboBoxDopiszTermin()
+        public List<TerminViewModel> Termin()
         {
             using (var dbContext = new ApplicationDbContext())
             {

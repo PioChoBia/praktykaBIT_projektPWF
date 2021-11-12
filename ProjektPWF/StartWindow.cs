@@ -50,7 +50,7 @@ namespace ProjektPWF
             richTextBoxDopiszTresc.Text = "";
             textBoxDopiszNetto.Text = "0";
 
-            comboBoxDopiszVatStawka.DataSource = wyswietl.ComboBoxDopiszVat();
+            comboBoxDopiszVatStawka.DataSource = wyswietl.Vat();
             comboBoxDopiszVatStawka.DisplayMember = "StawkaVat";
             comboBoxDopiszVatStawka.ValueMember = "Id";
 
@@ -76,7 +76,7 @@ namespace ProjektPWF
             comboBoxDopiszStatus.DisplayMember = "Status";
             comboBoxDopiszStatus.ValueMember = "Id";
 
-            comboBoxDopiszTermin.DataSource = wyswietl.ComboBoxDopiszTermin();
+            comboBoxDopiszTermin.DataSource = wyswietl.Termin();
             comboBoxDopiszTermin.DisplayMember = "Termin";
             comboBoxDopiszTermin.ValueMember = "Id";
         }
@@ -156,6 +156,22 @@ namespace ProjektPWF
             listBoxTabelePoboczneKierownik.DataSource = wyswietl.Kierownik();
             listBoxTabelePoboczneKierownik.DisplayMember = "NazwiskoKierownika";//wyświetli łacznie imię i nazwisko
             listBoxTabelePoboczneKierownik.ValueMember = "Id";
+
+
+
+
+            //Termin
+            groupBoxTabelePoboczneTerminDopisz.Visible = false;
+            groupBoxTabelePoboczneTerminEdytuj.Visible = false;
+            listBoxTabelePoboczneTermin.DataSource = wyswietl.Termin();
+            listBoxTabelePoboczneTermin.DisplayMember = "Termin";
+            listBoxTabelePoboczneTermin.ValueMember = "Id";
+            //Vat
+            groupBoxTabelePoboczneVatDopisz.Visible = false;
+            groupBoxTabelePoboczneVatEdytuj.Visible = false;
+            listBoxTabelePoboczneVat.DataSource = wyswietl.Vat();
+            listBoxTabelePoboczneVat.DisplayMember = "StawkaVat";
+            listBoxTabelePoboczneVat.ValueMember = "Id";
         }
 
 

@@ -97,6 +97,12 @@
     <Compile Include="TPKierownik.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TPTermin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPVat.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Wyswietl.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
