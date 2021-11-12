@@ -12,26 +12,10 @@ namespace ProjektPWF
     {
         //kod do Dostarczanie z TabelePoboczne
 
-        private void buttonTabelePoboczne_Click(object sender, EventArgs e)
-        {
-            tabControlTabelePoboczne.Visible = true;
-            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
-            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
-
-            //TabelePoboczne tabelePoboczne = new TabelePoboczne();
-            //tabelePoboczne.ListBox1();
-
-            listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
-            listBoxTabelePoboczneDostarczanie.DisplayMember = "Sposob";
-            listBoxTabelePoboczneDostarczanie.ValueMember = "Id";
-
-        }
-
-
-
         private void buttonDostarczanieKasuj_Click(object sender, EventArgs e)
         {
-
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
             DostarczanieViewModel dostarczanieViewModel = (DostarczanieViewModel)listBoxTabelePoboczneDostarczanie.SelectedItem;
             if (MessageBox.Show("Skasować pole " + dostarczanieViewModel.Sposob + " ?", "Potwierdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -47,6 +31,7 @@ namespace ProjektPWF
 
         private void buttonDostarczanieDopisz_Click(object sender, EventArgs e)
         {
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
             groupBoxTabelePoboczneDostarczanieDopisz.Visible = true;
         }
 
@@ -57,6 +42,7 @@ namespace ProjektPWF
                 TabDostarczanie tabDostarczanie = new TabDostarczanie { Sposob = textBoxTabelePoboczneDostarczanieDopisz.Text };
                 obsluga.WpiszTabDostarczanie(tabDostarczanie);
                 listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
+                textBoxTabelePoboczneDostarczanieDopisz.Text = "";
                 groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
             }
         }
@@ -69,6 +55,7 @@ namespace ProjektPWF
 
         private void buttonDostarczanieEdytuj_Click(object sender, EventArgs e)
         {
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
             groupBoxTabelePoboczneDostarczanieEdytuj.Visible = true;
             DostarczanieViewModel dostarczanieViewModel = (DostarczanieViewModel)listBoxTabelePoboczneDostarczanie.SelectedItem;
             textBoxTabelePoboczneDostarczanieEdytuj.Text = dostarczanieViewModel.Sposob;
@@ -95,12 +82,6 @@ namespace ProjektPWF
             textBoxTabelePoboczneDostarczanieEdytuj.Text = "";
             groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
         }
-
-
-
-
-
-
 
     }
 }

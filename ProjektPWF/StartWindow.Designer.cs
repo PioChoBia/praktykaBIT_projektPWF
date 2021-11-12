@@ -82,6 +82,24 @@ namespace ProjektPWF
             this.buttonDostarczanieDopisz = new System.Windows.Forms.Button();
             this.buttonDostarczanieEdytuj = new System.Windows.Forms.Button();
             this.tabPageKierownik = new System.Windows.Forms.TabPage();
+            this.groupBoxTabelePoboczneKierownikEdytuj = new System.Windows.Forms.GroupBox();
+            this.labelTabelePoboczneKierownikEdytujNazwisko = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneKierownikEdytujNazwisko = new System.Windows.Forms.TextBox();
+            this.labelTabelePoboczneKierownikEdytujImie = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneKierownikEdytujImie = new System.Windows.Forms.TextBox();
+            this.buttonTabelePoboczneKierownikEdytujPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneKierownikEdytujOK = new System.Windows.Forms.Button();
+            this.groupBoxTabelePoboczneKierownikDopisz = new System.Windows.Forms.GroupBox();
+            this.labelTabelePoboczneKierownikDopiszNazwisko = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneKierownikDopiszNazwisko = new System.Windows.Forms.TextBox();
+            this.labelTabelepoboczneKierownikDopiszImie = new System.Windows.Forms.Label();
+            this.buttonTabelepoboczneKierownikDopiszPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneKierownikDopiszOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneKierownikDopiszImie = new System.Windows.Forms.TextBox();
+            this.listBoxTabelePoboczneKierownik = new System.Windows.Forms.ListBox();
+            this.buttonTabelePoboczneKierownikKasuj = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneKierownikDopisz = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneKierownikEdytuj = new System.Windows.Forms.Button();
             this.tabPageNabywca = new System.Windows.Forms.TabPage();
             this.tabPagePlatnosc = new System.Windows.Forms.TabPage();
             this.tabPageStatus = new System.Windows.Forms.TabPage();
@@ -94,6 +112,9 @@ namespace ProjektPWF
             this.tabPageDostarczanie.SuspendLayout();
             this.groupBoxTabelePoboczneDostarczanieEdytuj.SuspendLayout();
             this.groupBoxTabelePoboczneDostarczanieDopisz.SuspendLayout();
+            this.tabPageKierownik.SuspendLayout();
+            this.groupBoxTabelePoboczneKierownikEdytuj.SuspendLayout();
+            this.groupBoxTabelePoboczneKierownikDopisz.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNaglowek
@@ -621,6 +642,12 @@ namespace ProjektPWF
             // 
             // tabPageKierownik
             // 
+            this.tabPageKierownik.Controls.Add(this.groupBoxTabelePoboczneKierownikEdytuj);
+            this.tabPageKierownik.Controls.Add(this.groupBoxTabelePoboczneKierownikDopisz);
+            this.tabPageKierownik.Controls.Add(this.listBoxTabelePoboczneKierownik);
+            this.tabPageKierownik.Controls.Add(this.buttonTabelePoboczneKierownikKasuj);
+            this.tabPageKierownik.Controls.Add(this.buttonTabelePoboczneKierownikDopisz);
+            this.tabPageKierownik.Controls.Add(this.buttonTabelePoboczneKierownikEdytuj);
             this.tabPageKierownik.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tabPageKierownik.Location = new System.Drawing.Point(4, 25);
             this.tabPageKierownik.Name = "tabPageKierownik";
@@ -629,6 +656,185 @@ namespace ProjektPWF
             this.tabPageKierownik.TabIndex = 1;
             this.tabPageKierownik.Text = "kierownik";
             this.tabPageKierownik.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxTabelePoboczneKierownikEdytuj
+            // 
+            this.groupBoxTabelePoboczneKierownikEdytuj.Controls.Add(this.labelTabelePoboczneKierownikEdytujNazwisko);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Controls.Add(this.textBoxTabelePoboczneKierownikEdytujNazwisko);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Controls.Add(this.labelTabelePoboczneKierownikEdytujImie);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Controls.Add(this.textBoxTabelePoboczneKierownikEdytujImie);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Controls.Add(this.buttonTabelePoboczneKierownikEdytujPomin);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Controls.Add(this.buttonTabelePoboczneKierownikEdytujOK);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Location = new System.Drawing.Point(327, 115);
+            this.groupBoxTabelePoboczneKierownikEdytuj.Name = "groupBoxTabelePoboczneKierownikEdytuj";
+            this.groupBoxTabelePoboczneKierownikEdytuj.Size = new System.Drawing.Size(407, 83);
+            this.groupBoxTabelePoboczneKierownikEdytuj.TabIndex = 17;
+            this.groupBoxTabelePoboczneKierownikEdytuj.TabStop = false;
+            this.groupBoxTabelePoboczneKierownikEdytuj.Text = "edytuj i zatwierdź";
+            // 
+            // labelTabelePoboczneKierownikEdytujNazwisko
+            // 
+            this.labelTabelePoboczneKierownikEdytujNazwisko.AutoSize = true;
+            this.labelTabelePoboczneKierownikEdytujNazwisko.Location = new System.Drawing.Point(16, 49);
+            this.labelTabelePoboczneKierownikEdytujNazwisko.Name = "labelTabelePoboczneKierownikEdytujNazwisko";
+            this.labelTabelePoboczneKierownikEdytujNazwisko.Size = new System.Drawing.Size(51, 13);
+            this.labelTabelePoboczneKierownikEdytujNazwisko.TabIndex = 13;
+            this.labelTabelePoboczneKierownikEdytujNazwisko.Text = "nazwisko";
+            // 
+            // textBoxTabelePoboczneKierownikEdytujNazwisko
+            // 
+            this.textBoxTabelePoboczneKierownikEdytujNazwisko.Location = new System.Drawing.Point(99, 45);
+            this.textBoxTabelePoboczneKierownikEdytujNazwisko.Name = "textBoxTabelePoboczneKierownikEdytujNazwisko";
+            this.textBoxTabelePoboczneKierownikEdytujNazwisko.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneKierownikEdytujNazwisko.TabIndex = 12;
+            // 
+            // labelTabelePoboczneKierownikEdytujImie
+            // 
+            this.labelTabelePoboczneKierownikEdytujImie.AutoSize = true;
+            this.labelTabelePoboczneKierownikEdytujImie.Location = new System.Drawing.Point(16, 22);
+            this.labelTabelePoboczneKierownikEdytujImie.Name = "labelTabelePoboczneKierownikEdytujImie";
+            this.labelTabelePoboczneKierownikEdytujImie.Size = new System.Drawing.Size(25, 13);
+            this.labelTabelePoboczneKierownikEdytujImie.TabIndex = 11;
+            this.labelTabelePoboczneKierownikEdytujImie.Text = "imie";
+            // 
+            // textBoxTabelePoboczneKierownikEdytujImie
+            // 
+            this.textBoxTabelePoboczneKierownikEdytujImie.Location = new System.Drawing.Point(99, 19);
+            this.textBoxTabelePoboczneKierownikEdytujImie.Name = "textBoxTabelePoboczneKierownikEdytujImie";
+            this.textBoxTabelePoboczneKierownikEdytujImie.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneKierownikEdytujImie.TabIndex = 10;
+            // 
+            // buttonTabelePoboczneKierownikEdytujPomin
+            // 
+            this.buttonTabelePoboczneKierownikEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneKierownikEdytujPomin.Location = new System.Drawing.Point(314, 25);
+            this.buttonTabelePoboczneKierownikEdytujPomin.Name = "buttonTabelePoboczneKierownikEdytujPomin";
+            this.buttonTabelePoboczneKierownikEdytujPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneKierownikEdytujPomin.TabIndex = 6;
+            this.buttonTabelePoboczneKierownikEdytujPomin.Text = "pomiń";
+            this.buttonTabelePoboczneKierownikEdytujPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneKierownikEdytujPomin.Click += new System.EventHandler(this.buttonTabelePoboczneKierownikEdytujPomin_Click);
+            // 
+            // buttonTabelePoboczneKierownikEdytujOK
+            // 
+            this.buttonTabelePoboczneKierownikEdytujOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneKierownikEdytujOK.Location = new System.Drawing.Point(249, 25);
+            this.buttonTabelePoboczneKierownikEdytujOK.Name = "buttonTabelePoboczneKierownikEdytujOK";
+            this.buttonTabelePoboczneKierownikEdytujOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneKierownikEdytujOK.TabIndex = 5;
+            this.buttonTabelePoboczneKierownikEdytujOK.Text = "OK";
+            this.buttonTabelePoboczneKierownikEdytujOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneKierownikEdytujOK.Click += new System.EventHandler(this.buttonTabelePoboczneKierownikEdytujOK_Click);
+            // 
+            // groupBoxTabelePoboczneKierownikDopisz
+            // 
+            this.groupBoxTabelePoboczneKierownikDopisz.Controls.Add(this.labelTabelePoboczneKierownikDopiszNazwisko);
+            this.groupBoxTabelePoboczneKierownikDopisz.Controls.Add(this.textBoxTabelePoboczneKierownikDopiszNazwisko);
+            this.groupBoxTabelePoboczneKierownikDopisz.Controls.Add(this.labelTabelepoboczneKierownikDopiszImie);
+            this.groupBoxTabelePoboczneKierownikDopisz.Controls.Add(this.buttonTabelepoboczneKierownikDopiszPomin);
+            this.groupBoxTabelePoboczneKierownikDopisz.Controls.Add(this.buttonTabelePoboczneKierownikDopiszOK);
+            this.groupBoxTabelePoboczneKierownikDopisz.Controls.Add(this.textBoxTabelePoboczneKierownikDopiszImie);
+            this.groupBoxTabelePoboczneKierownikDopisz.Location = new System.Drawing.Point(327, 20);
+            this.groupBoxTabelePoboczneKierownikDopisz.Name = "groupBoxTabelePoboczneKierownikDopisz";
+            this.groupBoxTabelePoboczneKierownikDopisz.Size = new System.Drawing.Size(407, 83);
+            this.groupBoxTabelePoboczneKierownikDopisz.TabIndex = 16;
+            this.groupBoxTabelePoboczneKierownikDopisz.TabStop = false;
+            this.groupBoxTabelePoboczneKierownikDopisz.Text = "dopisz i zatwierdź";
+            // 
+            // labelTabelePoboczneKierownikDopiszNazwisko
+            // 
+            this.labelTabelePoboczneKierownikDopiszNazwisko.AutoSize = true;
+            this.labelTabelePoboczneKierownikDopiszNazwisko.Location = new System.Drawing.Point(16, 49);
+            this.labelTabelePoboczneKierownikDopiszNazwisko.Name = "labelTabelePoboczneKierownikDopiszNazwisko";
+            this.labelTabelePoboczneKierownikDopiszNazwisko.Size = new System.Drawing.Size(51, 13);
+            this.labelTabelePoboczneKierownikDopiszNazwisko.TabIndex = 9;
+            this.labelTabelePoboczneKierownikDopiszNazwisko.Text = "nazwisko";
+            // 
+            // textBoxTabelePoboczneKierownikDopiszNazwisko
+            // 
+            this.textBoxTabelePoboczneKierownikDopiszNazwisko.Location = new System.Drawing.Point(99, 45);
+            this.textBoxTabelePoboczneKierownikDopiszNazwisko.Name = "textBoxTabelePoboczneKierownikDopiszNazwisko";
+            this.textBoxTabelePoboczneKierownikDopiszNazwisko.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneKierownikDopiszNazwisko.TabIndex = 8;
+            // 
+            // labelTabelepoboczneKierownikDopiszImie
+            // 
+            this.labelTabelepoboczneKierownikDopiszImie.AutoSize = true;
+            this.labelTabelepoboczneKierownikDopiszImie.Location = new System.Drawing.Point(16, 22);
+            this.labelTabelepoboczneKierownikDopiszImie.Name = "labelTabelepoboczneKierownikDopiszImie";
+            this.labelTabelepoboczneKierownikDopiszImie.Size = new System.Drawing.Size(25, 13);
+            this.labelTabelepoboczneKierownikDopiszImie.TabIndex = 7;
+            this.labelTabelepoboczneKierownikDopiszImie.Text = "imie";
+            // 
+            // buttonTabelepoboczneKierownikDopiszPomin
+            // 
+            this.buttonTabelepoboczneKierownikDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelepoboczneKierownikDopiszPomin.Location = new System.Drawing.Point(314, 25);
+            this.buttonTabelepoboczneKierownikDopiszPomin.Name = "buttonTabelepoboczneKierownikDopiszPomin";
+            this.buttonTabelepoboczneKierownikDopiszPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelepoboczneKierownikDopiszPomin.TabIndex = 6;
+            this.buttonTabelepoboczneKierownikDopiszPomin.Text = "pomiń";
+            this.buttonTabelepoboczneKierownikDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelepoboczneKierownikDopiszPomin.Click += new System.EventHandler(this.buttonTabelepoboczneKierownikDopiszPomin_Click);
+            // 
+            // buttonTabelePoboczneKierownikDopiszOK
+            // 
+            this.buttonTabelePoboczneKierownikDopiszOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneKierownikDopiszOK.Location = new System.Drawing.Point(249, 25);
+            this.buttonTabelePoboczneKierownikDopiszOK.Name = "buttonTabelePoboczneKierownikDopiszOK";
+            this.buttonTabelePoboczneKierownikDopiszOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneKierownikDopiszOK.TabIndex = 5;
+            this.buttonTabelePoboczneKierownikDopiszOK.Text = "OK";
+            this.buttonTabelePoboczneKierownikDopiszOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneKierownikDopiszOK.Click += new System.EventHandler(this.buttonTabelePoboczneKierownikDopiszOK_Click);
+            // 
+            // textBoxTabelePoboczneKierownikDopiszImie
+            // 
+            this.textBoxTabelePoboczneKierownikDopiszImie.Location = new System.Drawing.Point(99, 19);
+            this.textBoxTabelePoboczneKierownikDopiszImie.Name = "textBoxTabelePoboczneKierownikDopiszImie";
+            this.textBoxTabelePoboczneKierownikDopiszImie.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneKierownikDopiszImie.TabIndex = 0;
+            // 
+            // listBoxTabelePoboczneKierownik
+            // 
+            this.listBoxTabelePoboczneKierownik.FormattingEnabled = true;
+            this.listBoxTabelePoboczneKierownik.Location = new System.Drawing.Point(17, 26);
+            this.listBoxTabelePoboczneKierownik.Name = "listBoxTabelePoboczneKierownik";
+            this.listBoxTabelePoboczneKierownik.Size = new System.Drawing.Size(131, 160);
+            this.listBoxTabelePoboczneKierownik.TabIndex = 15;
+            // 
+            // buttonTabelePoboczneKierownikKasuj
+            // 
+            this.buttonTabelePoboczneKierownikKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneKierownikKasuj.Location = new System.Drawing.Point(185, 153);
+            this.buttonTabelePoboczneKierownikKasuj.Name = "buttonTabelePoboczneKierownikKasuj";
+            this.buttonTabelePoboczneKierownikKasuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneKierownikKasuj.TabIndex = 14;
+            this.buttonTabelePoboczneKierownikKasuj.Text = "kasuj";
+            this.buttonTabelePoboczneKierownikKasuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneKierownikKasuj.Click += new System.EventHandler(this.buttonTabelePoboczneKierownikKasuj_Click);
+            // 
+            // buttonTabelePoboczneKierownikDopisz
+            // 
+            this.buttonTabelePoboczneKierownikDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneKierownikDopisz.Location = new System.Drawing.Point(185, 26);
+            this.buttonTabelePoboczneKierownikDopisz.Name = "buttonTabelePoboczneKierownikDopisz";
+            this.buttonTabelePoboczneKierownikDopisz.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneKierownikDopisz.TabIndex = 13;
+            this.buttonTabelePoboczneKierownikDopisz.Text = "dopisz";
+            this.buttonTabelePoboczneKierownikDopisz.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneKierownikDopisz.Click += new System.EventHandler(this.buttonTabelePoboczneKierownikDopisz_Click);
+            // 
+            // buttonTabelePoboczneKierownikEdytuj
+            // 
+            this.buttonTabelePoboczneKierownikEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneKierownikEdytuj.Location = new System.Drawing.Point(185, 87);
+            this.buttonTabelePoboczneKierownikEdytuj.Name = "buttonTabelePoboczneKierownikEdytuj";
+            this.buttonTabelePoboczneKierownikEdytuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneKierownikEdytuj.TabIndex = 12;
+            this.buttonTabelePoboczneKierownikEdytuj.Text = "edytuj";
+            this.buttonTabelePoboczneKierownikEdytuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneKierownikEdytuj.Click += new System.EventHandler(this.buttonTabelePoboczneKierownikEdytuj_Click);
             // 
             // tabPageNabywca
             // 
@@ -702,6 +908,11 @@ namespace ProjektPWF
             this.groupBoxTabelePoboczneDostarczanieEdytuj.PerformLayout();
             this.groupBoxTabelePoboczneDostarczanieDopisz.ResumeLayout(false);
             this.groupBoxTabelePoboczneDostarczanieDopisz.PerformLayout();
+            this.tabPageKierownik.ResumeLayout(false);
+            this.groupBoxTabelePoboczneKierownikEdytuj.ResumeLayout(false);
+            this.groupBoxTabelePoboczneKierownikEdytuj.PerformLayout();
+            this.groupBoxTabelePoboczneKierownikDopisz.ResumeLayout(false);
+            this.groupBoxTabelePoboczneKierownikDopisz.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -766,6 +977,24 @@ namespace ProjektPWF
         private System.Windows.Forms.Button buttonTabelePoboczneDostarczanieEdytujPomin;
         private System.Windows.Forms.Button buttonTabelePoboczneDostarczanieEdytujOK;
         private System.Windows.Forms.TextBox textBoxTabelePoboczneDostarczanieEdytuj;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneKierownikEdytuj;
+        private System.Windows.Forms.Label labelTabelePoboczneKierownikEdytujNazwisko;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneKierownikEdytujNazwisko;
+        private System.Windows.Forms.Label labelTabelePoboczneKierownikEdytujImie;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneKierownikEdytujImie;
+        private System.Windows.Forms.Button buttonTabelePoboczneKierownikEdytujPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneKierownikEdytujOK;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneKierownikDopisz;
+        private System.Windows.Forms.Label labelTabelePoboczneKierownikDopiszNazwisko;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneKierownikDopiszNazwisko;
+        private System.Windows.Forms.Label labelTabelepoboczneKierownikDopiszImie;
+        private System.Windows.Forms.Button buttonTabelepoboczneKierownikDopiszPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneKierownikDopiszOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneKierownikDopiszImie;
+        private System.Windows.Forms.ListBox listBoxTabelePoboczneKierownik;
+        private System.Windows.Forms.Button buttonTabelePoboczneKierownikKasuj;
+        private System.Windows.Forms.Button buttonTabelePoboczneKierownikDopisz;
+        private System.Windows.Forms.Button buttonTabelePoboczneKierownikEdytuj;
     }
 }
 

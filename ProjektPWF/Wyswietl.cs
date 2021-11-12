@@ -72,7 +72,7 @@ namespace ProjektPWF
             }
         }
 
-        public List<KierownikViewModel> ComboBoxDopiszKierownik()
+        public List<KierownikViewModel> Kierownik()
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -80,7 +80,7 @@ namespace ProjektPWF
                    Select(s => new KierownikViewModel
                    {
                        Id = s.Id,
-                       NazwiskoKierownika = s.NazwiskoKierownika,
+                       NazwiskoKierownika = s.ImieKierownika+" "+ s.NazwiskoKierownika,
                        ImieKierownika=s.ImieKierownika
                    }).ToList();
                 return dane;

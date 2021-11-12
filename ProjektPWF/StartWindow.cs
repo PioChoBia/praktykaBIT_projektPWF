@@ -60,7 +60,7 @@ namespace ProjektPWF
             comboBoxDopiszDostarczanie.DisplayMember = "Sposob";
             comboBoxDopiszDostarczanie.ValueMember = "Id";
 
-            comboBoxDopiszKierownik.DataSource = wyswietl.ComboBoxDopiszKierownik();
+            comboBoxDopiszKierownik.DataSource = wyswietl.Kierownik();
             comboBoxDopiszKierownik.DisplayMember = "NazwiskoKierownika"; // jak wyświetlić imię i nazwisko ? "Imiekierownika+" "+"NazwiskoKierownika" nie idzie!!
             comboBoxDopiszKierownik.ValueMember = "Id";
 
@@ -141,7 +141,22 @@ namespace ProjektPWF
         }
 
 
-
+        private void buttonTabelePoboczne_Click(object sender, EventArgs e)
+        {
+            tabControlTabelePoboczne.Visible = true;
+            //Dostarczanie
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
+            listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
+            listBoxTabelePoboczneDostarczanie.DisplayMember = "Sposob";
+            listBoxTabelePoboczneDostarczanie.ValueMember = "Id";
+            //Kierownik
+            groupBoxTabelePoboczneKierownikDopisz.Visible = false;
+            groupBoxTabelePoboczneKierownikEdytuj.Visible = false;
+            listBoxTabelePoboczneKierownik.DataSource = wyswietl.Kierownik();
+            listBoxTabelePoboczneKierownik.DisplayMember = "NazwiskoKierownika";//wyświetli łacznie imię i nazwisko
+            listBoxTabelePoboczneKierownik.ValueMember = "Id";
+        }
 
 
     }
