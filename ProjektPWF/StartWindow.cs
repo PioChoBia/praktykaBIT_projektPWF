@@ -156,8 +156,12 @@ namespace ProjektPWF
             listBoxTabelePoboczneKierownik.DataSource = wyswietl.Kierownik();
             listBoxTabelePoboczneKierownik.DisplayMember = "NazwiskoKierownika";//wyświetli łacznie imię i nazwisko
             listBoxTabelePoboczneKierownik.ValueMember = "Id";
-
-
+            //Nabywca
+            groupBoxTabelePoboczneNabywcaDopisz.Visible = false;
+            groupBoxTabelePoboczneNabywcaEdytuj.Visible = false;
+            listBoxTabelePoboczneNabywca.DataSource = wyswietl.Nabywca();
+            listBoxTabelePoboczneNabywca.DisplayMember = "NazwaNabywcy";
+            listBoxTabelePoboczneNabywca.ValueMember = "Id";
             //Platnosc
             groupBoxTabelePobocznePlatnoscDopisz.Visible = false;
             groupBoxTabelePobocznePlatnoscEdytuj.Visible = false;
@@ -183,6 +187,9 @@ namespace ProjektPWF
             listBoxTabelePoboczneVat.DisplayMember = "StawkaVat";
             listBoxTabelePoboczneVat.ValueMember = "Id";
         }
+
+
+
 
 
 

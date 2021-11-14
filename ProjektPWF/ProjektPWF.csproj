@@ -97,6 +97,9 @@
     <Compile Include="TPKierownik.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TPNabywca.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TPPlatnosc.cs">
       <SubType>Form</SubType>
     </Compile>

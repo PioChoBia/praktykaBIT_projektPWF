@@ -101,6 +101,28 @@ namespace ProjektPWF
             this.buttonTabelePoboczneKierownikDopisz = new System.Windows.Forms.Button();
             this.buttonTabelePoboczneKierownikEdytuj = new System.Windows.Forms.Button();
             this.tabPageNabywca = new System.Windows.Forms.TabPage();
+            this.groupBoxTabelePoboczneNabywcaEdytuj = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneNabywcaEdytujNip = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneNabywcaEdytujAdres = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonTabelePoboczneNabywcaEdytujPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneNabywcaEdytujOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneNabywcaEdytujNazwa = new System.Windows.Forms.TextBox();
+            this.groupBoxTabelePoboczneNabywcaDopisz = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneNabywcaDopiszNip = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxTabelePoboczneNabywcaDopiszAdres = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonTabelePoboczneNabywcaDopiszPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneNabywcaDopiszOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneNabywcaDopiszNazwa = new System.Windows.Forms.TextBox();
+            this.listBoxTabelePoboczneNabywca = new System.Windows.Forms.ListBox();
+            this.buttonTabelePoboczneNabywcaKasuj = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneNabywcaDopisz = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneNabywcaEdytuj = new System.Windows.Forms.Button();
             this.tabPagePlatnosc = new System.Windows.Forms.TabPage();
             this.groupBoxTabelePobocznePlatnoscEdytuj = new System.Windows.Forms.GroupBox();
             this.buttonTabelePobocznePlatnoscEdytujPomin = new System.Windows.Forms.Button();
@@ -163,6 +185,9 @@ namespace ProjektPWF
             this.tabPageKierownik.SuspendLayout();
             this.groupBoxTabelePoboczneKierownikEdytuj.SuspendLayout();
             this.groupBoxTabelePoboczneKierownikDopisz.SuspendLayout();
+            this.tabPageNabywca.SuspendLayout();
+            this.groupBoxTabelePoboczneNabywcaEdytuj.SuspendLayout();
+            this.groupBoxTabelePoboczneNabywcaDopisz.SuspendLayout();
             this.tabPagePlatnosc.SuspendLayout();
             this.groupBoxTabelePobocznePlatnoscEdytuj.SuspendLayout();
             this.groupBoxTabelePobocznePlatnoscDopisz.SuspendLayout();
@@ -553,7 +578,7 @@ namespace ProjektPWF
             this.tabControlTabelePoboczne.Controls.Add(this.tabPageStatus);
             this.tabControlTabelePoboczne.Controls.Add(this.tabPageTermin);
             this.tabControlTabelePoboczne.Controls.Add(this.tabPageVat);
-            this.tabControlTabelePoboczne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tabControlTabelePoboczne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tabControlTabelePoboczne.Location = new System.Drawing.Point(12, 450);
             this.tabControlTabelePoboczne.Name = "tabControlTabelePoboczne";
             this.tabControlTabelePoboczne.SelectedIndex = 0;
@@ -569,10 +594,10 @@ namespace ProjektPWF
             this.tabPageDostarczanie.Controls.Add(this.buttonDostarczanieDopisz);
             this.tabPageDostarczanie.Controls.Add(this.buttonTabelePoboczneDostarczanieEdytuj);
             this.tabPageDostarczanie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tabPageDostarczanie.Location = new System.Drawing.Point(4, 25);
+            this.tabPageDostarczanie.Location = new System.Drawing.Point(4, 22);
             this.tabPageDostarczanie.Name = "tabPageDostarczanie";
             this.tabPageDostarczanie.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDostarczanie.Size = new System.Drawing.Size(1134, 223);
+            this.tabPageDostarczanie.Size = new System.Drawing.Size(1134, 226);
             this.tabPageDostarczanie.TabIndex = 0;
             this.tabPageDostarczanie.Text = "dostarczanie";
             this.tabPageDostarczanie.UseVisualStyleBackColor = true;
@@ -709,10 +734,10 @@ namespace ProjektPWF
             this.tabPageKierownik.Controls.Add(this.buttonTabelePoboczneKierownikDopisz);
             this.tabPageKierownik.Controls.Add(this.buttonTabelePoboczneKierownikEdytuj);
             this.tabPageKierownik.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tabPageKierownik.Location = new System.Drawing.Point(4, 25);
+            this.tabPageKierownik.Location = new System.Drawing.Point(4, 22);
             this.tabPageKierownik.Name = "tabPageKierownik";
             this.tabPageKierownik.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageKierownik.Size = new System.Drawing.Size(1134, 223);
+            this.tabPageKierownik.Size = new System.Drawing.Size(1134, 226);
             this.tabPageKierownik.TabIndex = 1;
             this.tabPageKierownik.Text = "kierownik";
             this.tabPageKierownik.UseVisualStyleBackColor = true;
@@ -898,12 +923,236 @@ namespace ProjektPWF
             // 
             // tabPageNabywca
             // 
-            this.tabPageNabywca.Location = new System.Drawing.Point(4, 25);
+            this.tabPageNabywca.Controls.Add(this.groupBoxTabelePoboczneNabywcaEdytuj);
+            this.tabPageNabywca.Controls.Add(this.groupBoxTabelePoboczneNabywcaDopisz);
+            this.tabPageNabywca.Controls.Add(this.listBoxTabelePoboczneNabywca);
+            this.tabPageNabywca.Controls.Add(this.buttonTabelePoboczneNabywcaKasuj);
+            this.tabPageNabywca.Controls.Add(this.buttonTabelePoboczneNabywcaDopisz);
+            this.tabPageNabywca.Controls.Add(this.buttonTabelePoboczneNabywcaEdytuj);
+            this.tabPageNabywca.Location = new System.Drawing.Point(4, 22);
             this.tabPageNabywca.Name = "tabPageNabywca";
-            this.tabPageNabywca.Size = new System.Drawing.Size(1134, 223);
+            this.tabPageNabywca.Size = new System.Drawing.Size(1134, 226);
             this.tabPageNabywca.TabIndex = 2;
             this.tabPageNabywca.Text = "nabywca";
             this.tabPageNabywca.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxTabelePoboczneNabywcaEdytuj
+            // 
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.label1);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.textBoxTabelePoboczneNabywcaEdytujNip);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.label2);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.textBoxTabelePoboczneNabywcaEdytujAdres);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.label6);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.buttonTabelePoboczneNabywcaEdytujPomin);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.buttonTabelePoboczneNabywcaEdytujOK);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Controls.Add(this.textBoxTabelePoboczneNabywcaEdytujNazwa);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Location = new System.Drawing.Point(360, 113);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Name = "groupBoxTabelePoboczneNabywcaEdytuj";
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Size = new System.Drawing.Size(495, 107);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.TabIndex = 23;
+            this.groupBoxTabelePoboczneNabywcaEdytuj.TabStop = false;
+            this.groupBoxTabelePoboczneNabywcaEdytuj.Text = "edytuj i zatwierdź";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Nip";
+            // 
+            // textBoxTabelePoboczneNabywcaEdytujNip
+            // 
+            this.textBoxTabelePoboczneNabywcaEdytujNip.Location = new System.Drawing.Point(99, 77);
+            this.textBoxTabelePoboczneNabywcaEdytujNip.Name = "textBoxTabelePoboczneNabywcaEdytujNip";
+            this.textBoxTabelePoboczneNabywcaEdytujNip.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneNabywcaEdytujNip.TabIndex = 10;
+            this.textBoxTabelePoboczneNabywcaEdytujNip.TextChanged += new System.EventHandler(this.textBoxTabelePoboczneNabywcaEdytujNip_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 55);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "adres";
+            // 
+            // textBoxTabelePoboczneNabywcaEdytujAdres
+            // 
+            this.textBoxTabelePoboczneNabywcaEdytujAdres.Location = new System.Drawing.Point(99, 51);
+            this.textBoxTabelePoboczneNabywcaEdytujAdres.Name = "textBoxTabelePoboczneNabywcaEdytujAdres";
+            this.textBoxTabelePoboczneNabywcaEdytujAdres.Size = new System.Drawing.Size(213, 20);
+            this.textBoxTabelePoboczneNabywcaEdytujAdres.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "nazwa";
+            // 
+            // buttonTabelePoboczneNabywcaEdytujPomin
+            // 
+            this.buttonTabelePoboczneNabywcaEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaEdytujPomin.Location = new System.Drawing.Point(402, 39);
+            this.buttonTabelePoboczneNabywcaEdytujPomin.Name = "buttonTabelePoboczneNabywcaEdytujPomin";
+            this.buttonTabelePoboczneNabywcaEdytujPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneNabywcaEdytujPomin.TabIndex = 6;
+            this.buttonTabelePoboczneNabywcaEdytujPomin.Text = "pomiń";
+            this.buttonTabelePoboczneNabywcaEdytujPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaEdytujPomin.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaEdytujPomin_Click);
+            // 
+            // buttonTabelePoboczneNabywcaEdytujOK
+            // 
+            this.buttonTabelePoboczneNabywcaEdytujOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaEdytujOK.Location = new System.Drawing.Point(337, 39);
+            this.buttonTabelePoboczneNabywcaEdytujOK.Name = "buttonTabelePoboczneNabywcaEdytujOK";
+            this.buttonTabelePoboczneNabywcaEdytujOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneNabywcaEdytujOK.TabIndex = 5;
+            this.buttonTabelePoboczneNabywcaEdytujOK.Text = "OK";
+            this.buttonTabelePoboczneNabywcaEdytujOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaEdytujOK.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaEdytujOK_Click);
+            // 
+            // textBoxTabelePoboczneNabywcaEdytujNazwa
+            // 
+            this.textBoxTabelePoboczneNabywcaEdytujNazwa.Location = new System.Drawing.Point(99, 26);
+            this.textBoxTabelePoboczneNabywcaEdytujNazwa.Name = "textBoxTabelePoboczneNabywcaEdytujNazwa";
+            this.textBoxTabelePoboczneNabywcaEdytujNazwa.Size = new System.Drawing.Size(213, 20);
+            this.textBoxTabelePoboczneNabywcaEdytujNazwa.TabIndex = 0;
+            // 
+            // groupBoxTabelePoboczneNabywcaDopisz
+            // 
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.label5);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.textBoxTabelePoboczneNabywcaDopiszNip);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.label3);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.textBoxTabelePoboczneNabywcaDopiszAdres);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.label4);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.buttonTabelePoboczneNabywcaDopiszPomin);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.buttonTabelePoboczneNabywcaDopiszOK);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Controls.Add(this.textBoxTabelePoboczneNabywcaDopiszNazwa);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Location = new System.Drawing.Point(360, 4);
+            this.groupBoxTabelePoboczneNabywcaDopisz.Name = "groupBoxTabelePoboczneNabywcaDopisz";
+            this.groupBoxTabelePoboczneNabywcaDopisz.Size = new System.Drawing.Size(495, 103);
+            this.groupBoxTabelePoboczneNabywcaDopisz.TabIndex = 22;
+            this.groupBoxTabelePoboczneNabywcaDopisz.TabStop = false;
+            this.groupBoxTabelePoboczneNabywcaDopisz.Text = "dopisz i zatwierdź";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Nip";
+            // 
+            // textBoxTabelePoboczneNabywcaDopiszNip
+            // 
+            this.textBoxTabelePoboczneNabywcaDopiszNip.Location = new System.Drawing.Point(99, 73);
+            this.textBoxTabelePoboczneNabywcaDopiszNip.Name = "textBoxTabelePoboczneNabywcaDopiszNip";
+            this.textBoxTabelePoboczneNabywcaDopiszNip.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePoboczneNabywcaDopiszNip.TabIndex = 10;
+            this.textBoxTabelePoboczneNabywcaDopiszNip.TextChanged += new System.EventHandler(this.textBoxTabelePoboczneNabywcaDopiszNip_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "adres";
+            // 
+            // textBoxTabelePoboczneNabywcaDopiszAdres
+            // 
+            this.textBoxTabelePoboczneNabywcaDopiszAdres.Location = new System.Drawing.Point(99, 47);
+            this.textBoxTabelePoboczneNabywcaDopiszAdres.Name = "textBoxTabelePoboczneNabywcaDopiszAdres";
+            this.textBoxTabelePoboczneNabywcaDopiszAdres.Size = new System.Drawing.Size(213, 20);
+            this.textBoxTabelePoboczneNabywcaDopiszAdres.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "nazwa";
+            // 
+            // buttonTabelePoboczneNabywcaDopiszPomin
+            // 
+            this.buttonTabelePoboczneNabywcaDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaDopiszPomin.Location = new System.Drawing.Point(402, 35);
+            this.buttonTabelePoboczneNabywcaDopiszPomin.Name = "buttonTabelePoboczneNabywcaDopiszPomin";
+            this.buttonTabelePoboczneNabywcaDopiszPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneNabywcaDopiszPomin.TabIndex = 6;
+            this.buttonTabelePoboczneNabywcaDopiszPomin.Text = "pomiń";
+            this.buttonTabelePoboczneNabywcaDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaDopiszPomin.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaDopiszPomin_Click);
+            // 
+            // buttonTabelePoboczneNabywcaDopiszOK
+            // 
+            this.buttonTabelePoboczneNabywcaDopiszOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaDopiszOK.Location = new System.Drawing.Point(337, 35);
+            this.buttonTabelePoboczneNabywcaDopiszOK.Name = "buttonTabelePoboczneNabywcaDopiszOK";
+            this.buttonTabelePoboczneNabywcaDopiszOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneNabywcaDopiszOK.TabIndex = 5;
+            this.buttonTabelePoboczneNabywcaDopiszOK.Text = "OK";
+            this.buttonTabelePoboczneNabywcaDopiszOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaDopiszOK.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaDopiszOK_Click);
+            // 
+            // textBoxTabelePoboczneNabywcaDopiszNazwa
+            // 
+            this.textBoxTabelePoboczneNabywcaDopiszNazwa.Location = new System.Drawing.Point(99, 22);
+            this.textBoxTabelePoboczneNabywcaDopiszNazwa.Name = "textBoxTabelePoboczneNabywcaDopiszNazwa";
+            this.textBoxTabelePoboczneNabywcaDopiszNazwa.Size = new System.Drawing.Size(213, 20);
+            this.textBoxTabelePoboczneNabywcaDopiszNazwa.TabIndex = 0;
+             // 
+            // listBoxTabelePoboczneNabywca
+            // 
+            this.listBoxTabelePoboczneNabywca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBoxTabelePoboczneNabywca.FormattingEnabled = true;
+            this.listBoxTabelePoboczneNabywca.Location = new System.Drawing.Point(27, 30);
+            this.listBoxTabelePoboczneNabywca.Name = "listBoxTabelePoboczneNabywca";
+            this.listBoxTabelePoboczneNabywca.Size = new System.Drawing.Size(187, 147);
+            this.listBoxTabelePoboczneNabywca.TabIndex = 21;
+            // 
+            // buttonTabelePoboczneNabywcaKasuj
+            // 
+            this.buttonTabelePoboczneNabywcaKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaKasuj.Location = new System.Drawing.Point(239, 157);
+            this.buttonTabelePoboczneNabywcaKasuj.Name = "buttonTabelePoboczneNabywcaKasuj";
+            this.buttonTabelePoboczneNabywcaKasuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneNabywcaKasuj.TabIndex = 20;
+            this.buttonTabelePoboczneNabywcaKasuj.Text = "kasuj";
+            this.buttonTabelePoboczneNabywcaKasuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaKasuj.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaKasuj_Click);
+            // 
+            // buttonTabelePoboczneNabywcaDopisz
+            // 
+            this.buttonTabelePoboczneNabywcaDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaDopisz.Location = new System.Drawing.Point(239, 30);
+            this.buttonTabelePoboczneNabywcaDopisz.Name = "buttonTabelePoboczneNabywcaDopisz";
+            this.buttonTabelePoboczneNabywcaDopisz.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneNabywcaDopisz.TabIndex = 19;
+            this.buttonTabelePoboczneNabywcaDopisz.Text = "dopisz";
+            this.buttonTabelePoboczneNabywcaDopisz.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaDopisz.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaDopisz_Click);
+            // 
+            // buttonTabelePoboczneNabywcaEdytuj
+            // 
+            this.buttonTabelePoboczneNabywcaEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneNabywcaEdytuj.Location = new System.Drawing.Point(239, 91);
+            this.buttonTabelePoboczneNabywcaEdytuj.Name = "buttonTabelePoboczneNabywcaEdytuj";
+            this.buttonTabelePoboczneNabywcaEdytuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneNabywcaEdytuj.TabIndex = 18;
+            this.buttonTabelePoboczneNabywcaEdytuj.Text = "edytuj";
+            this.buttonTabelePoboczneNabywcaEdytuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneNabywcaEdytuj.Click += new System.EventHandler(this.buttonTabelePoboczneNabywcaEdytuj_Click);
             // 
             // tabPagePlatnosc
             // 
@@ -1503,6 +1752,11 @@ namespace ProjektPWF
             this.groupBoxTabelePoboczneKierownikEdytuj.PerformLayout();
             this.groupBoxTabelePoboczneKierownikDopisz.ResumeLayout(false);
             this.groupBoxTabelePoboczneKierownikDopisz.PerformLayout();
+            this.tabPageNabywca.ResumeLayout(false);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.ResumeLayout(false);
+            this.groupBoxTabelePoboczneNabywcaEdytuj.PerformLayout();
+            this.groupBoxTabelePoboczneNabywcaDopisz.ResumeLayout(false);
+            this.groupBoxTabelePoboczneNabywcaDopisz.PerformLayout();
             this.tabPagePlatnosc.ResumeLayout(false);
             this.groupBoxTabelePobocznePlatnoscEdytuj.ResumeLayout(false);
             this.groupBoxTabelePobocznePlatnoscEdytuj.PerformLayout();
@@ -1653,6 +1907,28 @@ namespace ProjektPWF
         private System.Windows.Forms.Button buttonTabelePobocznePlatnoscKasuj;
         private System.Windows.Forms.Button buttonTabelePobocznePlatnoscDopisz;
         private System.Windows.Forms.Button buttonTabelePobocznePlatnoscEdytuj;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneNabywcaEdytuj;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneNabywcaEdytujNip;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneNabywcaEdytujAdres;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaEdytujPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaEdytujOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneNabywcaEdytujNazwa;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneNabywcaDopisz;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneNabywcaDopiszNip;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneNabywcaDopiszAdres;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaDopiszPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaDopiszOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneNabywcaDopiszNazwa;
+        private System.Windows.Forms.ListBox listBoxTabelePoboczneNabywca;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaKasuj;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaDopisz;
+        private System.Windows.Forms.Button buttonTabelePoboczneNabywcaEdytuj;
     }
 }
 
