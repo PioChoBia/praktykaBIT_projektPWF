@@ -97,6 +97,12 @@
     <Compile Include="TPKierownik.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TPPlatnosc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TPStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TPTermin.cs">
       <SubType>Form</SubType>
     </Compile>

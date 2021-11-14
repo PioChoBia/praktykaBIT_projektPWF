@@ -61,18 +61,18 @@ namespace ProjektPWF
             comboBoxDopiszDostarczanie.ValueMember = "Id";
 
             comboBoxDopiszKierownik.DataSource = wyswietl.Kierownik();
-            comboBoxDopiszKierownik.DisplayMember = "NazwiskoKierownika"; // jak wyświetlić imię i nazwisko ? "Imiekierownika+" "+"NazwiskoKierownika" nie idzie!!
+            comboBoxDopiszKierownik.DisplayMember = "NazwiskoKierownika";//wyświetli łacznie imię i nazwisko
             comboBoxDopiszKierownik.ValueMember = "Id";
 
-            comboBoxDopiszNabywca.DataSource = wyswietl.ComboBoxDopiszNabywca();
+            comboBoxDopiszNabywca.DataSource = wyswietl.Nabywca();
             comboBoxDopiszNabywca.DisplayMember = "NazwaNabywcy";
             comboBoxDopiszNabywca.ValueMember = "Id";
 
-            comboBoxDopiszPlatnosc.DataSource = wyswietl.ComboBoxDopiszPlatnosc();
+            comboBoxDopiszPlatnosc.DataSource = wyswietl.Platnosc();
             comboBoxDopiszPlatnosc.DisplayMember = "Rodzaj";
             comboBoxDopiszPlatnosc.ValueMember = "Id";
 
-            comboBoxDopiszStatus.DataSource = wyswietl.ComboBoxDopiszStatus();
+            comboBoxDopiszStatus.DataSource = wyswietl.Status();
             comboBoxDopiszStatus.DisplayMember = "Status";
             comboBoxDopiszStatus.ValueMember = "Id";
 
@@ -158,8 +158,18 @@ namespace ProjektPWF
             listBoxTabelePoboczneKierownik.ValueMember = "Id";
 
 
-
-
+            //Platnosc
+            groupBoxTabelePobocznePlatnoscDopisz.Visible = false;
+            groupBoxTabelePobocznePlatnoscEdytuj.Visible = false;
+            listBoxTabelePobocznePlatnosc.DataSource = wyswietl.Platnosc();
+            listBoxTabelePobocznePlatnosc.DisplayMember = "Rodzaj";
+            listBoxTabelePobocznePlatnosc.ValueMember = "Id";
+            //Status
+            groupBoxTabelePoboczneStatusDopisz.Visible = false;
+            groupBoxTabelePoboczneStatusEdytuj.Visible = false;
+            listBoxTabelePoboczneStatus.DataSource = wyswietl.Status();
+            listBoxTabelePoboczneStatus.DisplayMember = "Status";
+            listBoxTabelePoboczneStatus.ValueMember = "Id";
             //Termin
             groupBoxTabelePoboczneTerminDopisz.Visible = false;
             groupBoxTabelePoboczneTerminEdytuj.Visible = false;
@@ -173,6 +183,7 @@ namespace ProjektPWF
             listBoxTabelePoboczneVat.DisplayMember = "StawkaVat";
             listBoxTabelePoboczneVat.ValueMember = "Id";
         }
+
 
 
     }

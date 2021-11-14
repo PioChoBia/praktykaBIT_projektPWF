@@ -87,7 +87,7 @@ namespace ProjektPWF
             }
         }
 
-        public List<NabywcaViewModel> ComboBoxDopiszNabywca()
+        public List<NabywcaViewModel> Nabywca()
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -103,7 +103,7 @@ namespace ProjektPWF
             }
         }
 
-        public List<PlatnoscViewModel> ComboBoxDopiszPlatnosc()
+        public List<PlatnoscViewModel> Platnosc()
         {
             using (var dbContext = new ApplicationDbContext())
             {
@@ -117,7 +117,7 @@ namespace ProjektPWF
             }
         }
 
-        public List<StatusViewModel> ComboBoxDopiszStatus()
+        public List<StatusViewModel> Status()
         {
             using (var dbContext = new ApplicationDbContext())
             {

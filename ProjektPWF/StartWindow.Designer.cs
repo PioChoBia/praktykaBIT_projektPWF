@@ -102,7 +102,31 @@ namespace ProjektPWF
             this.buttonTabelePoboczneKierownikEdytuj = new System.Windows.Forms.Button();
             this.tabPageNabywca = new System.Windows.Forms.TabPage();
             this.tabPagePlatnosc = new System.Windows.Forms.TabPage();
+            this.groupBoxTabelePobocznePlatnoscEdytuj = new System.Windows.Forms.GroupBox();
+            this.buttonTabelePobocznePlatnoscEdytujPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePobocznePlatnoscEdytujOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePobocznePlatnoscEdytuj = new System.Windows.Forms.TextBox();
+            this.groupBoxTabelePobocznePlatnoscDopisz = new System.Windows.Forms.GroupBox();
+            this.buttonTabelePobocznePlatnoscDopiszPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePobocznePlatnoscDopiszOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePobocznePlatnoscDopisz = new System.Windows.Forms.TextBox();
+            this.listBoxTabelePobocznePlatnosc = new System.Windows.Forms.ListBox();
+            this.buttonTabelePobocznePlatnoscKasuj = new System.Windows.Forms.Button();
+            this.buttonTabelePobocznePlatnoscDopisz = new System.Windows.Forms.Button();
+            this.buttonTabelePobocznePlatnoscEdytuj = new System.Windows.Forms.Button();
             this.tabPageStatus = new System.Windows.Forms.TabPage();
+            this.groupBoxTabelePoboczneStatusEdytuj = new System.Windows.Forms.GroupBox();
+            this.buttonTabelePoboczneStatusEdytujPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneStatusEdytujOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneStatusEdytuj = new System.Windows.Forms.TextBox();
+            this.groupBoxTabelePoboczneStatusDopisz = new System.Windows.Forms.GroupBox();
+            this.buttonTabelePoboczneStatusDopiszPomin = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneStatusDopiszOK = new System.Windows.Forms.Button();
+            this.textBoxTabelePoboczneStatusDopisz = new System.Windows.Forms.TextBox();
+            this.listBoxTabelePoboczneStatus = new System.Windows.Forms.ListBox();
+            this.buttonTabelePoboczneStatusKasuj = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneStatusDopisz = new System.Windows.Forms.Button();
+            this.buttonTabelePoboczneStatusEdytuj = new System.Windows.Forms.Button();
             this.tabPageTermin = new System.Windows.Forms.TabPage();
             this.groupBoxTabelePoboczneTerminEdytuj = new System.Windows.Forms.GroupBox();
             this.buttonTabelePoboczneTerminEdytujPomin = new System.Windows.Forms.Button();
@@ -139,6 +163,12 @@ namespace ProjektPWF
             this.tabPageKierownik.SuspendLayout();
             this.groupBoxTabelePoboczneKierownikEdytuj.SuspendLayout();
             this.groupBoxTabelePoboczneKierownikDopisz.SuspendLayout();
+            this.tabPagePlatnosc.SuspendLayout();
+            this.groupBoxTabelePobocznePlatnoscEdytuj.SuspendLayout();
+            this.groupBoxTabelePobocznePlatnoscDopisz.SuspendLayout();
+            this.tabPageStatus.SuspendLayout();
+            this.groupBoxTabelePoboczneStatusEdytuj.SuspendLayout();
+            this.groupBoxTabelePoboczneStatusDopisz.SuspendLayout();
             this.tabPageTermin.SuspendLayout();
             this.groupBoxTabelePoboczneTerminEdytuj.SuspendLayout();
             this.groupBoxTabelePoboczneTerminDopisz.SuspendLayout();
@@ -877,6 +907,12 @@ namespace ProjektPWF
             // 
             // tabPagePlatnosc
             // 
+            this.tabPagePlatnosc.Controls.Add(this.groupBoxTabelePobocznePlatnoscEdytuj);
+            this.tabPagePlatnosc.Controls.Add(this.groupBoxTabelePobocznePlatnoscDopisz);
+            this.tabPagePlatnosc.Controls.Add(this.listBoxTabelePobocznePlatnosc);
+            this.tabPagePlatnosc.Controls.Add(this.buttonTabelePobocznePlatnoscKasuj);
+            this.tabPagePlatnosc.Controls.Add(this.buttonTabelePobocznePlatnoscDopisz);
+            this.tabPagePlatnosc.Controls.Add(this.buttonTabelePobocznePlatnoscEdytuj);
             this.tabPagePlatnosc.Location = new System.Drawing.Point(4, 25);
             this.tabPagePlatnosc.Name = "tabPagePlatnosc";
             this.tabPagePlatnosc.Size = new System.Drawing.Size(1134, 223);
@@ -884,14 +920,272 @@ namespace ProjektPWF
             this.tabPagePlatnosc.Text = "płatność";
             this.tabPagePlatnosc.UseVisualStyleBackColor = true;
             // 
+            // groupBoxTabelePobocznePlatnoscEdytuj
+            // 
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Controls.Add(this.buttonTabelePobocznePlatnoscEdytujPomin);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Controls.Add(this.buttonTabelePobocznePlatnoscEdytujOK);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Controls.Add(this.textBoxTabelePobocznePlatnoscEdytuj);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Location = new System.Drawing.Point(337, 115);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Name = "groupBoxTabelePobocznePlatnoscEdytuj";
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Size = new System.Drawing.Size(348, 83);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.TabIndex = 23;
+            this.groupBoxTabelePobocznePlatnoscEdytuj.TabStop = false;
+            this.groupBoxTabelePobocznePlatnoscEdytuj.Text = "edytuj i zatwierdź";
+            // 
+            // buttonTabelePobocznePlatnoscEdytujPomin
+            // 
+            this.buttonTabelePobocznePlatnoscEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscEdytujPomin.Location = new System.Drawing.Point(249, 25);
+            this.buttonTabelePobocznePlatnoscEdytujPomin.Name = "buttonTabelePobocznePlatnoscEdytujPomin";
+            this.buttonTabelePobocznePlatnoscEdytujPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePobocznePlatnoscEdytujPomin.TabIndex = 6;
+            this.buttonTabelePobocznePlatnoscEdytujPomin.Text = "pomiń";
+            this.buttonTabelePobocznePlatnoscEdytujPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscEdytujPomin.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscEdytujPomin_Click);
+            // 
+            // buttonTabelePobocznePlatnoscEdytujOK
+            // 
+            this.buttonTabelePobocznePlatnoscEdytujOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscEdytujOK.Location = new System.Drawing.Point(183, 25);
+            this.buttonTabelePobocznePlatnoscEdytujOK.Name = "buttonTabelePobocznePlatnoscEdytujOK";
+            this.buttonTabelePobocznePlatnoscEdytujOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePobocznePlatnoscEdytujOK.TabIndex = 5;
+            this.buttonTabelePobocznePlatnoscEdytujOK.Text = "OK";
+            this.buttonTabelePobocznePlatnoscEdytujOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscEdytujOK.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscEdytujOK_Click);
+            // 
+            // textBoxTabelePobocznePlatnoscEdytuj
+            // 
+            this.textBoxTabelePobocznePlatnoscEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxTabelePobocznePlatnoscEdytuj.Location = new System.Drawing.Point(27, 30);
+            this.textBoxTabelePobocznePlatnoscEdytuj.Name = "textBoxTabelePobocznePlatnoscEdytuj";
+            this.textBoxTabelePobocznePlatnoscEdytuj.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePobocznePlatnoscEdytuj.TabIndex = 0;
+            // 
+            // groupBoxTabelePobocznePlatnoscDopisz
+            // 
+            this.groupBoxTabelePobocznePlatnoscDopisz.Controls.Add(this.buttonTabelePobocznePlatnoscDopiszPomin);
+            this.groupBoxTabelePobocznePlatnoscDopisz.Controls.Add(this.buttonTabelePobocznePlatnoscDopiszOK);
+            this.groupBoxTabelePobocznePlatnoscDopisz.Controls.Add(this.textBoxTabelePobocznePlatnoscDopisz);
+            this.groupBoxTabelePobocznePlatnoscDopisz.Location = new System.Drawing.Point(337, 20);
+            this.groupBoxTabelePobocznePlatnoscDopisz.Name = "groupBoxTabelePobocznePlatnoscDopisz";
+            this.groupBoxTabelePobocznePlatnoscDopisz.Size = new System.Drawing.Size(348, 83);
+            this.groupBoxTabelePobocznePlatnoscDopisz.TabIndex = 22;
+            this.groupBoxTabelePobocznePlatnoscDopisz.TabStop = false;
+            this.groupBoxTabelePobocznePlatnoscDopisz.Text = "dopisz i zatwierdź";
+            // 
+            // buttonTabelePobocznePlatnoscDopiszPomin
+            // 
+            this.buttonTabelePobocznePlatnoscDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscDopiszPomin.Location = new System.Drawing.Point(249, 25);
+            this.buttonTabelePobocznePlatnoscDopiszPomin.Name = "buttonTabelePobocznePlatnoscDopiszPomin";
+            this.buttonTabelePobocznePlatnoscDopiszPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePobocznePlatnoscDopiszPomin.TabIndex = 6;
+            this.buttonTabelePobocznePlatnoscDopiszPomin.Text = "pomiń";
+            this.buttonTabelePobocznePlatnoscDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscDopiszPomin.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscDopiszPomin_Click);
+            // 
+            // buttonTabelePobocznePlatnoscDopiszOK
+            // 
+            this.buttonTabelePobocznePlatnoscDopiszOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscDopiszOK.Location = new System.Drawing.Point(183, 25);
+            this.buttonTabelePobocznePlatnoscDopiszOK.Name = "buttonTabelePobocznePlatnoscDopiszOK";
+            this.buttonTabelePobocznePlatnoscDopiszOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePobocznePlatnoscDopiszOK.TabIndex = 5;
+            this.buttonTabelePobocznePlatnoscDopiszOK.Text = "OK";
+            this.buttonTabelePobocznePlatnoscDopiszOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscDopiszOK.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscDopiszOK_Click);
+            // 
+            // textBoxTabelePobocznePlatnoscDopisz
+            // 
+            this.textBoxTabelePobocznePlatnoscDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxTabelePobocznePlatnoscDopisz.Location = new System.Drawing.Point(27, 30);
+            this.textBoxTabelePobocznePlatnoscDopisz.Name = "textBoxTabelePobocznePlatnoscDopisz";
+            this.textBoxTabelePobocznePlatnoscDopisz.Size = new System.Drawing.Size(121, 20);
+            this.textBoxTabelePobocznePlatnoscDopisz.TabIndex = 0;
+            // 
+            // listBoxTabelePobocznePlatnosc
+            // 
+            this.listBoxTabelePobocznePlatnosc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBoxTabelePobocznePlatnosc.FormattingEnabled = true;
+            this.listBoxTabelePobocznePlatnosc.Location = new System.Drawing.Point(18, 21);
+            this.listBoxTabelePobocznePlatnosc.Name = "listBoxTabelePobocznePlatnosc";
+            this.listBoxTabelePobocznePlatnosc.Size = new System.Drawing.Size(131, 160);
+            this.listBoxTabelePobocznePlatnosc.TabIndex = 21;
+            // 
+            // buttonTabelePobocznePlatnoscKasuj
+            // 
+            this.buttonTabelePobocznePlatnoscKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscKasuj.Location = new System.Drawing.Point(195, 153);
+            this.buttonTabelePobocznePlatnoscKasuj.Name = "buttonTabelePobocznePlatnoscKasuj";
+            this.buttonTabelePobocznePlatnoscKasuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePobocznePlatnoscKasuj.TabIndex = 20;
+            this.buttonTabelePobocznePlatnoscKasuj.Text = "kasuj";
+            this.buttonTabelePobocznePlatnoscKasuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscKasuj.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscKasuj_Click);
+            // 
+            // buttonTabelePobocznePlatnoscDopisz
+            // 
+            this.buttonTabelePobocznePlatnoscDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscDopisz.Location = new System.Drawing.Point(195, 26);
+            this.buttonTabelePobocznePlatnoscDopisz.Name = "buttonTabelePobocznePlatnoscDopisz";
+            this.buttonTabelePobocznePlatnoscDopisz.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePobocznePlatnoscDopisz.TabIndex = 19;
+            this.buttonTabelePobocznePlatnoscDopisz.Text = "dopisz";
+            this.buttonTabelePobocznePlatnoscDopisz.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscDopisz.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscDopisz_Click);
+            // 
+            // buttonTabelePobocznePlatnoscEdytuj
+            // 
+            this.buttonTabelePobocznePlatnoscEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePobocznePlatnoscEdytuj.Location = new System.Drawing.Point(195, 87);
+            this.buttonTabelePobocznePlatnoscEdytuj.Name = "buttonTabelePobocznePlatnoscEdytuj";
+            this.buttonTabelePobocznePlatnoscEdytuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePobocznePlatnoscEdytuj.TabIndex = 18;
+            this.buttonTabelePobocznePlatnoscEdytuj.Text = "edytuj";
+            this.buttonTabelePobocznePlatnoscEdytuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePobocznePlatnoscEdytuj.Click += new System.EventHandler(this.buttonTabelePobocznePlatnoscEdytuj_Click);
+            // 
             // tabPageStatus
             // 
+            this.tabPageStatus.Controls.Add(this.groupBoxTabelePoboczneStatusEdytuj);
+            this.tabPageStatus.Controls.Add(this.groupBoxTabelePoboczneStatusDopisz);
+            this.tabPageStatus.Controls.Add(this.listBoxTabelePoboczneStatus);
+            this.tabPageStatus.Controls.Add(this.buttonTabelePoboczneStatusKasuj);
+            this.tabPageStatus.Controls.Add(this.buttonTabelePoboczneStatusDopisz);
+            this.tabPageStatus.Controls.Add(this.buttonTabelePoboczneStatusEdytuj);
             this.tabPageStatus.Location = new System.Drawing.Point(4, 25);
             this.tabPageStatus.Name = "tabPageStatus";
             this.tabPageStatus.Size = new System.Drawing.Size(1134, 223);
             this.tabPageStatus.TabIndex = 4;
             this.tabPageStatus.Text = "status";
             this.tabPageStatus.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxTabelePoboczneStatusEdytuj
+            // 
+            this.groupBoxTabelePoboczneStatusEdytuj.Controls.Add(this.buttonTabelePoboczneStatusEdytujPomin);
+            this.groupBoxTabelePoboczneStatusEdytuj.Controls.Add(this.buttonTabelePoboczneStatusEdytujOK);
+            this.groupBoxTabelePoboczneStatusEdytuj.Controls.Add(this.textBoxTabelePoboczneStatusEdytuj);
+            this.groupBoxTabelePoboczneStatusEdytuj.Location = new System.Drawing.Point(391, 121);
+            this.groupBoxTabelePoboczneStatusEdytuj.Name = "groupBoxTabelePoboczneStatusEdytuj";
+            this.groupBoxTabelePoboczneStatusEdytuj.Size = new System.Drawing.Size(401, 83);
+            this.groupBoxTabelePoboczneStatusEdytuj.TabIndex = 29;
+            this.groupBoxTabelePoboczneStatusEdytuj.TabStop = false;
+            this.groupBoxTabelePoboczneStatusEdytuj.Text = "edytuj i zatwierdź";
+            // 
+            // buttonTabelePoboczneStatusEdytujPomin
+            // 
+            this.buttonTabelePoboczneStatusEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusEdytujPomin.Location = new System.Drawing.Point(308, 26);
+            this.buttonTabelePoboczneStatusEdytujPomin.Name = "buttonTabelePoboczneStatusEdytujPomin";
+            this.buttonTabelePoboczneStatusEdytujPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneStatusEdytujPomin.TabIndex = 6;
+            this.buttonTabelePoboczneStatusEdytujPomin.Text = "pomiń";
+            this.buttonTabelePoboczneStatusEdytujPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusEdytujPomin.Click += new System.EventHandler(this.buttonTabelePoboczneStatusEdytujPomin_Click);
+            // 
+            // buttonTabelePoboczneStatusEdytujOK
+            // 
+            this.buttonTabelePoboczneStatusEdytujOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusEdytujOK.Location = new System.Drawing.Point(242, 26);
+            this.buttonTabelePoboczneStatusEdytujOK.Name = "buttonTabelePoboczneStatusEdytujOK";
+            this.buttonTabelePoboczneStatusEdytujOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneStatusEdytujOK.TabIndex = 5;
+            this.buttonTabelePoboczneStatusEdytujOK.Text = "OK";
+            this.buttonTabelePoboczneStatusEdytujOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusEdytujOK.Click += new System.EventHandler(this.buttonTabelePoboczneStatusEdytujOK_Click);
+            // 
+            // textBoxTabelePoboczneStatusEdytuj
+            // 
+            this.textBoxTabelePoboczneStatusEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxTabelePoboczneStatusEdytuj.Location = new System.Drawing.Point(27, 30);
+            this.textBoxTabelePoboczneStatusEdytuj.Name = "textBoxTabelePoboczneStatusEdytuj";
+            this.textBoxTabelePoboczneStatusEdytuj.Size = new System.Drawing.Size(196, 20);
+            this.textBoxTabelePoboczneStatusEdytuj.TabIndex = 0;
+            // 
+            // groupBoxTabelePoboczneStatusDopisz
+            // 
+            this.groupBoxTabelePoboczneStatusDopisz.Controls.Add(this.buttonTabelePoboczneStatusDopiszPomin);
+            this.groupBoxTabelePoboczneStatusDopisz.Controls.Add(this.buttonTabelePoboczneStatusDopiszOK);
+            this.groupBoxTabelePoboczneStatusDopisz.Controls.Add(this.textBoxTabelePoboczneStatusDopisz);
+            this.groupBoxTabelePoboczneStatusDopisz.Location = new System.Drawing.Point(391, 26);
+            this.groupBoxTabelePoboczneStatusDopisz.Name = "groupBoxTabelePoboczneStatusDopisz";
+            this.groupBoxTabelePoboczneStatusDopisz.Size = new System.Drawing.Size(401, 83);
+            this.groupBoxTabelePoboczneStatusDopisz.TabIndex = 28;
+            this.groupBoxTabelePoboczneStatusDopisz.TabStop = false;
+            this.groupBoxTabelePoboczneStatusDopisz.Text = "dopisz i zatwierdź";
+            // 
+            // buttonTabelePoboczneStatusDopiszPomin
+            // 
+            this.buttonTabelePoboczneStatusDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusDopiszPomin.Location = new System.Drawing.Point(308, 24);
+            this.buttonTabelePoboczneStatusDopiszPomin.Name = "buttonTabelePoboczneStatusDopiszPomin";
+            this.buttonTabelePoboczneStatusDopiszPomin.Size = new System.Drawing.Size(78, 32);
+            this.buttonTabelePoboczneStatusDopiszPomin.TabIndex = 6;
+            this.buttonTabelePoboczneStatusDopiszPomin.Text = "pomiń";
+            this.buttonTabelePoboczneStatusDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusDopiszPomin.Click += new System.EventHandler(this.buttonTabelePoboczneStatusDopiszPomin_Click);
+            // 
+            // buttonTabelePoboczneStatusDopiszOK
+            // 
+            this.buttonTabelePoboczneStatusDopiszOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusDopiszOK.Location = new System.Drawing.Point(242, 24);
+            this.buttonTabelePoboczneStatusDopiszOK.Name = "buttonTabelePoboczneStatusDopiszOK";
+            this.buttonTabelePoboczneStatusDopiszOK.Size = new System.Drawing.Size(53, 32);
+            this.buttonTabelePoboczneStatusDopiszOK.TabIndex = 5;
+            this.buttonTabelePoboczneStatusDopiszOK.Text = "OK";
+            this.buttonTabelePoboczneStatusDopiszOK.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusDopiszOK.Click += new System.EventHandler(this.buttonTabelePoboczneStatusDopiszOK_Click);
+            // 
+            // textBoxTabelePoboczneStatusDopisz
+            // 
+            this.textBoxTabelePoboczneStatusDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBoxTabelePoboczneStatusDopisz.Location = new System.Drawing.Point(27, 30);
+            this.textBoxTabelePoboczneStatusDopisz.Name = "textBoxTabelePoboczneStatusDopisz";
+            this.textBoxTabelePoboczneStatusDopisz.Size = new System.Drawing.Size(196, 20);
+            this.textBoxTabelePoboczneStatusDopisz.TabIndex = 0;
+            // 
+            // listBoxTabelePoboczneStatus
+            // 
+            this.listBoxTabelePoboczneStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBoxTabelePoboczneStatus.FormattingEnabled = true;
+            this.listBoxTabelePoboczneStatus.Location = new System.Drawing.Point(27, 30);
+            this.listBoxTabelePoboczneStatus.Name = "listBoxTabelePoboczneStatus";
+            this.listBoxTabelePoboczneStatus.Size = new System.Drawing.Size(204, 160);
+            this.listBoxTabelePoboczneStatus.TabIndex = 27;
+            // 
+            // buttonTabelePoboczneStatusKasuj
+            // 
+            this.buttonTabelePoboczneStatusKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusKasuj.Location = new System.Drawing.Point(249, 159);
+            this.buttonTabelePoboczneStatusKasuj.Name = "buttonTabelePoboczneStatusKasuj";
+            this.buttonTabelePoboczneStatusKasuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneStatusKasuj.TabIndex = 26;
+            this.buttonTabelePoboczneStatusKasuj.Text = "kasuj";
+            this.buttonTabelePoboczneStatusKasuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusKasuj.Click += new System.EventHandler(this.buttonTabelePoboczneStatusKasuj_Click);
+            // 
+            // buttonTabelePoboczneStatusDopisz
+            // 
+            this.buttonTabelePoboczneStatusDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusDopisz.Location = new System.Drawing.Point(249, 32);
+            this.buttonTabelePoboczneStatusDopisz.Name = "buttonTabelePoboczneStatusDopisz";
+            this.buttonTabelePoboczneStatusDopisz.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneStatusDopisz.TabIndex = 25;
+            this.buttonTabelePoboczneStatusDopisz.Text = "dopisz";
+            this.buttonTabelePoboczneStatusDopisz.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusDopisz.Click += new System.EventHandler(this.buttonTabelePoboczneStatusDopisz_Click);
+            // 
+            // buttonTabelePoboczneStatusEdytuj
+            // 
+            this.buttonTabelePoboczneStatusEdytuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonTabelePoboczneStatusEdytuj.Location = new System.Drawing.Point(249, 93);
+            this.buttonTabelePoboczneStatusEdytuj.Name = "buttonTabelePoboczneStatusEdytuj";
+            this.buttonTabelePoboczneStatusEdytuj.Size = new System.Drawing.Size(104, 32);
+            this.buttonTabelePoboczneStatusEdytuj.TabIndex = 24;
+            this.buttonTabelePoboczneStatusEdytuj.Text = "edytuj";
+            this.buttonTabelePoboczneStatusEdytuj.UseVisualStyleBackColor = true;
+            this.buttonTabelePoboczneStatusEdytuj.Click += new System.EventHandler(this.buttonTabelePoboczneStatusEdytuj_Click);
             // 
             // tabPageTermin
             // 
@@ -1209,6 +1503,16 @@ namespace ProjektPWF
             this.groupBoxTabelePoboczneKierownikEdytuj.PerformLayout();
             this.groupBoxTabelePoboczneKierownikDopisz.ResumeLayout(false);
             this.groupBoxTabelePoboczneKierownikDopisz.PerformLayout();
+            this.tabPagePlatnosc.ResumeLayout(false);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.ResumeLayout(false);
+            this.groupBoxTabelePobocznePlatnoscEdytuj.PerformLayout();
+            this.groupBoxTabelePobocznePlatnoscDopisz.ResumeLayout(false);
+            this.groupBoxTabelePobocznePlatnoscDopisz.PerformLayout();
+            this.tabPageStatus.ResumeLayout(false);
+            this.groupBoxTabelePoboczneStatusEdytuj.ResumeLayout(false);
+            this.groupBoxTabelePoboczneStatusEdytuj.PerformLayout();
+            this.groupBoxTabelePoboczneStatusDopisz.ResumeLayout(false);
+            this.groupBoxTabelePoboczneStatusDopisz.PerformLayout();
             this.tabPageTermin.ResumeLayout(false);
             this.groupBoxTabelePoboczneTerminEdytuj.ResumeLayout(false);
             this.groupBoxTabelePoboczneTerminEdytuj.PerformLayout();
@@ -1325,6 +1629,30 @@ namespace ProjektPWF
         private System.Windows.Forms.Button buttonTabelePoboczneTerminKasuj;
         private System.Windows.Forms.Button buttonTabelePoboczneTerminDopisz;
         private System.Windows.Forms.Button buttonTabelePoboczneTerminEdytuj;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneStatusEdytuj;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusEdytujPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusEdytujOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneStatusEdytuj;
+        private System.Windows.Forms.GroupBox groupBoxTabelePoboczneStatusDopisz;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusDopiszPomin;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusDopiszOK;
+        private System.Windows.Forms.TextBox textBoxTabelePoboczneStatusDopisz;
+        private System.Windows.Forms.ListBox listBoxTabelePoboczneStatus;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusKasuj;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusDopisz;
+        private System.Windows.Forms.Button buttonTabelePoboczneStatusEdytuj;
+        private System.Windows.Forms.GroupBox groupBoxTabelePobocznePlatnoscEdytuj;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscEdytujPomin;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscEdytujOK;
+        private System.Windows.Forms.TextBox textBoxTabelePobocznePlatnoscEdytuj;
+        private System.Windows.Forms.GroupBox groupBoxTabelePobocznePlatnoscDopisz;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscDopiszPomin;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscDopiszOK;
+        private System.Windows.Forms.TextBox textBoxTabelePobocznePlatnoscDopisz;
+        private System.Windows.Forms.ListBox listBoxTabelePobocznePlatnosc;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscKasuj;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscDopisz;
+        private System.Windows.Forms.Button buttonTabelePobocznePlatnoscEdytuj;
     }
 }
 
