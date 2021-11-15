@@ -23,16 +23,62 @@ namespace ProjektPWF
 
             //obsluga.WpiszStartoweDoTabel();
 
-            dataGridView1.DataSource = wyswietl.BezFiltru();
+        //tabela Sprzedaz
+            dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
+            groupBoxDopisz.Visible = false;
 
 
+
+         //tabele poboczne
+            tabControlTabelePoboczne.Visible = true;
+            //Dostarczanie
+            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
+            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
+            listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
+            listBoxTabelePoboczneDostarczanie.DisplayMember = "Sposob";
+            listBoxTabelePoboczneDostarczanie.ValueMember = "Id";
+            //Kierownik
+            groupBoxTabelePoboczneKierownikDopisz.Visible = false;
+            groupBoxTabelePoboczneKierownikEdytuj.Visible = false;
+            listBoxTabelePoboczneKierownik.DataSource = wyswietl.Kierownik();
+            listBoxTabelePoboczneKierownik.DisplayMember = "NazwiskoKierownika";//wyświetli łacznie imię i nazwisko
+            listBoxTabelePoboczneKierownik.ValueMember = "Id";
+            //Nabywca
+            groupBoxTabelePoboczneNabywcaDopisz.Visible = false;
+            groupBoxTabelePoboczneNabywcaEdytuj.Visible = false;
+            listBoxTabelePoboczneNabywca.DataSource = wyswietl.Nabywca();
+            listBoxTabelePoboczneNabywca.DisplayMember = "NazwaNabywcy";
+            listBoxTabelePoboczneNabywca.ValueMember = "Id";
+            //Platnosc
+            groupBoxTabelePobocznePlatnoscDopisz.Visible = false;
+            groupBoxTabelePobocznePlatnoscEdytuj.Visible = false;
+            listBoxTabelePobocznePlatnosc.DataSource = wyswietl.Platnosc();
+            listBoxTabelePobocznePlatnosc.DisplayMember = "Rodzaj";
+            listBoxTabelePobocznePlatnosc.ValueMember = "Id";
+            //Status
+            groupBoxTabelePoboczneStatusDopisz.Visible = false;
+            groupBoxTabelePoboczneStatusEdytuj.Visible = false;
+            listBoxTabelePoboczneStatus.DataSource = wyswietl.Status();
+            listBoxTabelePoboczneStatus.DisplayMember = "Status";
+            listBoxTabelePoboczneStatus.ValueMember = "Id";
+            //Termin
+            groupBoxTabelePoboczneTerminDopisz.Visible = false;
+            groupBoxTabelePoboczneTerminEdytuj.Visible = false;
+            listBoxTabelePoboczneTermin.DataSource = wyswietl.Termin();
+            listBoxTabelePoboczneTermin.DisplayMember = "Termin";
+            listBoxTabelePoboczneTermin.ValueMember = "Id";
+            //Vat
+            groupBoxTabelePoboczneVatDopisz.Visible = false;
+            groupBoxTabelePoboczneVatEdytuj.Visible = false;
+            listBoxTabelePoboczneVat.DataSource = wyswietl.Vat();
+            listBoxTabelePoboczneVat.DisplayMember = "StawkaVat";
+            listBoxTabelePoboczneVat.ValueMember = "Id";
 
         }
 
         private void StartWindow_Load(object sender, EventArgs e)
         {
-            groupBoxDopisz.Visible = false;
-            tabControlTabelePoboczne.Visible = false;
+            
         }
 
 
@@ -111,7 +157,7 @@ namespace ProjektPWF
             tabSprzedaz.IdTermin = ((TerminViewModel)comboBoxDopiszTermin.SelectedItem).Id;
 
             obsluga.WpiszTabSprzedaz(tabSprzedaz);
-            dataGridView1.DataSource = wyswietl.BezFiltru();
+            dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
 
             groupBoxDopisz.Visible = false;
         }
@@ -141,52 +187,6 @@ namespace ProjektPWF
         }
 
 
-        private void buttonTabelePoboczne_Click(object sender, EventArgs e)
-        {
-            tabControlTabelePoboczne.Visible = true;
-            //Dostarczanie
-            groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
-            groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
-            listBoxTabelePoboczneDostarczanie.DataSource = wyswietl.Dostarczanie();
-            listBoxTabelePoboczneDostarczanie.DisplayMember = "Sposob";
-            listBoxTabelePoboczneDostarczanie.ValueMember = "Id";
-            //Kierownik
-            groupBoxTabelePoboczneKierownikDopisz.Visible = false;
-            groupBoxTabelePoboczneKierownikEdytuj.Visible = false;
-            listBoxTabelePoboczneKierownik.DataSource = wyswietl.Kierownik();
-            listBoxTabelePoboczneKierownik.DisplayMember = "NazwiskoKierownika";//wyświetli łacznie imię i nazwisko
-            listBoxTabelePoboczneKierownik.ValueMember = "Id";
-            //Nabywca
-            groupBoxTabelePoboczneNabywcaDopisz.Visible = false;
-            groupBoxTabelePoboczneNabywcaEdytuj.Visible = false;
-            listBoxTabelePoboczneNabywca.DataSource = wyswietl.Nabywca();
-            listBoxTabelePoboczneNabywca.DisplayMember = "NazwaNabywcy";
-            listBoxTabelePoboczneNabywca.ValueMember = "Id";
-            //Platnosc
-            groupBoxTabelePobocznePlatnoscDopisz.Visible = false;
-            groupBoxTabelePobocznePlatnoscEdytuj.Visible = false;
-            listBoxTabelePobocznePlatnosc.DataSource = wyswietl.Platnosc();
-            listBoxTabelePobocznePlatnosc.DisplayMember = "Rodzaj";
-            listBoxTabelePobocznePlatnosc.ValueMember = "Id";
-            //Status
-            groupBoxTabelePoboczneStatusDopisz.Visible = false;
-            groupBoxTabelePoboczneStatusEdytuj.Visible = false;
-            listBoxTabelePoboczneStatus.DataSource = wyswietl.Status();
-            listBoxTabelePoboczneStatus.DisplayMember = "Status";
-            listBoxTabelePoboczneStatus.ValueMember = "Id";
-            //Termin
-            groupBoxTabelePoboczneTerminDopisz.Visible = false;
-            groupBoxTabelePoboczneTerminEdytuj.Visible = false;
-            listBoxTabelePoboczneTermin.DataSource = wyswietl.Termin();
-            listBoxTabelePoboczneTermin.DisplayMember = "Termin";
-            listBoxTabelePoboczneTermin.ValueMember = "Id";
-            //Vat
-            groupBoxTabelePoboczneVatDopisz.Visible = false;
-            groupBoxTabelePoboczneVatEdytuj.Visible = false;
-            listBoxTabelePoboczneVat.DataSource = wyswietl.Vat();
-            listBoxTabelePoboczneVat.DisplayMember = "StawkaVat";
-            listBoxTabelePoboczneVat.ValueMember = "Id";
-        }
 
 
 

@@ -30,12 +30,7 @@ namespace ProjektPWF
         private void InitializeComponent()
         {
             this.labelNaglowek = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonDrukuj = new System.Windows.Forms.Button();
-            this.buttonSzukaj = new System.Windows.Forms.Button();
-            this.groupBoxSzukaj = new System.Windows.Forms.GroupBox();
-            this.textBoxSzukaj = new System.Windows.Forms.TextBox();
-            this.buttonDopisz = new System.Windows.Forms.Button();
+            this.dataGridViewSprzedaz = new System.Windows.Forms.DataGridView();
             this.groupBoxDopisz = new System.Windows.Forms.GroupBox();
             this.comboBoxDopiszTermin = new System.Windows.Forms.ComboBox();
             this.labelDopiszTermin = new System.Windows.Forms.Label();
@@ -66,7 +61,6 @@ namespace ProjektPWF
             this.labelDopiszDataWystawienia = new System.Windows.Forms.Label();
             this.dateTimePickerDopiszDataSprzedazy = new System.Windows.Forms.DateTimePicker();
             this.labelDopiszDataSprzedazy = new System.Windows.Forms.Label();
-            this.buttonTabelePoboczne = new System.Windows.Forms.Button();
             this.tabControlTabelePoboczne = new System.Windows.Forms.TabControl();
             this.tabPageDostarczanie = new System.Windows.Forms.TabPage();
             this.groupBoxTabelePoboczneDostarczanieEdytuj = new System.Windows.Forms.GroupBox();
@@ -175,8 +169,11 @@ namespace ProjektPWF
             this.buttonTabelePoboczneVatKasuj = new System.Windows.Forms.Button();
             this.buttonTabelePoboczneVatDopisz = new System.Windows.Forms.Button();
             this.buttonTabelePoboczneVatEdytuj = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBoxSzukaj.SuspendLayout();
+            this.tabControlStart = new System.Windows.Forms.TabControl();
+            this.tabPageSprzedaz = new System.Windows.Forms.TabPage();
+            this.tabPageTabelePoboczne = new System.Windows.Forms.TabPage();
+            this.tabPageDrukuj = new System.Windows.Forms.TabPage();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).BeginInit();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
             this.tabPageDostarczanie.SuspendLayout();
@@ -200,6 +197,9 @@ namespace ProjektPWF
             this.tabPageVat.SuspendLayout();
             this.groupBoxTabelePoboczneVatEdytuj.SuspendLayout();
             this.groupBoxTabelePoboczneVatDopisz.SuspendLayout();
+            this.tabControlStart.SuspendLayout();
+            this.tabPageSprzedaz.SuspendLayout();
+            this.tabPageTabelePoboczne.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNaglowek
@@ -207,69 +207,19 @@ namespace ProjektPWF
             this.labelNaglowek.AutoSize = true;
             this.labelNaglowek.BackColor = System.Drawing.SystemColors.ControlLight;
             this.labelNaglowek.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelNaglowek.Location = new System.Drawing.Point(134, 9);
+            this.labelNaglowek.Location = new System.Drawing.Point(225, 9);
             this.labelNaglowek.Name = "labelNaglowek";
             this.labelNaglowek.Size = new System.Drawing.Size(616, 25);
             this.labelNaglowek.TabIndex = 0;
             this.labelNaglowek.Text = "Polecenie Wystawienia Faktury Sprzedaży/PWF BIT S. A.";
             // 
-            // dataGridView1
+            // dataGridViewSprzedaz
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1148, 232);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // buttonDrukuj
-            // 
-            this.buttonDrukuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDrukuj.Location = new System.Drawing.Point(1073, 8);
-            this.buttonDrukuj.Name = "buttonDrukuj";
-            this.buttonDrukuj.Size = new System.Drawing.Size(104, 32);
-            this.buttonDrukuj.TabIndex = 3;
-            this.buttonDrukuj.Text = "drukuj";
-            this.buttonDrukuj.UseVisualStyleBackColor = true;
-            // 
-            // buttonSzukaj
-            // 
-            this.buttonSzukaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSzukaj.Location = new System.Drawing.Point(805, 17);
-            this.buttonSzukaj.Name = "buttonSzukaj";
-            this.buttonSzukaj.Size = new System.Drawing.Size(104, 32);
-            this.buttonSzukaj.TabIndex = 4;
-            this.buttonSzukaj.Text = "szukaj";
-            this.buttonSzukaj.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxSzukaj
-            // 
-            this.groupBoxSzukaj.Controls.Add(this.textBoxSzukaj);
-            this.groupBoxSzukaj.Controls.Add(this.buttonSzukaj);
-            this.groupBoxSzukaj.Location = new System.Drawing.Point(58, 74);
-            this.groupBoxSzukaj.Name = "groupBoxSzukaj";
-            this.groupBoxSzukaj.Size = new System.Drawing.Size(1119, 71);
-            this.groupBoxSzukaj.TabIndex = 5;
-            this.groupBoxSzukaj.TabStop = false;
-            this.groupBoxSzukaj.Text = "szukaj po polach i treści";
-            // 
-            // textBoxSzukaj
-            // 
-            this.textBoxSzukaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBoxSzukaj.Location = new System.Drawing.Point(563, 19);
-            this.textBoxSzukaj.Name = "textBoxSzukaj";
-            this.textBoxSzukaj.Size = new System.Drawing.Size(172, 22);
-            this.textBoxSzukaj.TabIndex = 5;
-            // 
-            // buttonDopisz
-            // 
-            this.buttonDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDopisz.Location = new System.Drawing.Point(953, 8);
-            this.buttonDopisz.Name = "buttonDopisz";
-            this.buttonDopisz.Size = new System.Drawing.Size(104, 32);
-            this.buttonDopisz.TabIndex = 6;
-            this.buttonDopisz.Text = "dopisz";
-            this.buttonDopisz.UseVisualStyleBackColor = true;
-            this.buttonDopisz.Click += new System.EventHandler(this.buttonDopisz_Click);
+            this.dataGridViewSprzedaz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSprzedaz.Location = new System.Drawing.Point(16, 15);
+            this.dataGridViewSprzedaz.Name = "dataGridViewSprzedaz";
+            this.dataGridViewSprzedaz.Size = new System.Drawing.Size(1100, 244);
+            this.dataGridViewSprzedaz.TabIndex = 2;
             // 
             // groupBoxDopisz
             // 
@@ -302,7 +252,7 @@ namespace ProjektPWF
             this.groupBoxDopisz.Controls.Add(this.labelDopiszDataWystawienia);
             this.groupBoxDopisz.Controls.Add(this.dateTimePickerDopiszDataSprzedazy);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszDataSprzedazy);
-            this.groupBoxDopisz.Location = new System.Drawing.Point(48, 409);
+            this.groupBoxDopisz.Location = new System.Drawing.Point(35, 496);
             this.groupBoxDopisz.Name = "groupBoxDopisz";
             this.groupBoxDopisz.Size = new System.Drawing.Size(1142, 253);
             this.groupBoxDopisz.TabIndex = 7;
@@ -558,17 +508,6 @@ namespace ProjektPWF
             this.labelDopiszDataSprzedazy.TabIndex = 0;
             this.labelDopiszDataSprzedazy.Text = "data sprzedaży";
             // 
-            // buttonTabelePoboczne
-            // 
-            this.buttonTabelePoboczne.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonTabelePoboczne.Location = new System.Drawing.Point(773, 8);
-            this.buttonTabelePoboczne.Name = "buttonTabelePoboczne";
-            this.buttonTabelePoboczne.Size = new System.Drawing.Size(157, 32);
-            this.buttonTabelePoboczne.TabIndex = 8;
-            this.buttonTabelePoboczne.Text = "tabele poboczne";
-            this.buttonTabelePoboczne.UseVisualStyleBackColor = true;
-            this.buttonTabelePoboczne.Click += new System.EventHandler(this.buttonTabelePoboczne_Click);
-            // 
             // tabControlTabelePoboczne
             // 
             this.tabControlTabelePoboczne.Controls.Add(this.tabPageDostarczanie);
@@ -579,10 +518,10 @@ namespace ProjektPWF
             this.tabControlTabelePoboczne.Controls.Add(this.tabPageTermin);
             this.tabControlTabelePoboczne.Controls.Add(this.tabPageVat);
             this.tabControlTabelePoboczne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tabControlTabelePoboczne.Location = new System.Drawing.Point(12, 450);
+            this.tabControlTabelePoboczne.Location = new System.Drawing.Point(16, 16);
             this.tabControlTabelePoboczne.Name = "tabControlTabelePoboczne";
             this.tabControlTabelePoboczne.SelectedIndex = 0;
-            this.tabControlTabelePoboczne.Size = new System.Drawing.Size(1142, 252);
+            this.tabControlTabelePoboczne.Size = new System.Drawing.Size(1096, 252);
             this.tabControlTabelePoboczne.TabIndex = 9;
             // 
             // tabPageDostarczanie
@@ -597,7 +536,7 @@ namespace ProjektPWF
             this.tabPageDostarczanie.Location = new System.Drawing.Point(4, 22);
             this.tabPageDostarczanie.Name = "tabPageDostarczanie";
             this.tabPageDostarczanie.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDostarczanie.Size = new System.Drawing.Size(1134, 226);
+            this.tabPageDostarczanie.Size = new System.Drawing.Size(1088, 226);
             this.tabPageDostarczanie.TabIndex = 0;
             this.tabPageDostarczanie.Text = "dostarczanie";
             this.tabPageDostarczanie.UseVisualStyleBackColor = true;
@@ -1111,7 +1050,7 @@ namespace ProjektPWF
             this.textBoxTabelePoboczneNabywcaDopiszNazwa.Name = "textBoxTabelePoboczneNabywcaDopiszNazwa";
             this.textBoxTabelePoboczneNabywcaDopiszNazwa.Size = new System.Drawing.Size(213, 20);
             this.textBoxTabelePoboczneNabywcaDopiszNazwa.TabIndex = 0;
-             // 
+            // 
             // listBoxTabelePoboczneNabywca
             // 
             this.listBoxTabelePoboczneNabywca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -1162,9 +1101,9 @@ namespace ProjektPWF
             this.tabPagePlatnosc.Controls.Add(this.buttonTabelePobocznePlatnoscKasuj);
             this.tabPagePlatnosc.Controls.Add(this.buttonTabelePobocznePlatnoscDopisz);
             this.tabPagePlatnosc.Controls.Add(this.buttonTabelePobocznePlatnoscEdytuj);
-            this.tabPagePlatnosc.Location = new System.Drawing.Point(4, 25);
+            this.tabPagePlatnosc.Location = new System.Drawing.Point(4, 22);
             this.tabPagePlatnosc.Name = "tabPagePlatnosc";
-            this.tabPagePlatnosc.Size = new System.Drawing.Size(1134, 223);
+            this.tabPagePlatnosc.Size = new System.Drawing.Size(1134, 226);
             this.tabPagePlatnosc.TabIndex = 3;
             this.tabPagePlatnosc.Text = "płatność";
             this.tabPagePlatnosc.UseVisualStyleBackColor = true;
@@ -1303,9 +1242,9 @@ namespace ProjektPWF
             this.tabPageStatus.Controls.Add(this.buttonTabelePoboczneStatusKasuj);
             this.tabPageStatus.Controls.Add(this.buttonTabelePoboczneStatusDopisz);
             this.tabPageStatus.Controls.Add(this.buttonTabelePoboczneStatusEdytuj);
-            this.tabPageStatus.Location = new System.Drawing.Point(4, 25);
+            this.tabPageStatus.Location = new System.Drawing.Point(4, 22);
             this.tabPageStatus.Name = "tabPageStatus";
-            this.tabPageStatus.Size = new System.Drawing.Size(1134, 223);
+            this.tabPageStatus.Size = new System.Drawing.Size(1134, 226);
             this.tabPageStatus.TabIndex = 4;
             this.tabPageStatus.Text = "status";
             this.tabPageStatus.UseVisualStyleBackColor = true;
@@ -1444,9 +1383,9 @@ namespace ProjektPWF
             this.tabPageTermin.Controls.Add(this.buttonTabelePoboczneTerminKasuj);
             this.tabPageTermin.Controls.Add(this.buttonTabelePoboczneTerminDopisz);
             this.tabPageTermin.Controls.Add(this.buttonTabelePoboczneTerminEdytuj);
-            this.tabPageTermin.Location = new System.Drawing.Point(4, 25);
+            this.tabPageTermin.Location = new System.Drawing.Point(4, 22);
             this.tabPageTermin.Name = "tabPageTermin";
-            this.tabPageTermin.Size = new System.Drawing.Size(1134, 223);
+            this.tabPageTermin.Size = new System.Drawing.Size(1134, 226);
             this.tabPageTermin.TabIndex = 5;
             this.tabPageTermin.Text = "termin";
             this.tabPageTermin.UseVisualStyleBackColor = true;
@@ -1587,9 +1526,9 @@ namespace ProjektPWF
             this.tabPageVat.Controls.Add(this.buttonTabelePoboczneVatKasuj);
             this.tabPageVat.Controls.Add(this.buttonTabelePoboczneVatDopisz);
             this.tabPageVat.Controls.Add(this.buttonTabelePoboczneVatEdytuj);
-            this.tabPageVat.Location = new System.Drawing.Point(4, 25);
+            this.tabPageVat.Location = new System.Drawing.Point(4, 22);
             this.tabPageVat.Name = "tabPageVat";
-            this.tabPageVat.Size = new System.Drawing.Size(1134, 223);
+            this.tabPageVat.Size = new System.Drawing.Size(1134, 226);
             this.tabPageVat.TabIndex = 6;
             this.tabPageVat.Text = "Vat";
             this.tabPageVat.UseVisualStyleBackColor = true;
@@ -1720,25 +1659,60 @@ namespace ProjektPWF
             this.buttonTabelePoboczneVatEdytuj.UseVisualStyleBackColor = true;
             this.buttonTabelePoboczneVatEdytuj.Click += new System.EventHandler(this.buttonTabelePoboczneVatEdytuj_Click);
             // 
+            // tabControlStart
+            // 
+            this.tabControlStart.Controls.Add(this.tabPageSprzedaz);
+            this.tabControlStart.Controls.Add(this.tabPageTabelePoboczne);
+            this.tabControlStart.Controls.Add(this.tabPageDrukuj);
+            this.tabControlStart.Location = new System.Drawing.Point(35, 55);
+            this.tabControlStart.Name = "tabControlStart";
+            this.tabControlStart.SelectedIndex = 0;
+            this.tabControlStart.Size = new System.Drawing.Size(1161, 421);
+            this.tabControlStart.TabIndex = 10;
+            // 
+            // tabPageSprzedaz
+            // 
+            this.tabPageSprzedaz.Controls.Add(this.dataGridViewSprzedaz);
+            this.tabPageSprzedaz.Location = new System.Drawing.Point(4, 22);
+            this.tabPageSprzedaz.Name = "tabPageSprzedaz";
+            this.tabPageSprzedaz.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSprzedaz.Size = new System.Drawing.Size(1153, 395);
+            this.tabPageSprzedaz.TabIndex = 0;
+            this.tabPageSprzedaz.Text = "sprzedaż";
+            this.tabPageSprzedaz.UseVisualStyleBackColor = true;
+            // 
+            // tabPageTabelePoboczne
+            // 
+            this.tabPageTabelePoboczne.Controls.Add(this.tabControlTabelePoboczne);
+            this.tabPageTabelePoboczne.Location = new System.Drawing.Point(4, 22);
+            this.tabPageTabelePoboczne.Name = "tabPageTabelePoboczne";
+            this.tabPageTabelePoboczne.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTabelePoboczne.Size = new System.Drawing.Size(1153, 331);
+            this.tabPageTabelePoboczne.TabIndex = 1;
+            this.tabPageTabelePoboczne.Text = "tabele poboczne";
+            this.tabPageTabelePoboczne.UseVisualStyleBackColor = true;
+            // 
+            // tabPageDrukuj
+            // 
+            this.tabPageDrukuj.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDrukuj.Name = "tabPageDrukuj";
+            this.tabPageDrukuj.Size = new System.Drawing.Size(1153, 331);
+            this.tabPageDrukuj.TabIndex = 2;
+            this.tabPageDrukuj.Text = "drukuj";
+            this.tabPageDrukuj.UseVisualStyleBackColor = true;
+            // 
             // StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 844);
-            this.Controls.Add(this.tabControlTabelePoboczne);
-            this.Controls.Add(this.buttonTabelePoboczne);
+            this.Controls.Add(this.tabControlStart);
             this.Controls.Add(this.groupBoxDopisz);
-            this.Controls.Add(this.buttonDopisz);
             this.Controls.Add(this.labelNaglowek);
-            this.Controls.Add(this.groupBoxSzukaj);
-            this.Controls.Add(this.buttonDrukuj);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "StartWindow";
             this.Text = "StartWindow zmienione";
             this.Load += new System.EventHandler(this.StartWindow_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBoxSzukaj.ResumeLayout(false);
-            this.groupBoxSzukaj.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).EndInit();
             this.groupBoxDopisz.ResumeLayout(false);
             this.groupBoxDopisz.PerformLayout();
             this.tabControlTabelePoboczne.ResumeLayout(false);
@@ -1777,6 +1751,9 @@ namespace ProjektPWF
             this.groupBoxTabelePoboczneVatEdytuj.PerformLayout();
             this.groupBoxTabelePoboczneVatDopisz.ResumeLayout(false);
             this.groupBoxTabelePoboczneVatDopisz.PerformLayout();
+            this.tabControlStart.ResumeLayout(false);
+            this.tabPageSprzedaz.ResumeLayout(false);
+            this.tabPageTabelePoboczne.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1784,12 +1761,7 @@ namespace ProjektPWF
 
         #endregion
         private System.Windows.Forms.Label labelNaglowek;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button buttonDrukuj;
-        private System.Windows.Forms.Button buttonSzukaj;
-        private System.Windows.Forms.GroupBox groupBoxSzukaj;
-        private System.Windows.Forms.TextBox textBoxSzukaj;
-        private System.Windows.Forms.Button buttonDopisz;
+        private System.Windows.Forms.DataGridView dataGridViewSprzedaz;
         private System.Windows.Forms.GroupBox groupBoxDopisz;
         private System.Windows.Forms.DateTimePicker dateTimePickerDopiszDataSprzedazy;
         private System.Windows.Forms.Label labelDopiszDataSprzedazy;
@@ -1820,7 +1792,6 @@ namespace ProjektPWF
         private System.Windows.Forms.Label labelDopiszStatus;
         private System.Windows.Forms.ComboBox comboBoxDopiszTermin;
         private System.Windows.Forms.Label labelDopiszTermin;
-        private System.Windows.Forms.Button buttonTabelePoboczne;
         private System.Windows.Forms.TabControl tabControlTabelePoboczne;
         private System.Windows.Forms.TabPage tabPageDostarczanie;
         private System.Windows.Forms.TabPage tabPageKierownik;
@@ -1929,6 +1900,10 @@ namespace ProjektPWF
         private System.Windows.Forms.Button buttonTabelePoboczneNabywcaKasuj;
         private System.Windows.Forms.Button buttonTabelePoboczneNabywcaDopisz;
         private System.Windows.Forms.Button buttonTabelePoboczneNabywcaEdytuj;
+        private System.Windows.Forms.TabControl tabControlStart;
+        private System.Windows.Forms.TabPage tabPageSprzedaz;
+        private System.Windows.Forms.TabPage tabPageTabelePoboczne;
+        private System.Windows.Forms.TabPage tabPageDrukuj;
     }
 }
 

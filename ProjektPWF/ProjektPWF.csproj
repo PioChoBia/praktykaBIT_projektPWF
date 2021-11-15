@@ -83,6 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProjektPWFDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SprzedazStartowa.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="StartWindow.cs">
       <SubType>Form</SubType>
     </Compile>
