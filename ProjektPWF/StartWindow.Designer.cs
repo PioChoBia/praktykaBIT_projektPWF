@@ -171,12 +171,13 @@ namespace ProjektPWF
             this.buttonTabelePoboczneVatEdytuj = new System.Windows.Forms.Button();
             this.tabControlStart = new System.Windows.Forms.TabControl();
             this.tabPageStartSprzedaz = new System.Windows.Forms.TabPage();
-            this.tabPageStartTabelePoboczne = new System.Windows.Forms.TabPage();
             this.tabControlStartSprzedaz = new System.Windows.Forms.TabControl();
             this.tabPageStartSprzedazFiltruj = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazDopisz = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazEdytuj = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazDrukuj = new System.Windows.Forms.TabPage();
+            this.tabPageStartTabelePoboczne = new System.Windows.Forms.TabPage();
+            this.buttonDopiszPomin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).BeginInit();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
@@ -203,9 +204,9 @@ namespace ProjektPWF
             this.groupBoxTabelePoboczneVatDopisz.SuspendLayout();
             this.tabControlStart.SuspendLayout();
             this.tabPageStartSprzedaz.SuspendLayout();
-            this.tabPageStartTabelePoboczne.SuspendLayout();
             this.tabControlStartSprzedaz.SuspendLayout();
             this.tabPageStartSprzedazDopisz.SuspendLayout();
+            this.tabPageStartTabelePoboczne.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNaglowek
@@ -224,11 +225,12 @@ namespace ProjektPWF
             this.dataGridViewSprzedaz.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewSprzedaz.Location = new System.Drawing.Point(16, 15);
             this.dataGridViewSprzedaz.Name = "dataGridViewSprzedaz";
-            this.dataGridViewSprzedaz.Size = new System.Drawing.Size(1100, 86);
+            this.dataGridViewSprzedaz.Size = new System.Drawing.Size(1210, 294);
             this.dataGridViewSprzedaz.TabIndex = 2;
             // 
             // groupBoxDopisz
             // 
+            this.groupBoxDopisz.Controls.Add(this.buttonDopiszPomin);
             this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszTermin);
             this.groupBoxDopisz.Controls.Add(this.labelDopiszTermin);
             this.groupBoxDopisz.Controls.Add(this.comboBoxDopiszStatus);
@@ -472,7 +474,7 @@ namespace ProjektPWF
             // buttonDopiszZatwierdz
             // 
             this.buttonDopiszZatwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDopiszZatwierdz.Location = new System.Drawing.Point(1016, 200);
+            this.buttonDopiszZatwierdz.Location = new System.Drawing.Point(1016, 149);
             this.buttonDopiszZatwierdz.Name = "buttonDopiszZatwierdz";
             this.buttonDopiszZatwierdz.Size = new System.Drawing.Size(104, 32);
             this.buttonDopiszZatwierdz.TabIndex = 7;
@@ -1672,7 +1674,7 @@ namespace ProjektPWF
             this.tabControlStart.Location = new System.Drawing.Point(35, 55);
             this.tabControlStart.Name = "tabControlStart";
             this.tabControlStart.SelectedIndex = 0;
-            this.tabControlStart.Size = new System.Drawing.Size(1268, 502);
+            this.tabControlStart.Size = new System.Drawing.Size(1268, 691);
             this.tabControlStart.TabIndex = 10;
             // 
             // tabPageStartSprzedaz
@@ -1682,21 +1684,10 @@ namespace ProjektPWF
             this.tabPageStartSprzedaz.Location = new System.Drawing.Point(4, 22);
             this.tabPageStartSprzedaz.Name = "tabPageStartSprzedaz";
             this.tabPageStartSprzedaz.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStartSprzedaz.Size = new System.Drawing.Size(1260, 476);
+            this.tabPageStartSprzedaz.Size = new System.Drawing.Size(1260, 665);
             this.tabPageStartSprzedaz.TabIndex = 0;
             this.tabPageStartSprzedaz.Text = "sprzedaż";
             this.tabPageStartSprzedaz.UseVisualStyleBackColor = true;
-            // 
-            // tabPageStartTabelePoboczne
-            // 
-            this.tabPageStartTabelePoboczne.Controls.Add(this.tabControlTabelePoboczne);
-            this.tabPageStartTabelePoboczne.Location = new System.Drawing.Point(4, 22);
-            this.tabPageStartTabelePoboczne.Name = "tabPageStartTabelePoboczne";
-            this.tabPageStartTabelePoboczne.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStartTabelePoboczne.Size = new System.Drawing.Size(1153, 395);
-            this.tabPageStartTabelePoboczne.TabIndex = 1;
-            this.tabPageStartTabelePoboczne.Text = "tabele poboczne";
-            this.tabPageStartTabelePoboczne.UseVisualStyleBackColor = true;
             // 
             // tabControlStartSprzedaz
             // 
@@ -1704,7 +1695,7 @@ namespace ProjektPWF
             this.tabControlStartSprzedaz.Controls.Add(this.tabPageStartSprzedazDopisz);
             this.tabControlStartSprzedaz.Controls.Add(this.tabPageStartSprzedazEdytuj);
             this.tabControlStartSprzedaz.Controls.Add(this.tabPageStartSprzedazDrukuj);
-            this.tabControlStartSprzedaz.Location = new System.Drawing.Point(16, 148);
+            this.tabControlStartSprzedaz.Location = new System.Drawing.Point(16, 326);
             this.tabControlStartSprzedaz.Name = "tabControlStartSprzedaz";
             this.tabControlStartSprzedaz.SelectedIndex = 0;
             this.tabControlStartSprzedaz.Size = new System.Drawing.Size(1214, 322);
@@ -1748,6 +1739,28 @@ namespace ProjektPWF
             this.tabPageStartSprzedazDrukuj.TabIndex = 3;
             this.tabPageStartSprzedazDrukuj.Text = "drukuj";
             this.tabPageStartSprzedazDrukuj.UseVisualStyleBackColor = true;
+            // 
+            // tabPageStartTabelePoboczne
+            // 
+            this.tabPageStartTabelePoboczne.Controls.Add(this.tabControlTabelePoboczne);
+            this.tabPageStartTabelePoboczne.Location = new System.Drawing.Point(4, 22);
+            this.tabPageStartTabelePoboczne.Name = "tabPageStartTabelePoboczne";
+            this.tabPageStartTabelePoboczne.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageStartTabelePoboczne.Size = new System.Drawing.Size(1260, 665);
+            this.tabPageStartTabelePoboczne.TabIndex = 1;
+            this.tabPageStartTabelePoboczne.Text = "tabele poboczne";
+            this.tabPageStartTabelePoboczne.UseVisualStyleBackColor = true;
+            // 
+            // buttonDopiszPomin
+            // 
+            this.buttonDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDopiszPomin.Location = new System.Drawing.Point(1016, 200);
+            this.buttonDopiszPomin.Name = "buttonDopiszPomin";
+            this.buttonDopiszPomin.Size = new System.Drawing.Size(104, 32);
+            this.buttonDopiszPomin.TabIndex = 32;
+            this.buttonDopiszPomin.Text = "pomiń";
+            this.buttonDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonDopiszPomin.Click += new System.EventHandler(this.buttonDopiszPomin_Click);
             // 
             // StartWindow
             // 
@@ -1800,9 +1813,9 @@ namespace ProjektPWF
             this.groupBoxTabelePoboczneVatDopisz.PerformLayout();
             this.tabControlStart.ResumeLayout(false);
             this.tabPageStartSprzedaz.ResumeLayout(false);
-            this.tabPageStartTabelePoboczne.ResumeLayout(false);
             this.tabControlStartSprzedaz.ResumeLayout(false);
             this.tabPageStartSprzedazDopisz.ResumeLayout(false);
+            this.tabPageStartTabelePoboczne.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1957,6 +1970,7 @@ namespace ProjektPWF
         private System.Windows.Forms.TabPage tabPageStartSprzedazDopisz;
         private System.Windows.Forms.TabPage tabPageStartSprzedazEdytuj;
         private System.Windows.Forms.TabPage tabPageStartSprzedazDrukuj;
+        private System.Windows.Forms.Button buttonDopiszPomin;
     }
 }
 
