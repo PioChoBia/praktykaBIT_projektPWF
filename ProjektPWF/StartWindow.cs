@@ -31,7 +31,7 @@ namespace ProjektPWF
             DopiszStartowe();
 
          //tabele poboczne
-            tabControlTabelePoboczne.Visible = true;
+           // tabControlTabelePoboczne.Visible = true;
             //Dostarczanie
             groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
             groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
@@ -74,27 +74,24 @@ namespace ProjektPWF
             listBoxTabelePoboczneVat.DataSource = wyswietl.Vat();
             listBoxTabelePoboczneVat.DisplayMember = "StawkaVat";
             listBoxTabelePoboczneVat.ValueMember = "Id";
-
         }
 
         private void StartWindow_Load(object sender, EventArgs e)
-        {
-            
+        {         
         }
 
-
-        private void buttonDopisz_Click(object sender, EventArgs e)
+        private void tabControlStartSprzedaz_Selected(object sender, TabControlEventArgs e)
         {
-       
+            //label21.Text = e.TabPage.Text;
+         
+            //kliknięto na zakładkę edytuj tabControlStartSprzedaz
+            if (e.TabPage.Text == "edytuj")
+            {
+                SprzedazEdytujWpiszWartosciSelectedIteam();
 
+            }
 
         }
-
-
-
-
     }
-
-
 
 }

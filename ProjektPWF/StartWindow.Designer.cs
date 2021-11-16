@@ -32,6 +32,7 @@ namespace ProjektPWF
             this.labelNaglowek = new System.Windows.Forms.Label();
             this.dataGridViewSprzedaz = new System.Windows.Forms.DataGridView();
             this.groupBoxDopisz = new System.Windows.Forms.GroupBox();
+            this.buttonDopiszPomin = new System.Windows.Forms.Button();
             this.comboBoxDopiszTermin = new System.Windows.Forms.ComboBox();
             this.labelDopiszTermin = new System.Windows.Forms.Label();
             this.comboBoxDopiszStatus = new System.Windows.Forms.ComboBox();
@@ -175,9 +176,40 @@ namespace ProjektPWF
             this.tabPageStartSprzedazFiltruj = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazDopisz = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazEdytuj = new System.Windows.Forms.TabPage();
+            this.groupBoxSprzedazEdytuj = new System.Windows.Forms.GroupBox();
+            this.buttonSprzedazEdytujPomin = new System.Windows.Forms.Button();
+            this.comboBoxSprzedazEdytujTermin = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxSprzedazEdytujStatus = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxSprzedazEdytujPlatnosc = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxSprzedazEdytujNabywca = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxSprzedazEdytujKierownik = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxSprzedazEdytujDostarczenie = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.richTextBoxSprzedazEdytujUwagi = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBoxSprzedazEdytujVat = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxSprzedazEdytujNetto = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.richTextBoxSprzedazEdytujTrescUmowy = new System.Windows.Forms.RichTextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBoxSprzedazEdytujNrUmowy = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxSprzedazEdytujNrZlecenia = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.buttonSprzedazEdytujZatwierdz = new System.Windows.Forms.Button();
+            this.dateTimePickerSprzedazEdytujDataWystawienia = new System.Windows.Forms.DateTimePicker();
+            this.label19 = new System.Windows.Forms.Label();
+            this.dateTimePickerSprzedazEdytujDataSprzedazy = new System.Windows.Forms.DateTimePicker();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabPageStartSprzedazDrukuj = new System.Windows.Forms.TabPage();
             this.tabPageStartTabelePoboczne = new System.Windows.Forms.TabPage();
-            this.buttonDopiszPomin = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).BeginInit();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
@@ -206,6 +238,8 @@ namespace ProjektPWF
             this.tabPageStartSprzedaz.SuspendLayout();
             this.tabControlStartSprzedaz.SuspendLayout();
             this.tabPageStartSprzedazDopisz.SuspendLayout();
+            this.tabPageStartSprzedazEdytuj.SuspendLayout();
+            this.groupBoxSprzedazEdytuj.SuspendLayout();
             this.tabPageStartTabelePoboczne.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -266,6 +300,17 @@ namespace ProjektPWF
             this.groupBoxDopisz.TabIndex = 7;
             this.groupBoxDopisz.TabStop = false;
             this.groupBoxDopisz.Text = "wpisz poprawne wartości i kliknij zatwierdź";
+            // 
+            // buttonDopiszPomin
+            // 
+            this.buttonDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonDopiszPomin.Location = new System.Drawing.Point(1016, 200);
+            this.buttonDopiszPomin.Name = "buttonDopiszPomin";
+            this.buttonDopiszPomin.Size = new System.Drawing.Size(104, 32);
+            this.buttonDopiszPomin.TabIndex = 32;
+            this.buttonDopiszPomin.Text = "pomiń";
+            this.buttonDopiszPomin.UseVisualStyleBackColor = true;
+            this.buttonDopiszPomin.Click += new System.EventHandler(this.buttonDopiszPomin_Click);
             // 
             // comboBoxDopiszTermin
             // 
@@ -1700,6 +1745,7 @@ namespace ProjektPWF
             this.tabControlStartSprzedaz.SelectedIndex = 0;
             this.tabControlStartSprzedaz.Size = new System.Drawing.Size(1214, 322);
             this.tabControlStartSprzedaz.TabIndex = 3;
+            this.tabControlStartSprzedaz.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControlStartSprzedaz_Selected);
             // 
             // tabPageStartSprzedazFiltruj
             // 
@@ -1724,12 +1770,312 @@ namespace ProjektPWF
             // 
             // tabPageStartSprzedazEdytuj
             // 
+            this.tabPageStartSprzedazEdytuj.Controls.Add(this.groupBoxSprzedazEdytuj);
             this.tabPageStartSprzedazEdytuj.Location = new System.Drawing.Point(4, 22);
             this.tabPageStartSprzedazEdytuj.Name = "tabPageStartSprzedazEdytuj";
             this.tabPageStartSprzedazEdytuj.Size = new System.Drawing.Size(1206, 296);
             this.tabPageStartSprzedazEdytuj.TabIndex = 2;
             this.tabPageStartSprzedazEdytuj.Text = "edytuj";
             this.tabPageStartSprzedazEdytuj.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxSprzedazEdytuj
+            // 
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujPomin);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujTermin);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label7);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujStatus);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label8);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujPlatnosc);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label9);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujNabywca);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label10);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujKierownik);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label11);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujDostarczenie);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label12);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.richTextBoxSprzedazEdytujUwagi);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label13);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujVat);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label14);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.textBoxSprzedazEdytujNetto);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label15);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.richTextBoxSprzedazEdytujTrescUmowy);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label16);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.textBoxSprzedazEdytujNrUmowy);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label17);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.textBoxSprzedazEdytujNrZlecenia);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label18);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujZatwierdz);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.dateTimePickerSprzedazEdytujDataWystawienia);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label19);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.dateTimePickerSprzedazEdytujDataSprzedazy);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.label20);
+            this.groupBoxSprzedazEdytuj.Location = new System.Drawing.Point(32, 22);
+            this.groupBoxSprzedazEdytuj.Name = "groupBoxSprzedazEdytuj";
+            this.groupBoxSprzedazEdytuj.Size = new System.Drawing.Size(1142, 253);
+            this.groupBoxSprzedazEdytuj.TabIndex = 8;
+            this.groupBoxSprzedazEdytuj.TabStop = false;
+            this.groupBoxSprzedazEdytuj.Text = "wprowadź zmiany i kliknij zatwierdź";
+            // 
+            // buttonSprzedazEdytujPomin
+            // 
+            this.buttonSprzedazEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSprzedazEdytujPomin.Location = new System.Drawing.Point(1016, 200);
+            this.buttonSprzedazEdytujPomin.Name = "buttonSprzedazEdytujPomin";
+            this.buttonSprzedazEdytujPomin.Size = new System.Drawing.Size(104, 32);
+            this.buttonSprzedazEdytujPomin.TabIndex = 32;
+            this.buttonSprzedazEdytujPomin.Text = "pomiń";
+            this.buttonSprzedazEdytujPomin.UseVisualStyleBackColor = true;
+            this.buttonSprzedazEdytujPomin.Click += new System.EventHandler(this.buttonSprzedazEdytujPomin_Click);
+            // 
+            // comboBoxSprzedazEdytujTermin
+            // 
+            this.comboBoxSprzedazEdytujTermin.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujTermin.Location = new System.Drawing.Point(684, 51);
+            this.comboBoxSprzedazEdytujTermin.Name = "comboBoxSprzedazEdytujTermin";
+            this.comboBoxSprzedazEdytujTermin.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxSprzedazEdytujTermin.TabIndex = 31;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(564, 54);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "termin płatności dni";
+            // 
+            // comboBoxSprzedazEdytujStatus
+            // 
+            this.comboBoxSprzedazEdytujStatus.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujStatus.Location = new System.Drawing.Point(966, 17);
+            this.comboBoxSprzedazEdytujStatus.Name = "comboBoxSprzedazEdytujStatus";
+            this.comboBoxSprzedazEdytujStatus.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxSprzedazEdytujStatus.TabIndex = 29;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(825, 21);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 13);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "status płatności";
+            // 
+            // comboBoxSprzedazEdytujPlatnosc
+            // 
+            this.comboBoxSprzedazEdytujPlatnosc.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujPlatnosc.Location = new System.Drawing.Point(966, 58);
+            this.comboBoxSprzedazEdytujPlatnosc.Name = "comboBoxSprzedazEdytujPlatnosc";
+            this.comboBoxSprzedazEdytujPlatnosc.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxSprzedazEdytujPlatnosc.TabIndex = 27;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(825, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 13);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "płatność opłacona jako";
+            // 
+            // comboBoxSprzedazEdytujNabywca
+            // 
+            this.comboBoxSprzedazEdytujNabywca.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujNabywca.Location = new System.Drawing.Point(278, 88);
+            this.comboBoxSprzedazEdytujNabywca.Name = "comboBoxSprzedazEdytujNabywca";
+            this.comboBoxSprzedazEdytujNabywca.Size = new System.Drawing.Size(201, 21);
+            this.comboBoxSprzedazEdytujNabywca.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(205, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "nabywca";
+            // 
+            // comboBoxSprzedazEdytujKierownik
+            // 
+            this.comboBoxSprzedazEdytujKierownik.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujKierownik.Location = new System.Drawing.Point(278, 116);
+            this.comboBoxSprzedazEdytujKierownik.Name = "comboBoxSprzedazEdytujKierownik";
+            this.comboBoxSprzedazEdytujKierownik.Size = new System.Drawing.Size(201, 21);
+            this.comboBoxSprzedazEdytujKierownik.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(204, 120);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "kierownik";
+            // 
+            // comboBoxSprzedazEdytujDostarczenie
+            // 
+            this.comboBoxSprzedazEdytujDostarczenie.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujDostarczenie.Location = new System.Drawing.Point(683, 17);
+            this.comboBoxSprzedazEdytujDostarczenie.Name = "comboBoxSprzedazEdytujDostarczenie";
+            this.comboBoxSprzedazEdytujDostarczenie.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxSprzedazEdytujDostarczenie.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(564, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "sposób dostarczania";
+            // 
+            // richTextBoxSprzedazEdytujUwagi
+            // 
+            this.richTextBoxSprzedazEdytujUwagi.Location = new System.Drawing.Point(562, 85);
+            this.richTextBoxSprzedazEdytujUwagi.Name = "richTextBoxSprzedazEdytujUwagi";
+            this.richTextBoxSprzedazEdytujUwagi.Size = new System.Drawing.Size(558, 47);
+            this.richTextBoxSprzedazEdytujUwagi.TabIndex = 19;
+            this.richTextBoxSprzedazEdytujUwagi.Text = "";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(521, 96);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(35, 13);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "uwagi";
+            // 
+            // comboBoxSprzedazEdytujVat
+            // 
+            this.comboBoxSprzedazEdytujVat.FormattingEnabled = true;
+            this.comboBoxSprzedazEdytujVat.Location = new System.Drawing.Point(374, 58);
+            this.comboBoxSprzedazEdytujVat.Name = "comboBoxSprzedazEdytujVat";
+            this.comboBoxSprzedazEdytujVat.Size = new System.Drawing.Size(65, 21);
+            this.comboBoxSprzedazEdytujVat.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(291, 61);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 13);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "stawka Vat";
+            // 
+            // textBoxSprzedazEdytujNetto
+            // 
+            this.textBoxSprzedazEdytujNetto.Location = new System.Drawing.Point(374, 25);
+            this.textBoxSprzedazEdytujNetto.Name = "textBoxSprzedazEdytujNetto";
+            this.textBoxSprzedazEdytujNetto.Size = new System.Drawing.Size(65, 20);
+            this.textBoxSprzedazEdytujNetto.TabIndex = 15;
+            this.textBoxSprzedazEdytujNetto.TextChanged += new System.EventHandler(this.textBoxSprzedazEdytujNetto_TextChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(291, 32);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "wartość netto";
+            // 
+            // richTextBoxSprzedazEdytujTrescUmowy
+            // 
+            this.richTextBoxSprzedazEdytujTrescUmowy.Location = new System.Drawing.Point(106, 147);
+            this.richTextBoxSprzedazEdytujTrescUmowy.Name = "richTextBoxSprzedazEdytujTrescUmowy";
+            this.richTextBoxSprzedazEdytujTrescUmowy.Size = new System.Drawing.Size(892, 98);
+            this.richTextBoxSprzedazEdytujTrescUmowy.TabIndex = 13;
+            this.richTextBoxSprzedazEdytujTrescUmowy.Text = "";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(12, 149);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "treść umowy";
+            // 
+            // textBoxSprzedazEdytujNrUmowy
+            // 
+            this.textBoxSprzedazEdytujNrUmowy.Location = new System.Drawing.Point(107, 115);
+            this.textBoxSprzedazEdytujNrUmowy.Name = "textBoxSprzedazEdytujNrUmowy";
+            this.textBoxSprzedazEdytujNrUmowy.Size = new System.Drawing.Size(65, 20);
+            this.textBoxSprzedazEdytujNrUmowy.TabIndex = 11;
+            this.textBoxSprzedazEdytujNrUmowy.TextChanged += new System.EventHandler(this.textBoxSprzedazEdytujNrUmowy_TextChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(12, 119);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(72, 13);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "numer umowy";
+            // 
+            // textBoxSprzedazEdytujNrZlecenia
+            // 
+            this.textBoxSprzedazEdytujNrZlecenia.Location = new System.Drawing.Point(107, 89);
+            this.textBoxSprzedazEdytujNrZlecenia.Name = "textBoxSprzedazEdytujNrZlecenia";
+            this.textBoxSprzedazEdytujNrZlecenia.Size = new System.Drawing.Size(65, 20);
+            this.textBoxSprzedazEdytujNrZlecenia.TabIndex = 9;
+            this.textBoxSprzedazEdytujNrZlecenia.TextChanged += new System.EventHandler(this.textBoxSprzedazEdytujNrZlecenia_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(12, 93);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(78, 13);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "numer zlecenia";
+            // 
+            // buttonSprzedazEdytujZatwierdz
+            // 
+            this.buttonSprzedazEdytujZatwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSprzedazEdytujZatwierdz.Location = new System.Drawing.Point(1016, 149);
+            this.buttonSprzedazEdytujZatwierdz.Name = "buttonSprzedazEdytujZatwierdz";
+            this.buttonSprzedazEdytujZatwierdz.Size = new System.Drawing.Size(104, 32);
+            this.buttonSprzedazEdytujZatwierdz.TabIndex = 7;
+            this.buttonSprzedazEdytujZatwierdz.Text = "zatwierdź";
+            this.buttonSprzedazEdytujZatwierdz.UseVisualStyleBackColor = true;
+            this.buttonSprzedazEdytujZatwierdz.Click += new System.EventHandler(this.buttonSprzedazEdytujZatwierdz_Click);
+            // 
+            // dateTimePickerSprzedazEdytujDataWystawienia
+            // 
+            this.dateTimePickerSprzedazEdytujDataWystawienia.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerSprzedazEdytujDataWystawienia.Location = new System.Drawing.Point(106, 51);
+            this.dateTimePickerSprzedazEdytujDataWystawienia.Name = "dateTimePickerSprzedazEdytujDataWystawienia";
+            this.dateTimePickerSprzedazEdytujDataWystawienia.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePickerSprzedazEdytujDataWystawienia.TabIndex = 3;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(12, 51);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(88, 13);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "data wystawienia";
+            // 
+            // dateTimePickerSprzedazEdytujDataSprzedazy
+            // 
+            this.dateTimePickerSprzedazEdytujDataSprzedazy.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateTimePickerSprzedazEdytujDataSprzedazy.Location = new System.Drawing.Point(107, 25);
+            this.dateTimePickerSprzedazEdytujDataSprzedazy.Name = "dateTimePickerSprzedazEdytujDataSprzedazy";
+            this.dateTimePickerSprzedazEdytujDataSprzedazy.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePickerSprzedazEdytujDataSprzedazy.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 25);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(78, 13);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "data sprzedaży";
             // 
             // tabPageStartSprzedazDrukuj
             // 
@@ -1751,22 +2097,21 @@ namespace ProjektPWF
             this.tabPageStartTabelePoboczne.Text = "tabele poboczne";
             this.tabPageStartTabelePoboczne.UseVisualStyleBackColor = true;
             // 
-            // buttonDopiszPomin
+            // label21
             // 
-            this.buttonDopiszPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonDopiszPomin.Location = new System.Drawing.Point(1016, 200);
-            this.buttonDopiszPomin.Name = "buttonDopiszPomin";
-            this.buttonDopiszPomin.Size = new System.Drawing.Size(104, 32);
-            this.buttonDopiszPomin.TabIndex = 32;
-            this.buttonDopiszPomin.Text = "pomiń";
-            this.buttonDopiszPomin.UseVisualStyleBackColor = true;
-            this.buttonDopiszPomin.Click += new System.EventHandler(this.buttonDopiszPomin_Click);
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(39, 13);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "label21";
             // 
             // StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 844);
+            this.Controls.Add(this.label21);
             this.Controls.Add(this.tabControlStart);
             this.Controls.Add(this.labelNaglowek);
             this.Name = "StartWindow";
@@ -1815,6 +2160,9 @@ namespace ProjektPWF
             this.tabPageStartSprzedaz.ResumeLayout(false);
             this.tabControlStartSprzedaz.ResumeLayout(false);
             this.tabPageStartSprzedazDopisz.ResumeLayout(false);
+            this.tabPageStartSprzedazEdytuj.ResumeLayout(false);
+            this.groupBoxSprzedazEdytuj.ResumeLayout(false);
+            this.groupBoxSprzedazEdytuj.PerformLayout();
             this.tabPageStartTabelePoboczne.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1971,6 +2319,38 @@ namespace ProjektPWF
         private System.Windows.Forms.TabPage tabPageStartSprzedazEdytuj;
         private System.Windows.Forms.TabPage tabPageStartSprzedazDrukuj;
         private System.Windows.Forms.Button buttonDopiszPomin;
+        private System.Windows.Forms.GroupBox groupBoxSprzedazEdytuj;
+        private System.Windows.Forms.Button buttonSprzedazEdytujPomin;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujTermin;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujStatus;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujPlatnosc;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujNabywca;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujKierownik;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujDostarczenie;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RichTextBox richTextBoxSprzedazEdytujUwagi;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox comboBoxSprzedazEdytujVat;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxSprzedazEdytujNetto;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RichTextBox richTextBoxSprzedazEdytujTrescUmowy;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBoxSprzedazEdytujNrUmowy;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBoxSprzedazEdytujNrZlecenia;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button buttonSprzedazEdytujZatwierdz;
+        private System.Windows.Forms.DateTimePicker dateTimePickerSprzedazEdytujDataWystawienia;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.DateTimePicker dateTimePickerSprzedazEdytujDataSprzedazy;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }
 
