@@ -209,7 +209,7 @@ namespace ProjektPWF
             this.label20 = new System.Windows.Forms.Label();
             this.tabPageStartSprzedazDrukuj = new System.Windows.Forms.TabPage();
             this.tabPageStartTabelePoboczne = new System.Windows.Forms.TabPage();
-            this.label21 = new System.Windows.Forms.Label();
+            this.labelTest = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).BeginInit();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
@@ -2097,21 +2097,21 @@ namespace ProjektPWF
             this.tabPageStartTabelePoboczne.Text = "tabele poboczne";
             this.tabPageStartTabelePoboczne.UseVisualStyleBackColor = true;
             // 
-            // label21
+            // labelTest
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(39, 13);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 13);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "label21";
+            this.labelTest.AutoSize = true;
+            this.labelTest.Location = new System.Drawing.Point(39, 13);
+            this.labelTest.Name = "labelTest";
+            this.labelTest.Size = new System.Drawing.Size(53, 13);
+            this.labelTest.TabIndex = 11;
+            this.labelTest.Text = "do testów";
             // 
             // StartWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 844);
-            this.Controls.Add(this.label21);
+            this.Controls.Add(this.labelTest);
             this.Controls.Add(this.tabControlStart);
             this.Controls.Add(this.labelNaglowek);
             this.Name = "StartWindow";
@@ -2350,7 +2350,7 @@ namespace ProjektPWF
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DateTimePicker dateTimePickerSprzedazEdytujDataSprzedazy;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label labelTest;
     }
 }
 

@@ -33,7 +33,7 @@ namespace ProjektPWF
         private void buttonTabelePoboczneStatusDopisz_Click(object sender, EventArgs e)
         {
             groupBoxTabelePoboczneStatusEdytuj.Visible = false;
-            groupBoxTabelePoboczneTerminDopisz.Visible = true;
+            groupBoxTabelePoboczneStatusDopisz.Visible = true;
         }
 
         private void buttonTabelePoboczneStatusDopiszOK_Click(object sender, EventArgs e)
