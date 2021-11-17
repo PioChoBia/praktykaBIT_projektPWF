@@ -6,6 +6,7 @@ namespace ProjektPWF
 {
     public class Obsluga
     {
+
         public void WpiszTabDostarczanie(TabDostarczanie t)
         {
             using (var dbContext = new ApplicationDbContext())

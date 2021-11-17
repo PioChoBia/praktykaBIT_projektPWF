@@ -196,7 +196,7 @@ namespace ProjektPWF
             this.label14 = new System.Windows.Forms.Label();
             this.textBoxSprzedazEdytujNetto = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.richTextBoxSprzedazEdytujTrescUmowy = new System.Windows.Forms.RichTextBox();
+            this.richTextBoxSprzedazEdytujTresc = new System.Windows.Forms.RichTextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBoxSprzedazEdytujNrUmowy = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -1799,7 +1799,7 @@ namespace ProjektPWF
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label14);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.textBoxSprzedazEdytujNetto);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label15);
-            this.groupBoxSprzedazEdytuj.Controls.Add(this.richTextBoxSprzedazEdytujTrescUmowy);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.richTextBoxSprzedazEdytujTresc);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label16);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.textBoxSprzedazEdytujNrUmowy);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label17);
@@ -1981,13 +1981,13 @@ namespace ProjektPWF
             this.label15.TabIndex = 14;
             this.label15.Text = "wartość netto";
             // 
-            // richTextBoxSprzedazEdytujTrescUmowy
+            // richTextBoxSprzedazEdytujTresc
             // 
-            this.richTextBoxSprzedazEdytujTrescUmowy.Location = new System.Drawing.Point(106, 147);
-            this.richTextBoxSprzedazEdytujTrescUmowy.Name = "richTextBoxSprzedazEdytujTrescUmowy";
-            this.richTextBoxSprzedazEdytujTrescUmowy.Size = new System.Drawing.Size(892, 98);
-            this.richTextBoxSprzedazEdytujTrescUmowy.TabIndex = 13;
-            this.richTextBoxSprzedazEdytujTrescUmowy.Text = "";
+            this.richTextBoxSprzedazEdytujTresc.Location = new System.Drawing.Point(106, 147);
+            this.richTextBoxSprzedazEdytujTresc.Name = "richTextBoxSprzedazEdytujTresc";
+            this.richTextBoxSprzedazEdytujTresc.Size = new System.Drawing.Size(892, 98);
+            this.richTextBoxSprzedazEdytujTresc.TabIndex = 13;
+            this.richTextBoxSprzedazEdytujTresc.Text = "";
             // 
             // label16
             // 
@@ -2339,7 +2339,7 @@ namespace ProjektPWF
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxSprzedazEdytujNetto;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.RichTextBox richTextBoxSprzedazEdytujTrescUmowy;
+        private System.Windows.Forms.RichTextBox richTextBoxSprzedazEdytujTresc;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBoxSprzedazEdytujNrUmowy;
         private System.Windows.Forms.Label label17;

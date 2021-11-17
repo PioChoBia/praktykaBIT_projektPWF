@@ -32,7 +32,7 @@ namespace ProjektPWF
 
                 textBoxSprzedazEdytujNrZlecenia.Text = doEdycji.NrZlecenia.ToString();
                 textBoxSprzedazEdytujNrUmowy.Text = doEdycji.NrUmowy.ToString();
-                richTextBoxSprzedazEdytujTrescUmowy.Text = doEdycji.Tresc;
+                richTextBoxSprzedazEdytujTresc.Text = doEdycji.Tresc;
                 textBoxSprzedazEdytujNetto.Text = doEdycji.Netto.ToString();
 
                 comboBoxSprzedazEdytujVat.DataSource = wyswietl.Vat();
@@ -77,36 +77,41 @@ namespace ProjektPWF
 
         private void buttonSprzedazEdytujZatwierdz_Click(object sender, EventArgs e)
         {
-            TabSprzedaz tabSprzedaz = new TabSprzedaz();
+            int selectedId = (int)dataGridViewSprzedaz.CurrentRow.Cells[0].Value;
+            using (var dbContext = new ApplicationDbContext())
+            {
+                TabSprzedaz doEdycji = dbContext.SprzedazC.Where(a => (
+                a.IdSprzedaz == selectedId)).First();
 
-            tabSprzedaz.DataSprzedazy = dateTimePickerDopiszDataSprzedazy.Value;
-            tabSprzedaz.DataWystawienia = dateTimePickerDopiszDataWystawienia.Value;
+                doEdycji.DataSprzedazy = dateTimePickerSprzedazEdytujDataSprzedazy.Value;
+                doEdycji.DataWystawienia = dateTimePickerSprzedazEdytujDataWystawienia.Value;
 
-            tabSprzedaz.NrZlecenia = int.Parse(textBoxDopiszNrZlecenia.Text);
-            tabSprzedaz.NrUmowy = int.Parse(textBoxDopiszNrUmowy.Text);
-            tabSprzedaz.Tresc = richTextBoxDopiszTresc.Text;
+                doEdycji.NrZlecenia = int.Parse(textBoxSprzedazEdytujNrZlecenia.Text);
+                doEdycji.NrUmowy = int.Parse(textBoxSprzedazEdytujNrUmowy.Text);
+                doEdycji.Tresc = richTextBoxSprzedazEdytujTresc.Text;
 
-            tabSprzedaz.Netto = double.Parse(textBoxDopiszNetto.Text);
+                doEdycji.Netto = double.Parse(textBoxSprzedazEdytujNetto.Text);
 
-            tabSprzedaz.IdVat = ((VatViewModel)comboBoxDopiszVatStawka.SelectedItem).Id;
+                doEdycji.IdVat = ((VatViewModel)comboBoxSprzedazEdytujVat.SelectedItem).Id;
 
-            tabSprzedaz.Uwagi = richTextBoxDopiszUwagi.Text;
+                doEdycji.Uwagi = richTextBoxSprzedazEdytujUwagi.Text;
 
-            tabSprzedaz.IdDostarczanie = ((DostarczanieViewModel)comboBoxDopiszDostarczanie.SelectedItem).Id;
+                doEdycji.IdDostarczanie = ((DostarczanieViewModel)comboBoxSprzedazEdytujDostarczenie.SelectedItem).Id;
 
-            tabSprzedaz.IdKierownik = ((KierownikViewModel)comboBoxDopiszKierownik.SelectedItem).Id;
+                doEdycji.IdKierownik = ((KierownikViewModel)comboBoxSprzedazEdytujKierownik.SelectedItem).Id;
 
-            tabSprzedaz.IdNabywca = ((NabywcaViewModel)comboBoxDopiszNabywca.SelectedItem).Id;
+                doEdycji.IdNabywca = ((NabywcaViewModel)comboBoxSprzedazEdytujNabywca.SelectedItem).Id;
 
-            tabSprzedaz.IdPlatnosc = ((PlatnoscViewModel)comboBoxDopiszPlatnosc.SelectedItem).Id;
+                doEdycji.IdPlatnosc = ((PlatnoscViewModel)comboBoxSprzedazEdytujPlatnosc.SelectedItem).Id;
 
-            tabSprzedaz.IdStatus = ((StatusViewModel)comboBoxDopiszStatus.SelectedItem).Id;
+                doEdycji.IdStatus = ((StatusViewModel)comboBoxSprzedazEdytujStatus.SelectedItem).Id;
 
-            tabSprzedaz.IdTermin = ((TerminViewModel)comboBoxDopiszTermin.SelectedItem).Id;
+                doEdycji.IdTermin = ((TerminViewModel)comboBoxDopiszTermin.SelectedItem).Id;
 
-            obsluga.WpiszTabSprzedaz(tabSprzedaz);
+                dbContext.SaveChanges();
 
-            dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
+                dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
+            }
         }
 
         private void buttonSprzedazEdytujPomin_Click(object sender, EventArgs e)
