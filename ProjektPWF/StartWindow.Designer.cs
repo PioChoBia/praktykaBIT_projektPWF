@@ -177,6 +177,8 @@ namespace ProjektPWF
             this.tabPageStartSprzedazDopisz = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazEdytuj = new System.Windows.Forms.TabPage();
             this.groupBoxSprzedazEdytuj = new System.Windows.Forms.GroupBox();
+            this.buttonSprzedazEdytujWyczysc = new System.Windows.Forms.Button();
+            this.labelSprzedazEdytujId = new System.Windows.Forms.Label();
             this.buttonSprzedazEdytujDopisz = new System.Windows.Forms.Button();
             this.buttonSprzedazEdytujKasuj = new System.Windows.Forms.Button();
             this.buttonSprzedazEdytujPomin = new System.Windows.Forms.Button();
@@ -212,7 +214,6 @@ namespace ProjektPWF
             this.tabPageStartSprzedazDrukuj = new System.Windows.Forms.TabPage();
             this.tabPageStartTabelePoboczne = new System.Windows.Forms.TabPage();
             this.labelTest = new System.Windows.Forms.Label();
-            this.labelSprzedazEdytujId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).BeginInit();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
@@ -265,7 +266,6 @@ namespace ProjektPWF
             this.dataGridViewSprzedaz.Size = new System.Drawing.Size(1210, 294);
             this.dataGridViewSprzedaz.TabIndex = 2;
             this.dataGridViewSprzedaz.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSprzedaz_CellClick);
-            this.dataGridViewSprzedaz.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSprzedaz_CellContentClick);
             // 
             // groupBoxDopisz
             // 
@@ -1785,6 +1785,7 @@ namespace ProjektPWF
             // 
             // groupBoxSprzedazEdytuj
             // 
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujWyczysc);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.labelSprzedazEdytujId);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujDopisz);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujKasuj);
@@ -1818,17 +1819,38 @@ namespace ProjektPWF
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label19);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.dateTimePickerSprzedazEdytujDataSprzedazy);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label20);
-            this.groupBoxSprzedazEdytuj.Location = new System.Drawing.Point(32, 22);
+            this.groupBoxSprzedazEdytuj.Location = new System.Drawing.Point(19, 17);
             this.groupBoxSprzedazEdytuj.Name = "groupBoxSprzedazEdytuj";
-            this.groupBoxSprzedazEdytuj.Size = new System.Drawing.Size(1142, 253);
+            this.groupBoxSprzedazEdytuj.Size = new System.Drawing.Size(1169, 266);
             this.groupBoxSprzedazEdytuj.TabIndex = 8;
             this.groupBoxSprzedazEdytuj.TabStop = false;
             this.groupBoxSprzedazEdytuj.Text = "wprowadź zmiany i  zatwierdź, dopisz jako nowy lub skasuj rekord";
             // 
+            // buttonSprzedazEdytujWyczysc
+            // 
+            this.buttonSprzedazEdytujWyczysc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSprzedazEdytujWyczysc.Location = new System.Drawing.Point(1005, 15);
+            this.buttonSprzedazEdytujWyczysc.Name = "buttonSprzedazEdytujWyczysc";
+            this.buttonSprzedazEdytujWyczysc.Size = new System.Drawing.Size(149, 32);
+            this.buttonSprzedazEdytujWyczysc.TabIndex = 36;
+            this.buttonSprzedazEdytujWyczysc.Text = "wyczyść pola";
+            this.buttonSprzedazEdytujWyczysc.UseVisualStyleBackColor = true;
+            this.buttonSprzedazEdytujWyczysc.Click += new System.EventHandler(this.buttonSprzedazEdytujWyczysc_Click);
+            // 
+            // labelSprzedazEdytujId
+            // 
+            this.labelSprzedazEdytujId.AutoSize = true;
+            this.labelSprzedazEdytujId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelSprzedazEdytujId.Location = new System.Drawing.Point(6, 182);
+            this.labelSprzedazEdytujId.Name = "labelSprzedazEdytujId";
+            this.labelSprzedazEdytujId.Size = new System.Drawing.Size(77, 25);
+            this.labelSprzedazEdytujId.TabIndex = 35;
+            this.labelSprzedazEdytujId.Text = "Id 123";
+            // 
             // buttonSprzedazEdytujDopisz
             // 
             this.buttonSprzedazEdytujDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSprzedazEdytujDopisz.Location = new System.Drawing.Point(987, 86);
+            this.buttonSprzedazEdytujDopisz.Location = new System.Drawing.Point(1005, 55);
             this.buttonSprzedazEdytujDopisz.Name = "buttonSprzedazEdytujDopisz";
             this.buttonSprzedazEdytujDopisz.Size = new System.Drawing.Size(149, 32);
             this.buttonSprzedazEdytujDopisz.TabIndex = 34;
@@ -1839,7 +1861,7 @@ namespace ProjektPWF
             // buttonSprzedazEdytujKasuj
             // 
             this.buttonSprzedazEdytujKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSprzedazEdytujKasuj.Location = new System.Drawing.Point(987, 213);
+            this.buttonSprzedazEdytujKasuj.Location = new System.Drawing.Point(1005, 213);
             this.buttonSprzedazEdytujKasuj.Name = "buttonSprzedazEdytujKasuj";
             this.buttonSprzedazEdytujKasuj.Size = new System.Drawing.Size(149, 32);
             this.buttonSprzedazEdytujKasuj.TabIndex = 33;
@@ -1850,7 +1872,7 @@ namespace ProjektPWF
             // buttonSprzedazEdytujPomin
             // 
             this.buttonSprzedazEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSprzedazEdytujPomin.Location = new System.Drawing.Point(987, 175);
+            this.buttonSprzedazEdytujPomin.Location = new System.Drawing.Point(1005, 159);
             this.buttonSprzedazEdytujPomin.Name = "buttonSprzedazEdytujPomin";
             this.buttonSprzedazEdytujPomin.Size = new System.Drawing.Size(149, 32);
             this.buttonSprzedazEdytujPomin.TabIndex = 32;
@@ -1861,15 +1883,15 @@ namespace ProjektPWF
             // comboBoxSprzedazEdytujTermin
             // 
             this.comboBoxSprzedazEdytujTermin.FormattingEnabled = true;
-            this.comboBoxSprzedazEdytujTermin.Location = new System.Drawing.Point(684, 51);
+            this.comboBoxSprzedazEdytujTermin.Location = new System.Drawing.Point(564, 48);
             this.comboBoxSprzedazEdytujTermin.Name = "comboBoxSprzedazEdytujTermin";
-            this.comboBoxSprzedazEdytujTermin.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxSprzedazEdytujTermin.Size = new System.Drawing.Size(129, 21);
             this.comboBoxSprzedazEdytujTermin.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(564, 54);
+            this.label7.Location = new System.Drawing.Point(457, 51);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(99, 13);
             this.label7.TabIndex = 30;
@@ -1878,15 +1900,15 @@ namespace ProjektPWF
             // comboBoxSprzedazEdytujStatus
             // 
             this.comboBoxSprzedazEdytujStatus.FormattingEnabled = true;
-            this.comboBoxSprzedazEdytujStatus.Location = new System.Drawing.Point(966, 17);
+            this.comboBoxSprzedazEdytujStatus.Location = new System.Drawing.Point(834, 14);
             this.comboBoxSprzedazEdytujStatus.Name = "comboBoxSprzedazEdytujStatus";
-            this.comboBoxSprzedazEdytujStatus.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxSprzedazEdytujStatus.Size = new System.Drawing.Size(147, 21);
             this.comboBoxSprzedazEdytujStatus.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(825, 21);
+            this.label8.Location = new System.Drawing.Point(718, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 28;
@@ -1895,15 +1917,15 @@ namespace ProjektPWF
             // comboBoxSprzedazEdytujPlatnosc
             // 
             this.comboBoxSprzedazEdytujPlatnosc.FormattingEnabled = true;
-            this.comboBoxSprzedazEdytujPlatnosc.Location = new System.Drawing.Point(966, 58);
+            this.comboBoxSprzedazEdytujPlatnosc.Location = new System.Drawing.Point(834, 52);
             this.comboBoxSprzedazEdytujPlatnosc.Name = "comboBoxSprzedazEdytujPlatnosc";
-            this.comboBoxSprzedazEdytujPlatnosc.Size = new System.Drawing.Size(124, 21);
+            this.comboBoxSprzedazEdytujPlatnosc.Size = new System.Drawing.Size(147, 21);
             this.comboBoxSprzedazEdytujPlatnosc.TabIndex = 27;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(825, 58);
+            this.label9.Location = new System.Drawing.Point(707, 55);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 13);
             this.label9.TabIndex = 26;
@@ -1946,15 +1968,15 @@ namespace ProjektPWF
             // comboBoxSprzedazEdytujDostarczenie
             // 
             this.comboBoxSprzedazEdytujDostarczenie.FormattingEnabled = true;
-            this.comboBoxSprzedazEdytujDostarczenie.Location = new System.Drawing.Point(683, 17);
+            this.comboBoxSprzedazEdytujDostarczenie.Location = new System.Drawing.Point(563, 14);
             this.comboBoxSprzedazEdytujDostarczenie.Name = "comboBoxSprzedazEdytujDostarczenie";
-            this.comboBoxSprzedazEdytujDostarczenie.Size = new System.Drawing.Size(102, 21);
+            this.comboBoxSprzedazEdytujDostarczenie.Size = new System.Drawing.Size(129, 21);
             this.comboBoxSprzedazEdytujDostarczenie.TabIndex = 21;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(564, 21);
+            this.label12.Location = new System.Drawing.Point(457, 18);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(104, 13);
             this.label12.TabIndex = 20;
@@ -1980,7 +2002,7 @@ namespace ProjektPWF
             // comboBoxSprzedazEdytujVat
             // 
             this.comboBoxSprzedazEdytujVat.FormattingEnabled = true;
-            this.comboBoxSprzedazEdytujVat.Location = new System.Drawing.Point(374, 58);
+            this.comboBoxSprzedazEdytujVat.Location = new System.Drawing.Point(369, 52);
             this.comboBoxSprzedazEdytujVat.Name = "comboBoxSprzedazEdytujVat";
             this.comboBoxSprzedazEdytujVat.Size = new System.Drawing.Size(65, 21);
             this.comboBoxSprzedazEdytujVat.TabIndex = 17;
@@ -1988,7 +2010,7 @@ namespace ProjektPWF
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(291, 61);
+            this.label14.Location = new System.Drawing.Point(286, 55);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 13);
             this.label14.TabIndex = 16;
@@ -1996,7 +2018,7 @@ namespace ProjektPWF
             // 
             // textBoxSprzedazEdytujNetto
             // 
-            this.textBoxSprzedazEdytujNetto.Location = new System.Drawing.Point(374, 25);
+            this.textBoxSprzedazEdytujNetto.Location = new System.Drawing.Point(369, 19);
             this.textBoxSprzedazEdytujNetto.Name = "textBoxSprzedazEdytujNetto";
             this.textBoxSprzedazEdytujNetto.Size = new System.Drawing.Size(65, 20);
             this.textBoxSprzedazEdytujNetto.TabIndex = 15;
@@ -2005,7 +2027,7 @@ namespace ProjektPWF
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(291, 32);
+            this.label15.Location = new System.Drawing.Point(286, 26);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 13);
             this.label15.TabIndex = 14;
@@ -2065,7 +2087,7 @@ namespace ProjektPWF
             // buttonSprzedazEdytujZatwierdz
             // 
             this.buttonSprzedazEdytujZatwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSprzedazEdytujZatwierdz.Location = new System.Drawing.Point(987, 124);
+            this.buttonSprzedazEdytujZatwierdz.Location = new System.Drawing.Point(1005, 115);
             this.buttonSprzedazEdytujZatwierdz.Name = "buttonSprzedazEdytujZatwierdz";
             this.buttonSprzedazEdytujZatwierdz.Size = new System.Drawing.Size(149, 38);
             this.buttonSprzedazEdytujZatwierdz.TabIndex = 7;
@@ -2135,16 +2157,6 @@ namespace ProjektPWF
             this.labelTest.Size = new System.Drawing.Size(53, 13);
             this.labelTest.TabIndex = 11;
             this.labelTest.Text = "do testów";
-            // 
-            // labelSprzedazEdytujId
-            // 
-            this.labelSprzedazEdytujId.AutoSize = true;
-            this.labelSprzedazEdytujId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelSprzedazEdytujId.Location = new System.Drawing.Point(6, 182);
-            this.labelSprzedazEdytujId.Name = "labelSprzedazEdytujId";
-            this.labelSprzedazEdytujId.Size = new System.Drawing.Size(77, 25);
-            this.labelSprzedazEdytujId.TabIndex = 35;
-            this.labelSprzedazEdytujId.Text = "Id 123";
             // 
             // StartWindow
             // 
@@ -2394,6 +2406,7 @@ namespace ProjektPWF
         private System.Windows.Forms.Button buttonSprzedazEdytujDopisz;
         private System.Windows.Forms.Button buttonSprzedazEdytujKasuj;
         private System.Windows.Forms.Label labelSprzedazEdytujId;
+        private System.Windows.Forms.Button buttonSprzedazEdytujWyczysc;
     }
 }
 

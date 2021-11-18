@@ -26,12 +26,8 @@ namespace ProjektPWF
         //pokaż tabele Sprzedaz
             dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
 
-
-            //wstawia wartości startowe/zerowe/ do dopisz sprzedaż
-            DopiszStartowe();
-
-         //tabele poboczne
-           // tabControlTabelePoboczne.Visible = true;
+        //tabele poboczne
+            // tabControlTabelePoboczne.Visible = true;
             //Dostarczanie
             groupBoxTabelePoboczneDostarczanieDopisz.Visible = false;
             groupBoxTabelePoboczneDostarczanieEdytuj.Visible = false;
@@ -80,28 +76,23 @@ namespace ProjektPWF
         {         
         }
 
+
+
+
+
+        private void dataGridViewSprzedaz_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //jak kliknięto na dataGridViewSprzedaz tozmienia się zawartość w zakładce edytuj
+            SprzedazEdytujWpiszWartosciSelectedIteam();
+        }
+
         private void tabControlStartSprzedaz_Selected(object sender, TabControlEventArgs e)
         {
-            //label21.Text = e.TabPage.Text;
-         
             //kliknięto na zakładkę edytuj tabControlStartSprzedaz
             if (e.TabPage.Text == "edytuj")
             {
                 SprzedazEdytujWpiszWartosciSelectedIteam();
-
             }
-
-        }
-
-        private void dataGridViewSprzedaz_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridViewSprzedaz_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //jak kliknięto na dataGridViewSprzedaz to nich zmienia się zawartość w zakładce edytuj
-            SprzedazEdytujWpiszWartosciSelectedIteam();
         }
     }
 
