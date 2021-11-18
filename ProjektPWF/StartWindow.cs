@@ -94,6 +94,7 @@ namespace ProjektPWF
                 SprzedazEdytujWpiszWartosciSelectedIteam();
             }
         }
+
     }
 
 }
