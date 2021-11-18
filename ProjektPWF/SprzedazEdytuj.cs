@@ -20,6 +20,8 @@ namespace ProjektPWF
                 TabSprzedaz doEdycji = dbContext.SprzedazC.Where(a => (
                 a.IdSprzedaz == selectedId)).First();
 
+                labelSprzedazEdytujId.Text = "Id " + selectedId.ToString();
+
                 DateTimePicker d = new DateTimePicker();
                 
                 dateTimePickerSprzedazEdytujDataSprzedazy.CustomFormat= "d MMMM yyyy";
@@ -74,6 +76,10 @@ namespace ProjektPWF
             }
         }
 
+        private void buttonSprzedazEdytujDopisz_Click(object sender, EventArgs e)
+        {
+            labelTest.Text = "funkcja w przyszłości";
+        }
 
         private void buttonSprzedazEdytujZatwierdz_Click(object sender, EventArgs e)
         {
@@ -116,22 +122,53 @@ namespace ProjektPWF
 
         private void buttonSprzedazEdytujPomin_Click(object sender, EventArgs e)
         {
+            SprzedazEdytujWpiszWartosciSelectedIteam();
+        }
 
+
+
+        private void buttonSprzedazEdytujKasuj_Click(object sender, EventArgs e)
+        {
+            int selectedId = (int)dataGridViewSprzedaz.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show(
+                "Skasować rekord tabeli Sprzedaz o Id " + selectedId + " ?",
+                "Poerdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                using (var dbContext = new ApplicationDbContext())
+                {
+                    TabSprzedaz doEdycji = dbContext.SprzedazC.Where(a => (
+                    a.IdSprzedaz == selectedId)).First();
+
+                    dbContext.SprzedazC.Remove(doEdycji);
+                    dbContext.SaveChanges();
+                    dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
+                    SprzedazEdytujWpiszWartosciSelectedIteam();
+                }
+            }
         }
 
         private void textBoxSprzedazEdytujNetto_TextChanged(object sender, EventArgs e)
         {
-
+            if (!double.TryParse(textBoxSprzedazEdytujNetto.Text, out _))
+            {
+                textBoxSprzedazEdytujNetto.Text = "";
+            }
         }
 
         private void textBoxSprzedazEdytujNrZlecenia_TextChanged(object sender, EventArgs e)
         {
-
+            if (!int.TryParse(textBoxSprzedazEdytujNrZlecenia.Text, out _))
+            {
+                textBoxSprzedazEdytujNrZlecenia.Text = "";
+            }
         }
 
         private void textBoxSprzedazEdytujNrUmowy_TextChanged(object sender, EventArgs e)
         {
-
+            if (!int.TryParse(textBoxSprzedazEdytujNrUmowy.Text, out _))
+            {
+                textBoxSprzedazEdytujNrUmowy.Text = "";
+            }
         }
 
 

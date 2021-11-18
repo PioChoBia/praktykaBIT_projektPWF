@@ -19,7 +19,7 @@ namespace ProjektPWF
             KierownikViewModel kierownikViewModel = (KierownikViewModel)listBoxTabelePoboczneKierownik.SelectedItem;
             if (MessageBox.Show(
                 "Skasować pole " + kierownikViewModel.NazwiskoKierownika + " ?",
-                "Potwierdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                "Poerdź", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (var dbContext = new ApplicationDbContext())
                 {

@@ -23,7 +23,7 @@ namespace ProjektPWF
 
             //obsluga.WpiszStartoweDoTabel();
 
-        //tabela Sprzedaz
+        //pokaż tabele Sprzedaz
             dataGridViewSprzedaz.DataSource = wyswietl.BezFiltru();
 
 
@@ -91,6 +91,17 @@ namespace ProjektPWF
 
             }
 
+        }
+
+        private void dataGridViewSprzedaz_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewSprzedaz_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //jak kliknięto na dataGridViewSprzedaz to nich zmienia się zawartość w zakładce edytuj
+            SprzedazEdytujWpiszWartosciSelectedIteam();
         }
     }
 

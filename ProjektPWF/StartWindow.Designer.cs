@@ -177,6 +177,8 @@ namespace ProjektPWF
             this.tabPageStartSprzedazDopisz = new System.Windows.Forms.TabPage();
             this.tabPageStartSprzedazEdytuj = new System.Windows.Forms.TabPage();
             this.groupBoxSprzedazEdytuj = new System.Windows.Forms.GroupBox();
+            this.buttonSprzedazEdytujDopisz = new System.Windows.Forms.Button();
+            this.buttonSprzedazEdytujKasuj = new System.Windows.Forms.Button();
             this.buttonSprzedazEdytujPomin = new System.Windows.Forms.Button();
             this.comboBoxSprzedazEdytujTermin = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -210,6 +212,7 @@ namespace ProjektPWF
             this.tabPageStartSprzedazDrukuj = new System.Windows.Forms.TabPage();
             this.tabPageStartTabelePoboczne = new System.Windows.Forms.TabPage();
             this.labelTest = new System.Windows.Forms.Label();
+            this.labelSprzedazEdytujId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSprzedaz)).BeginInit();
             this.groupBoxDopisz.SuspendLayout();
             this.tabControlTabelePoboczne.SuspendLayout();
@@ -261,6 +264,8 @@ namespace ProjektPWF
             this.dataGridViewSprzedaz.Name = "dataGridViewSprzedaz";
             this.dataGridViewSprzedaz.Size = new System.Drawing.Size(1210, 294);
             this.dataGridViewSprzedaz.TabIndex = 2;
+            this.dataGridViewSprzedaz.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSprzedaz_CellClick);
+            this.dataGridViewSprzedaz.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSprzedaz_CellContentClick);
             // 
             // groupBoxDopisz
             // 
@@ -1716,7 +1721,7 @@ namespace ProjektPWF
             // 
             this.tabControlStart.Controls.Add(this.tabPageStartSprzedaz);
             this.tabControlStart.Controls.Add(this.tabPageStartTabelePoboczne);
-            this.tabControlStart.Location = new System.Drawing.Point(35, 55);
+            this.tabControlStart.Location = new System.Drawing.Point(42, 55);
             this.tabControlStart.Name = "tabControlStart";
             this.tabControlStart.SelectedIndex = 0;
             this.tabControlStart.Size = new System.Drawing.Size(1268, 691);
@@ -1780,6 +1785,9 @@ namespace ProjektPWF
             // 
             // groupBoxSprzedazEdytuj
             // 
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.labelSprzedazEdytujId);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujDopisz);
+            this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujKasuj);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.buttonSprzedazEdytujPomin);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.comboBoxSprzedazEdytujTermin);
             this.groupBoxSprzedazEdytuj.Controls.Add(this.label7);
@@ -1815,16 +1823,38 @@ namespace ProjektPWF
             this.groupBoxSprzedazEdytuj.Size = new System.Drawing.Size(1142, 253);
             this.groupBoxSprzedazEdytuj.TabIndex = 8;
             this.groupBoxSprzedazEdytuj.TabStop = false;
-            this.groupBoxSprzedazEdytuj.Text = "wprowadź zmiany i kliknij zatwierdź";
+            this.groupBoxSprzedazEdytuj.Text = "wprowadź zmiany i  zatwierdź, dopisz jako nowy lub skasuj rekord";
+            // 
+            // buttonSprzedazEdytujDopisz
+            // 
+            this.buttonSprzedazEdytujDopisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSprzedazEdytujDopisz.Location = new System.Drawing.Point(987, 86);
+            this.buttonSprzedazEdytujDopisz.Name = "buttonSprzedazEdytujDopisz";
+            this.buttonSprzedazEdytujDopisz.Size = new System.Drawing.Size(149, 32);
+            this.buttonSprzedazEdytujDopisz.TabIndex = 34;
+            this.buttonSprzedazEdytujDopisz.Text = "dopisz jako nowy";
+            this.buttonSprzedazEdytujDopisz.UseVisualStyleBackColor = true;
+            this.buttonSprzedazEdytujDopisz.Click += new System.EventHandler(this.buttonSprzedazEdytujDopisz_Click);
+            // 
+            // buttonSprzedazEdytujKasuj
+            // 
+            this.buttonSprzedazEdytujKasuj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonSprzedazEdytujKasuj.Location = new System.Drawing.Point(987, 213);
+            this.buttonSprzedazEdytujKasuj.Name = "buttonSprzedazEdytujKasuj";
+            this.buttonSprzedazEdytujKasuj.Size = new System.Drawing.Size(149, 32);
+            this.buttonSprzedazEdytujKasuj.TabIndex = 33;
+            this.buttonSprzedazEdytujKasuj.Text = "kasuj rekord";
+            this.buttonSprzedazEdytujKasuj.UseVisualStyleBackColor = true;
+            this.buttonSprzedazEdytujKasuj.Click += new System.EventHandler(this.buttonSprzedazEdytujKasuj_Click);
             // 
             // buttonSprzedazEdytujPomin
             // 
             this.buttonSprzedazEdytujPomin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSprzedazEdytujPomin.Location = new System.Drawing.Point(1016, 200);
+            this.buttonSprzedazEdytujPomin.Location = new System.Drawing.Point(987, 175);
             this.buttonSprzedazEdytujPomin.Name = "buttonSprzedazEdytujPomin";
-            this.buttonSprzedazEdytujPomin.Size = new System.Drawing.Size(104, 32);
+            this.buttonSprzedazEdytujPomin.Size = new System.Drawing.Size(149, 32);
             this.buttonSprzedazEdytujPomin.TabIndex = 32;
-            this.buttonSprzedazEdytujPomin.Text = "pomiń";
+            this.buttonSprzedazEdytujPomin.Text = "pomiń zmiany";
             this.buttonSprzedazEdytujPomin.UseVisualStyleBackColor = true;
             this.buttonSprzedazEdytujPomin.Click += new System.EventHandler(this.buttonSprzedazEdytujPomin_Click);
             // 
@@ -1934,7 +1964,7 @@ namespace ProjektPWF
             // 
             this.richTextBoxSprzedazEdytujUwagi.Location = new System.Drawing.Point(562, 85);
             this.richTextBoxSprzedazEdytujUwagi.Name = "richTextBoxSprzedazEdytujUwagi";
-            this.richTextBoxSprzedazEdytujUwagi.Size = new System.Drawing.Size(558, 47);
+            this.richTextBoxSprzedazEdytujUwagi.Size = new System.Drawing.Size(419, 47);
             this.richTextBoxSprzedazEdytujUwagi.TabIndex = 19;
             this.richTextBoxSprzedazEdytujUwagi.Text = "";
             // 
@@ -1985,7 +2015,7 @@ namespace ProjektPWF
             // 
             this.richTextBoxSprzedazEdytujTresc.Location = new System.Drawing.Point(106, 147);
             this.richTextBoxSprzedazEdytujTresc.Name = "richTextBoxSprzedazEdytujTresc";
-            this.richTextBoxSprzedazEdytujTresc.Size = new System.Drawing.Size(892, 98);
+            this.richTextBoxSprzedazEdytujTresc.Size = new System.Drawing.Size(875, 98);
             this.richTextBoxSprzedazEdytujTresc.TabIndex = 13;
             this.richTextBoxSprzedazEdytujTresc.Text = "";
             // 
@@ -2035,11 +2065,11 @@ namespace ProjektPWF
             // buttonSprzedazEdytujZatwierdz
             // 
             this.buttonSprzedazEdytujZatwierdz.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonSprzedazEdytujZatwierdz.Location = new System.Drawing.Point(1016, 149);
+            this.buttonSprzedazEdytujZatwierdz.Location = new System.Drawing.Point(987, 124);
             this.buttonSprzedazEdytujZatwierdz.Name = "buttonSprzedazEdytujZatwierdz";
-            this.buttonSprzedazEdytujZatwierdz.Size = new System.Drawing.Size(104, 32);
+            this.buttonSprzedazEdytujZatwierdz.Size = new System.Drawing.Size(149, 38);
             this.buttonSprzedazEdytujZatwierdz.TabIndex = 7;
-            this.buttonSprzedazEdytujZatwierdz.Text = "zatwierdź";
+            this.buttonSprzedazEdytujZatwierdz.Text = "zatwierdź zmiany";
             this.buttonSprzedazEdytujZatwierdz.UseVisualStyleBackColor = true;
             this.buttonSprzedazEdytujZatwierdz.Click += new System.EventHandler(this.buttonSprzedazEdytujZatwierdz_Click);
             // 
@@ -2105,6 +2135,16 @@ namespace ProjektPWF
             this.labelTest.Size = new System.Drawing.Size(53, 13);
             this.labelTest.TabIndex = 11;
             this.labelTest.Text = "do testów";
+            // 
+            // labelSprzedazEdytujId
+            // 
+            this.labelSprzedazEdytujId.AutoSize = true;
+            this.labelSprzedazEdytujId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelSprzedazEdytujId.Location = new System.Drawing.Point(6, 182);
+            this.labelSprzedazEdytujId.Name = "labelSprzedazEdytujId";
+            this.labelSprzedazEdytujId.Size = new System.Drawing.Size(77, 25);
+            this.labelSprzedazEdytujId.TabIndex = 35;
+            this.labelSprzedazEdytujId.Text = "Id 123";
             // 
             // StartWindow
             // 
@@ -2351,6 +2391,9 @@ namespace ProjektPWF
         private System.Windows.Forms.DateTimePicker dateTimePickerSprzedazEdytujDataSprzedazy;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label labelTest;
+        private System.Windows.Forms.Button buttonSprzedazEdytujDopisz;
+        private System.Windows.Forms.Button buttonSprzedazEdytujKasuj;
+        private System.Windows.Forms.Label labelSprzedazEdytujId;
     }
 }
 
